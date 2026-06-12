@@ -1,3 +1,16 @@
+# 💫 Hi 👋, I'm Snehal Ghadge
+**A passionate Computer Science (AI) Student | AI & ML Enthusiast | Full-Stack Developer | Aspiring Software Engineer from India 🇮🇳**
+
+Email Me 👉 ✉️ **snehalghadge59@gmail.com** collaborations, internships, projects, or tech discussions. 😊😊
+
+- 🔭 **I’m currently working on:** MediScanix – AI-powered Medical Diagnosis Platform
+- 🌱 **I’m currently learning:** Machine Learning, Deep Learning, Generative AI, Cloud Computing, and Full-Stack Development
+- 👯 **I’m looking to collaborate on:**AI/ML Projects, Web Development Projects, Open Source Contributions
+- 🤔 **I’m looking for help with:**Advanced AI Models, MLOps, and Scalable Cloud Deployments
+- 💬 **Ask me about:** Python, Machine Learning, Web Development, AI Projects, Career Guidance
+- 📫 **How to reach me:** LinkedIn, GitHub, or Email
+- 😄 **Pronouns:** Snehal
+- ⚡ **Fun fact:** I love building AI solutions that solve real-world problems and turning ideas into working products!
 
 ## 🌐 Socials:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/snehal-g-711587312/) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:snehalghadge59@gmail.com) 
