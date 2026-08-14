@@ -1,0 +1,120 @@
+<svg width="900" height="200" viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg"><defs>
+      <clipPath id="trophyRound"><rect x="0" y="0" width="900" height="200" rx="18"/></clipPath>
+      <linearGradient id="tBg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#150818"/>
+        <stop offset="100%" stop-color="#2a0a3d"/>
+      </linearGradient>
+      <linearGradient id="shine2" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+        <stop offset="48%" stop-color="#ffffff" stop-opacity="0"/>
+        <stop offset="50%" stop-color="#ffffff" stop-opacity="0.5"/>
+        <stop offset="52%" stop-color="#ffffff" stop-opacity="0"/>
+        <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+      </linearGradient>
+      <filter id="tGlow" x="-80%" y="-80%" width="260%" height="260%">
+        <feGaussianBlur stdDeviation="4" result="b"/>
+        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs><g clip-path="url(#trophyRound)"><rect x="0" y="0" width="900" height="200" fill="url(#tBg)"/><rect x="0.5" y="0.5" width="899" height="199" rx="18" fill="none" stroke="#ff8fe6" stroke-opacity="0.35"/><g transform="translate(75.0,100.0)" opacity="0">
+          <animate attributeName="opacity" from="0" to="1" begin="0.20s" dur="0.45s" fill="freeze"/>
+          <animateTransform attributeName="transform" type="scale" additive="sum" from="0.5" to="1" begin="0.20s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.34 1.4 0.44 1"/>
+          <clipPath id="shineClip0"><rect x="-70" y="-70" width="140" height="140" rx="16"/></clipPath>
+          <rect x="-70" y="-70" width="140" height="140" rx="16" fill="#1b0c28" stroke="#ff5fd6" stroke-width="1.5"/>
+          <polygon points="0,-42 10,-16 38,-16 16,1 24,27 0,11 -24,27 -16,1 -38,-16 -10,-16"
+            fill="#ff5fd6" filter="url(#tGlow)">
+            <animate attributeName="opacity" values="0.85;1;0.85" dur="2.4s" repeatCount="indefinite"/>
+          </polygon>
+          <text x="0" y="34" text-anchor="middle" font-size="15" font-weight="bold" font-family="'DejaVu Sans',sans-serif" fill="#ffffff">SSS</text>
+          <g clip-path="url(#shineClip0)">
+            <rect x="-160" y="-70" width="60" height="140" fill="url(#shine2)" transform="skewX(-18)">
+              <animate attributeName="x" values="-160;160" dur="3s" begin="1.20s" repeatCount="indefinite"/>
+            </rect>
+          </g>
+        </g><text x="75.0" y="158.0" text-anchor="middle" font-size="12" font-family="'DejaVu Sans',sans-serif" fill="#c9a9e0" opacity="0">
+              <animate attributeName="opacity" from="0" to="1" begin="0.50s" dur="0.4s" fill="freeze"/>Commit</text><text x="75.0" y="173.0" text-anchor="middle" font-size="12" font-family="'DejaVu Sans',sans-serif" fill="#c9a9e0" opacity="0">
+              <animate attributeName="opacity" from="0" to="1" begin="0.50s" dur="0.4s" fill="freeze"/>Master</text><g transform="translate(225.0,100.0)" opacity="0">
+          <animate attributeName="opacity" from="0" to="1" begin="0.38s" dur="0.45s" fill="freeze"/>
+          <animateTransform attributeName="transform" type="scale" additive="sum" from="0.5" to="1" begin="0.38s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.34 1.4 0.44 1"/>
+          <clipPath id="shineClip1"><rect x="-70" y="-70" width="140" height="140" rx="16"/></clipPath>
+          <rect x="-70" y="-70" width="140" height="140" rx="16" fill="#1b0c28" stroke="#ff9f4f" stroke-width="1.5"/>
+          <polygon points="0,-42 10,-16 38,-16 16,1 24,27 0,11 -24,27 -16,1 -38,-16 -10,-16"
+            fill="#ff9f4f" filter="url(#tGlow)">
+            <animate attributeName="opacity" values="0.85;1;0.85" dur="2.4s" repeatCount="indefinite"/>
+          </polygon>
+          <text x="0" y="34" text-anchor="middle" font-size="15" font-weight="bold" font-family="'DejaVu Sans',sans-serif" fill="#ffffff">S</text>
+          <g clip-path="url(#shineClip1)">
+            <rect x="-160" y="-70" width="60" height="140" fill="url(#shine2)" transform="skewX(-18)">
+              <animate attributeName="x" values="-160;160" dur="3s" begin="1.50s" repeatCount="indefinite"/>
+            </rect>
+          </g>
+        </g><text x="225.0" y="158.0" text-anchor="middle" font-size="12" font-family="'DejaVu Sans',sans-serif" fill="#c9a9e0" opacity="0">
+              <animate attributeName="opacity" from="0" to="1" begin="0.68s" dur="0.4s" fill="freeze"/>Repo</text><text x="225.0" y="173.0" text-anchor="middle" font-size="12" font-family="'DejaVu Sans',sans-serif" fill="#c9a9e0" opacity="0">
+              <animate attributeName="opacity" from="0" to="1" begin="0.68s" dur="0.4s" fill="freeze"/>Collector</text><g transform="translate(375.0,100.0)" opacity="0">
+          <animate attributeName="opacity" from="0" to="1" begin="0.56s" dur="0.45s" fill="freeze"/>
+          <animateTransform attributeName="transform" type="scale" additive="sum" from="0.5" to="1" begin="0.56s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.34 1.4 0.44 1"/>
+          <clipPath id="shineClip2"><rect x="-70" y="-70" width="140" height="140" rx="16"/></clipPath>
+          <rect x="-70" y="-70" width="140" height="140" rx="16" fill="#1b0c28" stroke="#8fd3ff" stroke-width="1.5"/>
+          <polygon points="0,-42 10,-16 38,-16 16,1 24,27 0,11 -24,27 -16,1 -38,-16 -10,-16"
+            fill="#8fd3ff" filter="url(#tGlow)">
+            <animate attributeName="opacity" values="0.85;1;0.85" dur="2.4s" repeatCount="indefinite"/>
+          </polygon>
+          <text x="0" y="34" text-anchor="middle" font-size="15" font-weight="bold" font-family="'DejaVu Sans',sans-serif" fill="#ffffff">A+</text>
+          <g clip-path="url(#shineClip2)">
+            <rect x="-160" y="-70" width="60" height="140" fill="url(#shine2)" transform="skewX(-18)">
+              <animate attributeName="x" values="-160;160" dur="3s" begin="1.80s" repeatCount="indefinite"/>
+            </rect>
+          </g>
+        </g><text x="375.0" y="158.0" text-anchor="middle" font-size="12" font-family="'DejaVu Sans',sans-serif" fill="#c9a9e0" opacity="0">
+              <animate attributeName="opacity" from="0" to="1" begin="0.86s" dur="0.4s" fill="freeze"/>Star</text><text x="375.0" y="173.0" text-anchor="middle" font-size="12" font-family="'DejaVu Sans',sans-serif" fill="#c9a9e0" opacity="0">
+              <animate attributeName="opacity" from="0" to="1" begin="0.86s" dur="0.4s" fill="freeze"/>Gazer</text><g transform="translate(525.0,100.0)" opacity="0">
+          <animate attributeName="opacity" from="0" to="1" begin="0.74s" dur="0.45s" fill="freeze"/>
+          <animateTransform attributeName="transform" type="scale" additive="sum" from="0.5" to="1" begin="0.74s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.34 1.4 0.44 1"/>
+          <clipPath id="shineClip3"><rect x="-70" y="-70" width="140" height="140" rx="16"/></clipPath>
+          <rect x="-70" y="-70" width="140" height="140" rx="16" fill="#1b0c28" stroke="#7ee787" stroke-width="1.5"/>
+          <polygon points="0,-42 10,-16 38,-16 16,1 24,27 0,11 -24,27 -16,1 -38,-16 -10,-16"
+            fill="#7ee787" filter="url(#tGlow)">
+            <animate attributeName="opacity" values="0.85;1;0.85" dur="2.4s" repeatCount="indefinite"/>
+          </polygon>
+          <text x="0" y="34" text-anchor="middle" font-size="15" font-weight="bold" font-family="'DejaVu Sans',sans-serif" fill="#ffffff">A</text>
+          <g clip-path="url(#shineClip3)">
+            <rect x="-160" y="-70" width="60" height="140" fill="url(#shine2)" transform="skewX(-18)">
+              <animate attributeName="x" values="-160;160" dur="3s" begin="2.10s" repeatCount="indefinite"/>
+            </rect>
+          </g>
+        </g><text x="525.0" y="158.0" text-anchor="middle" font-size="12" font-family="'DejaVu Sans',sans-serif" fill="#c9a9e0" opacity="0">
+              <animate attributeName="opacity" from="0" to="1" begin="1.04s" dur="0.4s" fill="freeze"/>Pull</text><text x="525.0" y="173.0" text-anchor="middle" font-size="12" font-family="'DejaVu Sans',sans-serif" fill="#c9a9e0" opacity="0">
+              <animate attributeName="opacity" from="0" to="1" begin="1.04s" dur="0.4s" fill="freeze"/>Shark</text><g transform="translate(675.0,100.0)" opacity="0">
+          <animate attributeName="opacity" from="0" to="1" begin="0.92s" dur="0.45s" fill="freeze"/>
+          <animateTransform attributeName="transform" type="scale" additive="sum" from="0.5" to="1" begin="0.92s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.34 1.4 0.44 1"/>
+          <clipPath id="shineClip4"><rect x="-70" y="-70" width="140" height="140" rx="16"/></clipPath>
+          <rect x="-70" y="-70" width="140" height="140" rx="16" fill="#1b0c28" stroke="#c98bff" stroke-width="1.5"/>
+          <polygon points="0,-42 10,-16 38,-16 16,1 24,27 0,11 -24,27 -16,1 -38,-16 -10,-16"
+            fill="#c98bff" filter="url(#tGlow)">
+            <animate attributeName="opacity" values="0.85;1;0.85" dur="2.4s" repeatCount="indefinite"/>
+          </polygon>
+          <text x="0" y="34" text-anchor="middle" font-size="15" font-weight="bold" font-family="'DejaVu Sans',sans-serif" fill="#ffffff">B+</text>
+          <g clip-path="url(#shineClip4)">
+            <rect x="-160" y="-70" width="60" height="140" fill="url(#shine2)" transform="skewX(-18)">
+              <animate attributeName="x" values="-160;160" dur="3s" begin="2.40s" repeatCount="indefinite"/>
+            </rect>
+          </g>
+        </g><text x="675.0" y="158.0" text-anchor="middle" font-size="12" font-family="'DejaVu Sans',sans-serif" fill="#c9a9e0" opacity="0">
+              <animate attributeName="opacity" from="0" to="1" begin="1.22s" dur="0.4s" fill="freeze"/>Ancient</text><text x="675.0" y="173.0" text-anchor="middle" font-size="12" font-family="'DejaVu Sans',sans-serif" fill="#c9a9e0" opacity="0">
+              <animate attributeName="opacity" from="0" to="1" begin="1.22s" dur="0.4s" fill="freeze"/>Coder</text><g transform="translate(825.0,100.0)" opacity="0">
+          <animate attributeName="opacity" from="0" to="1" begin="1.10s" dur="0.45s" fill="freeze"/>
+          <animateTransform attributeName="transform" type="scale" additive="sum" from="0.5" to="1" begin="1.10s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.34 1.4 0.44 1"/>
+          <clipPath id="shineClip5"><rect x="-70" y="-70" width="140" height="140" rx="16"/></clipPath>
+          <rect x="-70" y="-70" width="140" height="140" rx="16" fill="#1b0c28" stroke="#ff8fe6" stroke-width="1.5"/>
+          <polygon points="0,-42 10,-16 38,-16 16,1 24,27 0,11 -24,27 -16,1 -38,-16 -10,-16"
+            fill="#ff8fe6" filter="url(#tGlow)">
+            <animate attributeName="opacity" values="0.85;1;0.85" dur="2.4s" repeatCount="indefinite"/>
+          </polygon>
+          <text x="0" y="34" text-anchor="middle" font-size="15" font-weight="bold" font-family="'DejaVu Sans',sans-serif" fill="#ffffff">A+</text>
+          <g clip-path="url(#shineClip5)">
+            <rect x="-160" y="-70" width="60" height="140" fill="url(#shine2)" transform="skewX(-18)">
+              <animate attributeName="x" values="-160;160" dur="3s" begin="2.70s" repeatCount="indefinite"/>
+            </rect>
+          </g>
+        </g><text x="825.0" y="158.0" text-anchor="middle" font-size="12" font-family="'DejaVu Sans',sans-serif" fill="#c9a9e0" opacity="0">
+              <animate attributeName="opacity" from="0" to="1" begin="1.40s" dur="0.4s" fill="freeze"/>Long</text><text x="825.0" y="173.0" text-anchor="middle" font-size="12" font-family="'DejaVu Sans',sans-serif" fill="#c9a9e0" opacity="0">
+              <animate attributeName="opacity" from="0" to="1" begin="1.40s" dur="0.4s" fill="freeze"/>Streak</text></g></svg>

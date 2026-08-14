@@ -1,0 +1,59 @@
+<svg width="480" height="260" viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg"><defs>
+      <clipPath id="statsRound"><rect x="0" y="0" width="480" height="260" rx="18"/></clipPath>
+      <linearGradient id="sBg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#150818"/>
+        <stop offset="100%" stop-color="#2a0a3d"/>
+      </linearGradient>
+      <linearGradient id="ringGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ff5fd6"/>
+        <stop offset="100%" stop-color="#8b3fff"/>
+      </linearGradient>
+      <filter id="sGlow" x="-60%" y="-60%" width="220%" height="220%">
+        <feGaussianBlur stdDeviation="3" result="b"/>
+        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs><g clip-path="url(#statsRound)"><rect x="0" y="0" width="480" height="260" fill="url(#sBg)"/><rect x="0.5" y="0.5" width="479" height="259" rx="18" fill="none" stroke="#ff8fe6" stroke-opacity="0.35"/><text x="24" y="34" font-size="16" font-weight="bold" font-family="'DejaVu Sans',sans-serif" fill="#f5e6ff">Snehal's GitHub Stats</text><circle cx="110" cy="155" r="62" fill="none" stroke="#3a2050" stroke-width="12"/>
+    <circle cx="110" cy="155" r="62" fill="none" stroke="url(#ringGrad2)" stroke-width="12" stroke-linecap="round"
+      stroke-dasharray="303.9 389.6" transform="rotate(-90 110 155)" filter="url(#sGlow)">
+      <animate attributeName="stroke-dasharray" values="0 389.6;303.9 389.6" dur="1.6s" begin="0.3s" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1"/>
+    </circle>
+    <text x="110" y="161" text-anchor="middle" font-size="22" font-weight="bold" font-family="'DejaVu Sans',sans-serif" fill="#ffffff" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="1.6s" dur="0.5s" fill="freeze"/>A+</text>
+    <text x="110" y="181" text-anchor="middle" font-size="10" font-family="'DejaVu Sans',sans-serif" fill="#c9a9e0" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="1.6s" dur="0.5s" fill="freeze"/>RANK</text><g transform="translate(228,60)" opacity="0">
+          <animateTransform attributeName="transform" type="translate" from="268,60" to="228,60" begin="0.40s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1"/>
+          <animate attributeName="opacity" from="0" to="1" begin="0.40s" dur="0.5s" fill="freeze"/>
+          <text x="0" y="0" font-size="13" font-family="'DejaVu Sans',sans-serif" fill="#e6d9ff">Total Stars</text>
+          <text x="228" y="0" text-anchor="end" font-size="13" font-weight="bold" font-family="'DejaVu Sans',sans-serif" fill="#ff9ff0">18</text>
+          <rect x="0" y="8" width="228" height="3" rx="1.5" fill="#3a2050"/>
+          <rect x="0" y="8" width="0" height="3" rx="1.5" fill="url(#ringGrad2)">
+            <animate attributeName="width" from="0" to="190" begin="0.55s" dur="0.8s" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1"/>
+          </rect>
+        </g><g transform="translate(228,102)" opacity="0">
+          <animateTransform attributeName="transform" type="translate" from="268,102" to="228,102" begin="0.58s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1"/>
+          <animate attributeName="opacity" from="0" to="1" begin="0.58s" dur="0.5s" fill="freeze"/>
+          <text x="0" y="0" font-size="13" font-family="'DejaVu Sans',sans-serif" fill="#e6d9ff">Total Commits (2026)</text>
+          <text x="228" y="0" text-anchor="end" font-size="13" font-weight="bold" font-family="'DejaVu Sans',sans-serif" fill="#ff9ff0">1500+</text>
+          <rect x="0" y="8" width="228" height="3" rx="1.5" fill="#3a2050"/>
+          <rect x="0" y="8" width="0" height="3" rx="1.5" fill="url(#ringGrad2)">
+            <animate attributeName="width" from="0" to="215" begin="0.73s" dur="0.8s" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1"/>
+          </rect>
+        </g><g transform="translate(228,144)" opacity="0">
+          <animateTransform attributeName="transform" type="translate" from="268,144" to="228,144" begin="0.76s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1"/>
+          <animate attributeName="opacity" from="0" to="1" begin="0.76s" dur="0.5s" fill="freeze"/>
+          <text x="0" y="0" font-size="13" font-family="'DejaVu Sans',sans-serif" fill="#e6d9ff">Total PRs</text>
+          <text x="228" y="0" text-anchor="end" font-size="13" font-weight="bold" font-family="'DejaVu Sans',sans-serif" fill="#ff9ff0">22</text>
+          <rect x="0" y="8" width="228" height="3" rx="1.5" fill="#3a2050"/>
+          <rect x="0" y="8" width="0" height="3" rx="1.5" fill="url(#ringGrad2)">
+            <animate attributeName="width" from="0" to="110" begin="0.91s" dur="0.8s" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1"/>
+          </rect>
+        </g><g transform="translate(228,186)" opacity="0">
+          <animateTransform attributeName="transform" type="translate" from="268,186" to="228,186" begin="0.94s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1"/>
+          <animate attributeName="opacity" from="0" to="1" begin="0.94s" dur="0.5s" fill="freeze"/>
+          <text x="0" y="0" font-size="13" font-family="'DejaVu Sans',sans-serif" fill="#e6d9ff">Total Repos</text>
+          <text x="228" y="0" text-anchor="end" font-size="13" font-weight="bold" font-family="'DejaVu Sans',sans-serif" fill="#ff9ff0">24</text>
+          <rect x="0" y="8" width="228" height="3" rx="1.5" fill="#3a2050"/>
+          <rect x="0" y="8" width="0" height="3" rx="1.5" fill="url(#ringGrad2)">
+            <animate attributeName="width" from="0" to="205" begin="1.09s" dur="0.8s" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1"/>
+          </rect>
+        </g></g></svg>
