@@ -7,38 +7,46 @@
   <img src="assets/banner.svg?v=4" alt="Snehal Ghadge Banner" width="100%">
 </picture>
 
-<br><br>
-
-<!-- Interactive Lanyard Badge -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/lanyard.svg?v=4">
-  <source media="(prefers-color-scheme: light)" srcset="assets/lanyard.svg?v=4">
-  <img src="assets/lanyard.svg?v=4" alt="Snehal Ghadge ID Badge" width="240">
-</picture>
-
-<br><br>
-
-<!-- Social & Contact Quick Links -->
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/snehal-g-711587312)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/snehalghadge59-blip)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:snehalghadge59@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-FF5FD6?style=for-the-badge&logo=netlify&logoColor=white)](https://snehalsportfolio2027.netlify.app)
-[![Profile Views](https://komarev.com/ghpvc/?username=snehalghadge59-blip&label=Profile%20Views&color=c04bff&style=for-the-badge)](https://github.com/snehalghadge59-blip)
-
 </div>
 
----
+<br>
 
-## 🧠 About Me
-
-- 🎓 Final-year **B.Tech CSE (AI/ML)** student & **Data Analyst** at PCET's Nutan College of Engineering, Pune, India
-- 🤖 Passionate about building **Agentic AI workflows**, **GenAI / RAG architectures**, and **Data Analytics Dashboards**
-- 🧪 **Internship Experience**:
-  - **Lenovo LEAP NextGen Scholar Program** — AI & Data Science Track
-  - **Infosys Springboard** — Industry readiness & Data/Software foundations
-  - **AICTE‑Edunet / IBM SkillsBuild** — Applied Machine Learning & Cloud Analytics
-- 📊 **AI / ML & Data Analytics Capabilities**: Spans **Power BI & statistical modeling**, **LangChain/Groq agentic pipelines**, **TensorFlow/PyTorch ML models**, and **React/Flask full-stack systems**
-- ⚡ **Fun Fact**: I once refactored a codebase to cut duplication by 30% just for the satisfaction of clean architecture!
+<!-- Executive Intro: Lanyard Badge + About Me (2-Column Grid) -->
+<table border="0" width="100%">
+  <tr>
+    <td width="35%" align="center" valign="middle">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="assets/lanyard.svg?v=4">
+        <source media="(prefers-color-scheme: light)" srcset="assets/lanyard.svg?v=4">
+        <img src="assets/lanyard.svg?v=4" alt="Snehal Ghadge ID Badge" width="100%" style="max-width: 270px;">
+      </picture>
+    </td>
+    <td width="65%" valign="top">
+      <h3>👋 Hi, I'm <a href="https://linkedin.com/in/snehal-g-711587312">Snehal Ghadge</a></h3>
+      <p><b>🤖 AI / ML Engineer &nbsp;|&nbsp; 📊 Data Analyst &nbsp;|&nbsp; 🌐 Full-Stack Developer</b></p>
+      <ul>
+        <li>🎓 Final-year <b>B.Tech CSE (AI/ML)</b> student at PCET's Nutan College of Engineering, Pune, India</li>
+        <li>💡 Architecting <b>Agentic AI systems</b>, <b>RAG pipelines</b>, and <b>Data Analytics Dashboards</b></li>
+        <li>🧪 <b>Industry Internships &amp; Scholar Programs</b>:
+          <ul>
+            <li><b>Lenovo LEAP NextGen Scholar</b> — AI &amp; Data Science Track</li>
+            <li><b>Infosys Springboard</b> — Industry Readiness &amp; Software Foundations</li>
+            <li><b>AICTE‑Edunet / IBM SkillsBuild</b> — Applied Machine Learning &amp; Cloud</li>
+          </ul>
+        </li>
+        <li>📊 <b>Core Expertise</b>: Power BI, LangChain, Groq LLMs, TensorFlow, PyTorch, React.js &amp; MySQL</li>
+        <li>⚡ <b>Fun Fact</b>: Refactored a codebase to cut duplication by 30% purely for the joy of clean architecture!</li>
+      </ul>
+      <br>
+      <div>
+        <a href="https://linkedin.com/in/snehal-g-711587312"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+        <a href="mailto:snehalghadge59@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"></a>
+        <a href="https://snehalsportfolio2027.netlify.app"><img src="https://img.shields.io/badge/Portfolio-FF5FD6?style=for-the-badge&logo=netlify&logoColor=white" alt="Portfolio"></a>
+        <a href="https://github.com/snehalghadge59-blip"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
+      </div>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -46,48 +54,47 @@
 
 <div align="center">
 
-### 🤖 AI, Machine Learning & Data Science
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
-![Keras](https://img.shields.io/badge/Keras-D00000?style=flat-square&logo=keras&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat-square&logo=plotly&logoColor=white)
+### 🤖 AI, Machine Learning & Data Analytics
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=plotly&logoColor=white)
 
 <br>
 
-### 🌐 Web & Full-Stack Development
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
-![.NET](https://img.shields.io/badge/.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white)
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white)
+### 🌐 Web & Full-Stack Engineering
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 
 <br>
 
 ### 🗄️ Databases, Cloud & Big Data
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
-![Apache Spark](https://img.shields.io/badge/Apache%20Spark-E25A1C?style=flat-square&logo=apachespark&logoColor=white)
-![Hadoop](https://img.shields.io/badge/Hadoop-66CCFF?style=flat-square&logo=apachehadoop&logoColor=black)
-![Hive](https://img.shields.io/badge/Hive-FDEE21?style=flat-square&logo=apachehive&logoColor=black)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
+![Apache Spark](https://img.shields.io/badge/Apache%20Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)
+![Hadoop](https://img.shields.io/badge/Hadoop-66CCFF?style=for-the-badge&logo=apachehadoop&logoColor=black)
+![Hive](https://img.shields.io/badge/Hive-FDEE21?style=for-the-badge&logo=apachehive&logoColor=black)
 
 <br>
 
 ### 💻 Core Languages & Tools
-![C](https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white)
-![Java](https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
-![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
-![Canva](https://img.shields.io/badge/Canva-00C4CC?style=flat-square&logo=canva&logoColor=white)
+![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=openjdk&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![Canva](https://img.shields.io/badge/Canva-00C4CC?style=for-the-badge&logo=canva&logoColor=white)
 
 </div>
 
@@ -108,7 +115,7 @@
 
 <div align="center">
 
-<table>
+<table border="0" width="100%">
   <tr>
     <td align="center" width="50%">
       <img src="assets/stats.svg?v=2" alt="GitHub Stats" width="100%">
@@ -159,17 +166,12 @@
 
 ---
 
-## 🤝 Connect With Me
-
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/snehal-g-711587312)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/snehalghadge59-blip)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:snehalghadge59@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-FF5FD6?style=for-the-badge&logo=netlify&logoColor=white)](https://snehalsportfolio2027.netlify.app)
+[![Profile Views](https://komarev.com/ghpvc/?username=snehalghadge59-blip&label=Profile%20Views&color=c04bff&style=for-the-badge)](https://github.com/snehalghadge59-blip)
 
-<br><br>
+<br>
 
-*✨ Thanks for stopping by — always excited to collaborate on Agentic AI, Data Science, or chat over a good cup of chai ☕*
+*✨ Thanks for stopping by — always excited to collaborate on Agentic AI, Data Science &amp; Full-Stack systems!*
 
 </div>
