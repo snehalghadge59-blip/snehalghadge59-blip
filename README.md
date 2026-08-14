@@ -2,18 +2,18 @@
 
 <!-- Hero Banner (Dark / Light mode auto-switch) -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner.svg?v=2">
-  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg?v=2">
-  <img src="assets/banner.svg?v=2" alt="Snehal Ghadge Banner" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner.svg?v=3">
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg?v=3">
+  <img src="assets/banner.svg?v=3" alt="Snehal Ghadge Banner" width="100%">
 </picture>
 
 <br><br>
 
 <!-- Interactive Lanyard Badge -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/lanyard.svg?v=2">
-  <source media="(prefers-color-scheme: light)" srcset="assets/lanyard.svg?v=2">
-  <img src="assets/lanyard.svg?v=2" alt="Snehal Ghadge ID Badge" width="240">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/lanyard.svg?v=3">
+  <source media="(prefers-color-scheme: light)" srcset="assets/lanyard.svg?v=3">
+  <img src="assets/lanyard.svg?v=3" alt="Snehal Ghadge ID Badge" width="240">
 </picture>
 
 <br><br>
@@ -31,13 +31,13 @@
 
 ## 🧠 About Me
 
-- 🎓 Final-year **B.Tech CSE (AI/ML)** student at PCET's Nutan College of Engineering, Pune, India
-- 🤖 Passionate about building **Agentic AI workflows**, **GenAI / RAG architectures**, and end-to-end full-stack applications
+- 🎓 Final-year **B.Tech CSE (AI/ML)** student & **Data Analyst** at PCET's Nutan College of Engineering, Pune, India
+- 🤖 Passionate about building **Agentic AI workflows**, **GenAI / RAG architectures**, and **Data Analytics Dashboards**
 - 🧪 **Internship Experience**:
-  - **Lenovo LEAP NextGen Scholar Program** — AI & Data Track
-  - **Infosys Springboard** — Industry readiness & software foundations
-  - **AICTE‑Edunet / IBM SkillsBuild** — Applied Machine Learning & Cloud
-- 📊 **Versatile Engineering**: Spans **LangChain/Groq agentic pipelines**, **TensorFlow/PyTorch ML models**, **Power BI dashboards**, and **React/Flask full-stack systems**
+  - **Lenovo LEAP NextGen Scholar Program** — AI & Data Science Track
+  - **Infosys Springboard** — Industry readiness & Data/Software foundations
+  - **AICTE‑Edunet / IBM SkillsBuild** — Applied Machine Learning & Cloud Analytics
+- 📊 **AI / ML & Data Analytics Capabilities**: Spans **Power BI & statistical modeling**, **LangChain/Groq agentic pipelines**, **TensorFlow/PyTorch ML models**, and **React/Flask full-stack systems**
 - ⚡ **Fun Fact**: I once refactored a codebase to cut duplication by 30% just for the satisfaction of clean architecture!
 
 ---
