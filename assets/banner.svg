@@ -220,21 +220,12 @@
         </path><path d="M594.1857883049594 5.048112509252405Q587.1872686898595 5.048112509252405 583.6880088823095 1.204663212435233Q580.1887490747595 -2.6387860843819393 580.1887490747595 -8.260547742413028Q580.1887490747595 -13.42339008142117 582.7701702442636 -19.159881569207993Q585.3515914137677 -24.89637305699482 589.6539600296078 -29.944485566247224Q593.9563286454479 -34.99259807549963 599.1191709844561 -38.14766839378238Q604.2820133234642 -41.302738712065135 609.3301258327166 -41.302738712065135Q611.9689119170985 -41.302738712065135 614.2061435973353 -39.9259807549963Q616.4433752775723 -38.54922279792746 616.4433752775723 -34.30421909696521Q616.4433752775723 -29.944485566247224 613.8619541080682 -26.101036269430054Q611.2805329385641 -22.25758697261288 607.0928941524796 -19.27461139896373Q602.9052553663953 -16.291635825314582 597.9145077720208 -14.39859363434493Q592.9237601776463 -12.505551443375278 587.9903774981495 -12.046632124352332Q587.7609178386381 -10.899333826794967 587.6461880088823 -9.866765358993337Q587.5314581791266 -8.83419689119171 587.5314581791266 -7.916358253145818Q587.5314581791266 -6.195410806809771 587.9330125832716 -4.474463360473724Q588.3345669874168 -2.753515914137676 589.3671354552184 -1.3193930421909696Q590.3997039230201 0.11472982975573649 592.178016284234 0.9178386380458919Q593.9563286454479 1.7209474463360475 596.5951147298298 1.7209474463360475Q601.5284974093265 1.7209474463360475 606.3471502590675 -1.0899333826794966Q611.1658031088084 -3.9008142116950406 615.296076980015 -8.490007401924501Q619.4263508512214 -13.07920059215396 622.2945965951149 -18.58623242042931L623.6713545521836 -17.553663952627684Q620.5736491487787 -10.669874167283494 615.8123612139157 -5.6217616580310885Q611.0510732790526 -0.5736491487786824 605.4866765358994 2.2372316802368615Q599.9222797927462 5.048112509252405 594.1857883049594 5.048112509252405ZM588.5640266469283 -14.226498889711324Q591.6617320503332 -15.259067357512954 595.5625462620283 -17.266839378238345Q599.4633604737232 -19.27461139896373 603.0773501110289 -22.028127313101407Q606.6913397483346 -24.781643227239083 609.0433012583272 -28.10880829015544Q611.3952627683199 -31.435973353071798 611.3952627683199 -35.10732790525537Q611.3952627683199 -36.36935603256847 610.9363434492968 -37.05773501110289Q610.4774241302739 -37.74611398963731 608.9859363434493 -37.74611398963731Q606.2324204293117 -37.74611398963731 603.1347150259069 -35.62361213915618Q600.037009622502 -33.50111028867506 597.1687638786085 -30.059215396002962Q594.300518134715 -26.617320503330866 592.0059215396004 -22.487046632124354Q589.7113249444857 -18.35677276091784 588.5640266469283 -14.226498889711324Z" fill="url(#nameGrad)" opacity="0" transform="translate(0,14)">
           <animate attributeName="opacity" from="0" to="1" begin="2.36s" dur="0.45s" fill="freeze"/>
           <animateTransform attributeName="transform" type="translate" from="0,14" to="0,0" begin="2.36s" dur="0.45s" fill="freeze" additive="replace" calcMode="spline" keySplines="0.2 0 0.2 1"/>
-        </path></g><g transform="translate(58,236)"><clipPath id="roleClip0"><rect x="-4" y="-26" width="0" height="52">
-          <animate attributeName="width" values="0.0;0.0;170.8;170.8;0.0;0.0" keyTimes="0.00000;0.00010;0.08125;0.21250;0.24688;1.00000" dur="16.0s" begin="4.4s" repeatCount="indefinite"/>
-        </rect></clipPath>
-        <text clip-path="url(#roleClip0)" x="0" y="0" font-family="'DejaVu Sans Mono',monospace" font-size="22" font-weight="bold" fill="#f5e6ff">AI/ML Engineer</text><clipPath id="roleClip1"><rect x="-4" y="-26" width="0" height="52">
-          <animate attributeName="width" values="0.0;0.0;244.0;244.0;0.0;0.0" keyTimes="0.00000;0.25000;0.33125;0.46250;0.49688;1.00000" dur="16.0s" begin="4.4s" repeatCount="indefinite"/>
-        </rect></clipPath>
-        <text clip-path="url(#roleClip1)" x="0" y="0" font-family="'DejaVu Sans Mono',monospace" font-size="22" font-weight="bold" fill="#f5e6ff">Full-Stack Developer</text><clipPath id="roleClip2"><rect x="-4" y="-26" width="0" height="52">
-          <animate attributeName="width" values="0.0;0.0;280.6;280.6;0.0;0.0" keyTimes="0.00000;0.50000;0.58125;0.71250;0.74687;1.00000" dur="16.0s" begin="4.4s" repeatCount="indefinite"/>
-        </rect></clipPath>
-        <text clip-path="url(#roleClip2)" x="0" y="0" font-family="'DejaVu Sans Mono',monospace" font-size="22" font-weight="bold" fill="#f5e6ff">Data Analyst Enthusiast</text><clipPath id="roleClip3"><rect x="-4" y="-26" width="0" height="52">
-          <animate attributeName="width" values="0.0;0.0;329.4;329.4;0.0;0.0" keyTimes="0.00000;0.75000;0.83125;0.96250;0.99687;1.00000" dur="16.0s" begin="4.4s" repeatCount="indefinite"/>
-        </rect></clipPath>
-        <text clip-path="url(#roleClip3)" x="0" y="0" font-family="'DejaVu Sans Mono',monospace" font-size="22" font-weight="bold" fill="#f5e6ff">Final-Year CSE (AI) Student</text>
-      <rect x="0" y="-20" width="3" height="26" fill="#ff8fd8">
-        <animate attributeName="opacity" values="1;0" dur="0.5s" begin="4.4s" repeatCount="indefinite"/>
+        </path></g><g transform="translate(58,236)">
+      <clipPath id="roleClipAll"><rect x="-4" y="-26" width="0" height="52"><animate attributeName="width" from="0" to="580" begin="2.6s" dur="1.2s" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1"/></rect></clipPath>
+      <text clip-path="url(#roleClipAll)" x="0" y="0" font-family="'DejaVu Sans',sans-serif" font-size="19" font-weight="bold" fill="#f5e6ff" letter-spacing="0.5">AI/ML Engineer · Data Analyst · Full-Stack Developer</text>
+      <rect x="0" y="-18" width="3" height="22" fill="#ff8fd8">
+        <animateTransform attributeName="transform" type="translate" from="0,0" to="510,0" begin="2.6s" dur="1.2s" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1"/>
+        <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="0.8s" begin="3.8s" repeatCount="indefinite"/>
       </rect>
     </g>
     <g transform="translate(56,268)">
@@ -242,7 +233,7 @@
         <animate attributeName="opacity" from="0" to="1" begin="6.0s" dur="0.6s" fill="freeze"/>
       </rect>
       <text x="18" y="24" font-size="15" fill="#ff8fd8" font-family="'DejaVu Sans Mono',monospace" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="6.1s" dur="0.4s" fill="freeze"/>&#8220;</text>
-      <clipPath id="quoteClip"><rect x="14" y="-40" width="0" height="80"><animate attributeName="width" from="0" to="380.79999999999995" begin="6.3s" dur="1.6s" fill="freeze" calcMode="spline" keySplines="0.3 0 0.2 1"/></rect></clipPath>
+      <clipPath id="quoteClip"><rect x="14" y="-40" width="0" height="80"><animate attributeName="width" from="0" to="480" begin="6.3s" dur="1.6s" fill="freeze" calcMode="spline" keySplines="0.3 0 0.2 1"/></rect></clipPath>
       <text clip-path="url(#quoteClip)" x="18" y="34" font-size="15.5" fill="#c9a9e0" font-family="'DejaVu Sans Mono',monospace">Turning data into decisions, one model at a time</text>
     </g><g class="techpill" transform="translate(56,342)" opacity="0">
           <animate attributeName="opacity" from="0" to="1" begin="6.60s" dur="0.4s" fill="freeze"/>

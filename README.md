@@ -2,18 +2,18 @@
 
 <!-- Hero Banner (Dark / Light mode auto-switch) -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner.svg?v=3">
-  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg?v=3">
-  <img src="assets/banner.svg?v=3" alt="Snehal Ghadge Banner" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner.svg?v=4">
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg?v=4">
+  <img src="assets/banner.svg?v=4" alt="Snehal Ghadge Banner" width="100%">
 </picture>
 
 <br><br>
 
 <!-- Interactive Lanyard Badge -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/lanyard.svg?v=3">
-  <source media="(prefers-color-scheme: light)" srcset="assets/lanyard.svg?v=3">
-  <img src="assets/lanyard.svg?v=3" alt="Snehal Ghadge ID Badge" width="240">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/lanyard.svg?v=4">
+  <source media="(prefers-color-scheme: light)" srcset="assets/lanyard.svg?v=4">
+  <img src="assets/lanyard.svg?v=4" alt="Snehal Ghadge ID Badge" width="240">
 </picture>
 
 <br><br>
