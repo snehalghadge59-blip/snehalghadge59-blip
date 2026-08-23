@@ -3,20 +3,15 @@
   <h3><code>snehal@github ~ $ whoami</code></h3>
   <table border="0" cellpadding="0" cellspacing="0">
     <tr>
-      <td valign="top" width="370" align="center"><img src="./snehal-ascii.svg?v=46" width="370" alt="Snehal Ghadge — ASCII portrait" /></td>
-      <td valign="top" width="370" align="center"><img src="./assets/lanyard.svg?v=46" width="330" alt="Snehal Ghadge — Executive ID Card Visual" /></td>
+      <td valign="top" width="370" align="center"><img src="./snehal-ascii.svg?v=50" width="370" alt="Snehal Ghadge — ASCII portrait" /></td>
+      <td valign="top" width="370" align="center"><img src="./assets/lanyard.svg?v=50" width="330" alt="Snehal Ghadge — Executive ID Card Visual" /></td>
     </tr>
   </table>
 
   <br><br>
 
   <h3><code>snehal@github ~ $ ./contributions.sh</code></h3>
-  <img src="./contrib-heatmap.svg?v=46" width="860" alt="Live Contribution Heatmap" />
-
-  <br><br>
-
-  <h3><code>snehal@github ~ $ ./snake.sh</code></h3>
-  <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" width="860" alt="Contribution Snake Animation" />
+  <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" width="860" alt="Contribution Heatmap &amp; Snake Animation" />
 
   <br><br>
 
