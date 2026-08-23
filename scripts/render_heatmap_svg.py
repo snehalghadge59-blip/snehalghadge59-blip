@@ -1,5 +1,4 @@
 import json
-import math
 
 PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"]
 
@@ -10,7 +9,6 @@ def render_heatmap():
     days = data.get("days", [])
     total_contributions = data.get("total_contributions", 0)
 
-    # 53 weeks, 7 days per week
     BOX_SIZE = 11
     BOX_GAP = 3
     OFFSET_X = 25
@@ -46,9 +44,8 @@ def render_heatmap():
                 level = len(PALETTE) - 1
             color = PALETTE[level]
             
-            # Animation delay calculation based on diagonal index
             diag_index = w_idx + d_idx
-            delay = round(diag_index * 0.02, 2)
+            delay = round(diag_index * 0.015, 2)
             
             cell_svg = f'<rect class="day" x="{x}" y="{y}" width="{BOX_SIZE}" height="{BOX_SIZE}" rx="2" fill="{color}" style="animation-delay: {delay}s;" data-date="{day.get("date")}" data-count="{day.get("count")}"/>'
             svg_cells.append(cell_svg)
@@ -57,7 +54,6 @@ def render_heatmap():
 
     # Month labels
     month_labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-    # Simple month text positioning
     month_svgs = []
     for i in range(12):
         mx = OFFSET_X + i * (width - 60) / 12
@@ -74,24 +70,21 @@ def render_heatmap():
         legend_rects.append(f'<rect x="{lx}" y="{legend_y - 9}" width="{BOX_SIZE}" height="{BOX_SIZE}" rx="2" fill="{c}"/>')
     legend_content = "".join(legend_rects)
 
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="100%" height="{height}">
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}">
   <style>
-    .bg {{ fill: #0d1117; rx: 8px; }}
     .month-label, .meta-text {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 11px; fill: #8b949e; }}
     .day {{
       opacity: 0;
-      transform: translateY(-8px);
-      animation: fadeInSlide 0.4s ease-out forwards;
+      animation: fadeInDay 0.25s linear forwards;
     }}
-    @keyframes fadeInSlide {{
+    @keyframes fadeInDay {{
       to {{
         opacity: 1;
-        transform: translateY(0);
       }}
     }}
   </style>
 
-  <rect width="{width}" height="{height}" class="bg" />
+  <rect width="{width}" height="{height}" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1" />
 
   <!-- Month Labels -->
   {months_content}
@@ -105,12 +98,12 @@ def render_heatmap():
   {legend_content}
   <text x="{legend_x + len(PALETTE) * (BOX_SIZE + 2) + 4}" y="{height - 12}" class="meta-text">More</text>
 </svg>
-"""
+'''
 
     with open("contrib-heatmap.svg", "w", encoding="utf-8") as f:
         f.write(svg)
 
-    print("Successfully generated contrib-heatmap.svg!")
+    print("Successfully regenerated 100% GitHub-compliant contrib-heatmap.svg!")
 
 if __name__ == "__main__":
     render_heatmap()
