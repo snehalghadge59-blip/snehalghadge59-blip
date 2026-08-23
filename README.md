@@ -3,15 +3,15 @@
   <h3><code>snehal@github ~ $ whoami</code></h3>
   <table border="0" cellpadding="0" cellspacing="0">
     <tr>
-      <td valign="top" width="370"><img src="./snehal-ascii.svg?v=30" width="370" alt="Snehal Ghadge — ASCII portrait" /></td>
-      <td valign="top" width="490"><img src="./assets/lanyard.svg?v=30" width="490" alt="Snehal Ghadge — Executive ID Card Visual" /></td>
+      <td valign="top" width="370" align="center"><img src="./snehal-ascii.svg?v=35" width="370" alt="Snehal Ghadge — ASCII portrait" /></td>
+      <td valign="top" width="370" align="center"><img src="./assets/lanyard.svg?v=35" width="330" alt="Snehal Ghadge — Executive ID Card Visual" /></td>
     </tr>
   </table>
 
   <br><br>
 
   <h3><code>snehal@github ~ $ ./contributions.sh</code></h3>
-  <img src="./contrib-heatmap.svg?v=30" width="860" alt="Live Contribution Heatmap" />
+  <img src="./contrib-heatmap.svg?v=35" width="860" alt="Live Contribution Heatmap" />
 
   <br><br>
 
