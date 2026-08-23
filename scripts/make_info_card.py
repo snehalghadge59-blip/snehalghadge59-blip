@@ -4,7 +4,7 @@ def make_info_card():
     
     rows = [
         ("OS", "B.Tech CSE (AI/ML) @ NCOE Pune", "#58a6ff"),
-        ("Kernel", "Agentic AI &amp; RAG Pipeline Specialist", "#79c0ff"),
+        ("Kernel", "Agentic AI & RAG Pipeline Specialist", "#79c0ff"),
         ("Scholar", "Lenovo LEAP NextGen Scholar", "#d2a8ff"),
         ("Programs", "Infosys Springboard | IBM SkillsBuild", "#bc8cff"),
         ("Shell", "Python, PyTorch, TensorFlow, LangChain", "#7ee787"),
@@ -67,7 +67,7 @@ def make_info_card():
     with open("info-card.svg", "w", encoding="utf-8") as f:
         f.write(svg)
 
-    print("Successfully generated valid info-card.svg!")
+    print("Successfully generated clean valid info-card.svg!")
 
 if __name__ == "__main__":
     make_info_card()
