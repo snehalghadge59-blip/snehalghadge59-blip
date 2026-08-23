@@ -26,10 +26,9 @@ def process_photo():
     clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8, 8))
     enhanced = clahe.apply(cropped)
     cv2.imwrite(PREPPED_OUT, enhanced)
-    print("Photo prepped successfully!")
 
     # 2. Downsample for ASCII
-    GRID_WIDTH = 68
+    GRID_WIDTH = 64
     eh, ew = enhanced.shape
     aspect_ratio = eh / ew
     grid_height = int(GRID_WIDTH * aspect_ratio * 0.50)
@@ -43,18 +42,17 @@ def process_photo():
     for row in resized:
         line = ""
         for pixel in row:
-            # 255 is white (space), 0 is dark (%)
             idx = int((255 - pixel) / 255 * (ramp_len - 1))
             line += RAMP[idx]
         ascii_rows.append(line)
 
-    # 4. Generate SVG with row-by-row self-typing animation
+    # 4. Generate valid SVG with row-by-row self-typing animation
     width = 370
     height = 360
 
     line_svgs = []
-    start_y = 48
-    line_height = max(6, int((height - 60) / len(ascii_rows)))
+    start_y = 52
+    line_height = max(7, int((height - 65) / len(ascii_rows)))
 
     for idx, line in enumerate(ascii_rows):
         y = start_y + idx * line_height
@@ -62,7 +60,7 @@ def process_photo():
         escaped_line = line.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
         
         line_html = f'''<g class="ascii-row" style="animation-delay: {delay}s;">
-      <text x="12" y="{y}" class="ascii-text">{escaped_line}</text>
+      <text x="14" y="{y}" class="ascii-text" xml:space="preserve">{escaped_line}</text>
     </g>'''
         line_svgs.append(line_html)
 
@@ -72,7 +70,7 @@ def process_photo():
   <style>
     .bg {{ fill: #0d1117; stroke: #30363d; stroke-width: 1px; rx: 8px; }}
     .title-text {{ font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 13px; font-weight: bold; fill: #8b949e; }}
-    .ascii-text {{ font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 8px; fill: #79c0ff; font-weight: bold; xml:space: preserve; }}
+    .ascii-text {{ font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 8.5px; fill: #79c0ff; font-weight: bold; white-space: pre; }}
     .ascii-row {{
       opacity: 0;
       animation: typeRow 0.06s linear forwards;
@@ -101,7 +99,7 @@ def process_photo():
     with open(SVG_OUT, "w", encoding="utf-8") as f:
         f.write(svg)
 
-    print(f"Successfully generated monochrome ASCII face portrait -> {SVG_OUT}")
+    print("Successfully regenerated valid snehal-ascii.svg!")
 
 if __name__ == "__main__":
     process_photo()
