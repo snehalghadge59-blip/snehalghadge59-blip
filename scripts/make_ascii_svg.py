@@ -1,45 +1,62 @@
+import os
+import cv2
+
+RAMP = " .`:-=+*cs#%@"  # bright (sparse) -> dark (dense)
+
+def image_to_ascii(img_path, width=65):
+    img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
+    if img is None:
+        return []
+    
+    h, w = img.shape
+    aspect_ratio = h / w
+    new_height = int(width * aspect_ratio * 0.52)
+    resized = cv2.resize(img, (width, new_height))
+    
+    ascii_rows = []
+    ramp_len = len(RAMP)
+    
+    for row in resized:
+        line = ""
+        for pixel in row:
+            idx = int((255 - pixel) / 255 * (ramp_len - 1))
+            line += RAMP[idx]
+        ascii_rows.append(line)
+        
+    return ascii_rows
+
 def make_ascii_svg():
+    prepped_path = "data/source-prepped.png"
+    if os.path.exists(prepped_path):
+        ascii_lines = image_to_ascii(prepped_path, width=65)
+    else:
+        ascii_lines = [
+            "               .---.              ",
+            "              /     \\             ",
+            "             |  O O  |            ",
+            "             |   ^   |            ",
+            "              \\  -  /             ",
+            "               '---'              ",
+            "          .---------------.       ",
+            "         /  S N E H A L    \\      ",
+            "        |  AI / ML ENGINEER |     ",
+            "         \\_________________/      "
+        ]
+
     width = 370
     height = 360
 
-    # High-quality monochrome ASCII portrait representation
-    ascii_art = [
-        "   .---------------------------------.  ",
-        "  /   _   _   _   _   _   _   _   _   \\ ",
-        "  |  (S) (N) (E) (H) (A) (L) (G) (H)  | ",
-        "  \\___________________________________/ ",
-        "        _        _               _      ",
-        "     .-' '-.  .-' '-.         .-' '-.   ",
-        "    /   .   \\/   .   \\       /   .   \\  ",
-        "   |   / \\  ||  / \\   |     |   / \\   | ",
-        "   |  |   | || |   |  |     |  |   |  | ",
-        "    \\  \\_/  /\\  \\_/  /       \\  \\_/  /  ",
-        "     '-...-'  '-...-'         '-...-'   ",
-        "    _________________________________   ",
-        "   /                                 \\  ",
-        "  |  [+] ARTIFICIAL INTELLIGENCE     |  ",
-        "  |  [+] MACHINE LEARNING ENGINEER   |  ",
-        "  |  [+] AGENTIC RAG ARCHITECT       |  ",
-        "  |  [+] DATA ANALYTICS & SYSTEMS    |  ",
-        "  \\_________________________________/   ",
-        "    \\_______________________________/   ",
-        "       \\                         /      ",
-        "        `-----------------------'       "
-    ]
-
     line_svgs = []
-    start_y = 55
-    line_height = 14
+    start_y = 50
+    line_height = 11
 
-    for idx, line in enumerate(ascii_art):
+    for idx, line in enumerate(ascii_lines):
         y = start_y + idx * line_height
-        delay = round(idx * 0.04, 2)
-        
-        # Escape HTML special chars
+        delay = round(idx * 0.03, 2)
         escaped_line = line.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
         
         line_html = f'''<g class="ascii-row" style="animation-delay: {delay}s;">
-      <text x="20" y="{y}" class="ascii-text">{escaped_line}</text>
+      <text x="15" y="{y}" class="ascii-text">{escaped_line}</text>
     </g>'''
         line_svgs.append(line_html)
 
@@ -49,10 +66,10 @@ def make_ascii_svg():
   <style>
     .bg {{ fill: #0d1117; stroke: #30363d; stroke-width: 1px; rx: 8px; }}
     .title-text {{ font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 13px; font-weight: bold; fill: #8b949e; }}
-    .ascii-text {{ font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 11px; fill: #58a6ff; font-weight: bold; xml:space: preserve; }}
+    .ascii-text {{ font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 9px; fill: #58a6ff; font-weight: bold; xml:space: preserve; }}
     .ascii-row {{
       opacity: 0;
-      animation: typeRow 0.1s linear forwards;
+      animation: typeRow 0.08s linear forwards;
     }}
     @keyframes typeRow {{
       to {{
@@ -78,7 +95,7 @@ def make_ascii_svg():
     with open("snehal-ascii.svg", "w", encoding="utf-8") as f:
         f.write(svg)
 
-    print("Successfully generated snehal-ascii.svg!")
+    print("Successfully updated snehal-ascii.svg!")
 
 if __name__ == "__main__":
     make_ascii_svg()

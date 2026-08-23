@@ -2,10 +2,10 @@
   <style>
     .bg { fill: #0d1117; stroke: #30363d; stroke-width: 1px; rx: 8px; }
     .title-text { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 13px; font-weight: bold; fill: #8b949e; }
-    .ascii-text { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 11px; fill: #58a6ff; font-weight: bold; xml:space: preserve; }
+    .ascii-text { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 8px; fill: #79c0ff; font-weight: bold; xml:space: preserve; }
     .ascii-row {
       opacity: 0;
-      animation: typeRow 0.1s linear forwards;
+      animation: typeRow 0.06s linear forwards;
     }
     @keyframes typeRow {
       to {
@@ -25,66 +25,147 @@
 
   <!-- Self-typing ASCII Rows -->
   <g class="ascii-row" style="animation-delay: 0.0s;">
-      <text x="20" y="55" class="ascii-text">   .---------------------------------.  </text>
+      <text x="12" y="48" class="ascii-text">----++=--::::`````````````````````````````````````:::--==++*****+=-:</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.02s;">
+      <text x="12" y="54" class="ascii-text">----##sssssscsccccscccscc****+++==---::-:------::-===++++++++++++=-:</text>
     </g>
     <g class="ascii-row" style="animation-delay: 0.04s;">
-      <text x="20" y="69" class="ascii-text">  /   _   _   _   _   _   _   _   _   \ </text>
+      <text x="12" y="60" class="ascii-text">:::-#ssccccccccccsssssssssssssssssccsscsssssccc*+=cc*+++====-=-===:`</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.06s;">
+      <text x="12" y="66" class="ascii-text">`:::cccccccccccccc=-==++***cccccscsssssssssssssss##c*++===-----==-:`</text>
     </g>
     <g class="ascii-row" style="animation-delay: 0.08s;">
-      <text x="20" y="83" class="ascii-text">  |  (S) (N) (E) (H) (A) (L) (G) (H)  | </text>
+      <text x="12" y="72" class="ascii-text">`:-=scccccccccccc*-:::------------=--=ssssccsccs###*+++==--::::-=-:`</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.1s;">
+      <text x="12" y="78" class="ascii-text">``:=*cccccc****cc*:`::::--::---------=scsccccccss#s*++==--::```:=-::</text>
     </g>
     <g class="ascii-row" style="animation-delay: 0.12s;">
-      <text x="20" y="97" class="ascii-text">  \___________________________________/ </text>
+      <text x="12" y="84" class="ascii-text">.`:-*cccccc*******:```::::::::::::-::=ssscccccccs#s+++==-:````.`=-::</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.14s;">
+      <text x="12" y="90" class="ascii-text"> .`-ccccc*********`.````:```````:::::=ccccccccccsss+++=--```....--::</text>
     </g>
     <g class="ascii-row" style="animation-delay: 0.16s;">
-      <text x="20" y="111" class="ascii-text">        _        _               _      </text>
+      <text x="12" y="96" class="ascii-text"> .:-ccc****+++++++`..```````...``````=ccc*c***ccssc====-:`..... ---:</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.18s;">
+      <text x="12" y="102" class="ascii-text"> .:=***+++++++++++`.````..`.`.````...-**********cs*===-:`......`-=-:</text>
     </g>
     <g class="ascii-row" style="animation-delay: 0.2s;">
-      <text x="20" y="125" class="ascii-text">     .-' '-.  .-' '-.         .-' '-.   </text>
+      <text x="12" y="108" class="ascii-text">.:-=*++=------==++`...`:=+++=-=++=-:`-+++++++++*cc*==-:`. ..`::`=-::</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.22s;">
+      <text x="12" y="114" class="ascii-text">:-=***+=-::`::-=++`.:cssscs#ssss*c*++======-==+**c+---:`.`=c*cs*--::</text>
     </g>
     <g class="ascii-row" style="animation-delay: 0.24s;">
-      <text x="20" y="139" class="ascii-text">    /   .   \/   .   \       /   .   \  </text>
+      <text x="12" y="120" class="ascii-text">-+*c++==---:--=+**:##ssscc**c##sc**+c**+=-----=+*c=--:``.`:c#sc*-::`</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.26s;">
+      <text x="12" y="126" class="ascii-text">+*cc++==`     :*cs#%%#c*+====++*ss%+s*+c**=---==**=:::``...c#sss-::`</text>
     </g>
     <g class="ascii-row" style="animation-delay: 0.28s;">
-      <text x="20" y="153" class="ascii-text">   |   / \  ||  / \   |     |   / \   | </text>
+      <text x="12" y="132" class="ascii-text">*ccc===:      .-#%#+-`.`....`.`..`:+scs*ccc*+--=+*-::::`.:==-*cs-:``</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.3s;">
+      <text x="12" y="138" class="ascii-text">cs#s==-`.....``c%*-::`....``........:+%##csc*+-=++-:::``.....+*+:```</text>
     </g>
     <g class="ascii-row" style="animation-delay: 0.32s;">
-      <text x="20" y="167" class="ascii-text">   |  |   | || |   |  |     |  |   |  | </text>
+      <text x="12" y="144" class="ascii-text">s###++:````:``:#c=--::`````::::````.``-%%%s#sc+==+::::````..`++=:```</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.34s;">
+      <text x="12" y="150" class="ascii-text">s###+*+*=-:`-+##+=-:::`:::`::::```..``-+s%%###c===:::::``..`:+==::``</text>
     </g>
     <g class="ascii-row" style="animation-delay: 0.36s;">
-      <text x="20" y="181" class="ascii-text">    \  \_/  /\  \_/  /       \  \_/  /  </text>
+      <text x="12" y="156" class="ascii-text">s##s=------:=*##-:=++=-------=++++-`..:-c##%###*=-::::```....`.`::``</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.38s;">
+      <text x="12" y="162" class="ascii-text">s##c=-------+s##s#sssc*++-=+ccsssssc**=:-s####%c=-`:::````...  .::::</text>
     </g>
     <g class="ascii-row" style="animation-delay: 0.4s;">
-      <text x="20" y="195" class="ascii-text">     '-...-'  '-...-'         '-...-'   </text>
+      <text x="12" y="168" class="ascii-text">s#sc=======-+s#*-+c*s#s*=--+*s#s+-+#c+=-:-####%s*-`:::`:``....  ==--</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.42s;">
+      <text x="12" y="174" class="ascii-text">ccc*=======-+s%++#:#%#%c: .-+s%+%%%s#c*-:`*#%=+#c:``::::``.`--..**+=</text>
     </g>
     <g class="ascii-row" style="animation-delay: 0.44s;">
-      <text x="20" y="209" class="ascii-text">    _________________________________   </text>
+      <text x="12" y="180" class="ascii-text">cc*=-======-+c%:`=**s+-:   .``-*##s+:...``+sc=c#s==+++=```-*++*=ssc+</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.46s;">
+      <text x="12" y="186" class="ascii-text">c*+:....-==-=*#`......:     ...       ..`:+++:*#s+cs##=:`:-=+**=##cc</text>
     </g>
     <g class="ascii-row" style="animation-delay: 0.48s;">
-      <text x="20" y="223" class="ascii-text">   /                                 \  </text>
+      <text x="12" y="192" class="ascii-text">c*=-sccc****+cs:.....`::````..-:..   ..`:-*-::%#s=+*cs=:-==- .::##sc</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.5s;">
+      <text x="12" y="198" class="ascii-text">c*=-#scsccc**c#c```:=-c*cc*+-``+*-::`:`::-:``#sc*++*cs*`:*=-..:`cc*+</text>
     </g>
     <g class="ascii-row" style="animation-delay: 0.52s;">
-      <text x="20" y="237" class="ascii-text">  |  [+] ARTIFICIAL INTELLIGENCE     |  </text>
+      <text x="12" y="204" class="ascii-text">cc+=#sssccc++c#%:--=*-:=-`::`.`+cc*+=-::-=+-=%*c+-`.. ..-*c-.`--+=--</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.54s;">
+      <text x="12" y="210" class="ascii-text">ss**scccc**++c#%%-=+s##c.=`+ss#*c*+==---=%%%#*c*+++==`:+-.-+#%#*:```</text>
     </g>
     <g class="ascii-row" style="animation-delay: 0.56s;">
-      <text x="20" y="251" class="ascii-text">  |  [+] MACHINE LEARNING ENGINEER   |  </text>
+      <text x="12" y="216" class="ascii-text">sss**ccc**++*s#%%c-=--=-:`::-:``:----==+#%%c**c*===::-##sss=-+c#:```</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.58s;">
+      <text x="12" y="222" class="ascii-text">##scc#ss+=*+*s###%%=-::-++==::``:-===+s##scscsc+***c+*cs###scc%%=---</text>
     </g>
     <g class="ascii-row" style="animation-delay: 0.6s;">
-      <text x="20" y="265" class="ascii-text">  |  [+] AGENTIC RAG ARCHITECT       |  </text>
+      <text x="12" y="228" class="ascii-text">###s::::--`:=ss#s###c-`````..``:=+**c%###%#ssc*=+ss*-`````:=-**#===+</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.62s;">
+      <text x="12" y="234" class="ascii-text">###s--+=*+==*c##ss##%%*==+===+ssc***s##%#s#ccc=-*cs+::.  .:##s#%*+**</text>
     </g>
     <g class="ascii-row" style="animation-delay: 0.64s;">
-      <text x="20" y="279" class="ascii-text">  |  [+] DATA ANALYTICS &amp; SYSTEMS    |  </text>
+      <text x="12" y="240" class="ascii-text">s##%`..`:``-*ss##c#######c+++**++==+*%%#%scc*+==*cc**``  .-=c#%%****</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.66s;">
+      <text x="12" y="246" class="ascii-text">s##% .....`-ccs###ss##%###+---=--:-=+##ss#*+=++c*c+*+:`:.`:::``:+++=</text>
     </g>
     <g class="ascii-row" style="animation-delay: 0.68s;">
-      <text x="20" y="293" class="ascii-text">  \_________________________________/   </text>
+      <text x="12" y="252" class="ascii-text">cs#%.`````-*s*########s##%c+=-=----cc#*****+-=*s+=++-*cc-::::::.-=-:</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.7s;">
+      <text x="12" y="258" class="ascii-text">cs#%++++==*ccss#####scss#%c+==---=sss**+**++=+cc+=-=--==+s#%%%##+-:`</text>
     </g>
     <g class="ascii-row" style="animation-delay: 0.72s;">
-      <text x="20" y="307" class="ascii-text">    \_______________________________/   </text>
+      <text x="12" y="264" class="ascii-text">cs##**++=+**ss###%#c**ss#c++:::-*css+-++=-+c***+=-----=-=-:-s##s=:`.</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.74s;">
+      <text x="12" y="270" class="ascii-text">css#*+==+*ccc##s%##%*ccs#-:``.:*css+-:=+*==+c=c=--::-=:-::`-::sc=-`.</text>
     </g>
     <g class="ascii-row" style="animation-delay: 0.76s;">
-      <text x="20" y="321" class="ascii-text">       \                         /      </text>
+      <text x="12" y="276" class="ascii-text">css#*===cc*s#sc%s%#*+*css:`..+*cc*+--=+*+=++c==--::==----`::`---+-:`</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.78s;">
+      <text x="12" y="282" class="ascii-text">csss-=-+**s#ss%s#ss+==css`.s%%*cc*-=++==+*c%s+-:``:---=-------+++=-:</text>
     </g>
     <g class="ascii-row" style="animation-delay: 0.8s;">
-      <text x="20" y="335" class="ascii-text">        `-----------------------'       </text>
+      <text x="12" y="288" class="ascii-text">cs#s-=-+*c##s%s*ss=--s**s`:c##%#*-=+s-=cc#%sc-:-:----=-+=-:-+*=**+=-</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.82s;">
+      <text x="12" y="294" class="ascii-text">ss#s==-+cssssc*cc=-:#*#cc`.c**ss:+c=c##%#s=c-cc+------+-==+s+=+c+===</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.84s;">
+      <text x="12" y="300" class="ascii-text">ss##-=-+cssccs*s*-:=+*scc`+cs##-*cc###%cc+-+`*c*--==+++++cc=-*s*-===</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.86s;">
+      <text x="12" y="306" class="ascii-text">s##s==-+*ssc#s+*-::#+c+-cs#%#c:cs#%##%s+*-+`-cs=-==+-+=c#*:=s*==----</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.88s;">
+      <text x="12" y="312" class="ascii-text">s###*==+cs*s#c+=::*=+*-*#%#s+-*s#%ss#s=+-+c`+cs=-=*=+*##--s*==++::::</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.9s;">
+      <text x="12" y="318" class="ascii-text">s###c+==*c*ss+=-::c+**+##**+++c#%cccc+==*+-.ssc==***c#+=sc==-=++::``</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.92s;">
+      <text x="12" y="324" class="ascii-text">s##s---+ccssc=-:`s=++*=#c*+=-+c#s**+c=-+:=:`s#*=c#s#++sc+-:-===+::``</text>
+    </g>
+    <g class="ascii-row" style="animation-delay: 0.94s;">
+      <text x="12" y="330" class="ascii-text">s###``-*ccc#=-:::*=++++s+++:-++cc==+*=*:`-``#%+=%%**cs*---=++++=::``</text>
     </g>
 </svg>
