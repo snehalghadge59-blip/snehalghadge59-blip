@@ -1,4 +1,4 @@
-name: Update profile art
+name: Update profile art & contribution snake
 
 on:
   schedule:
@@ -11,10 +11,19 @@ permissions:
   contents: write
 
 jobs:
-  heatmap:
+  heatmap-and-snake:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      
+      - name: Generate Snake Animation
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -23,7 +32,15 @@ jobs:
       - run: python scripts/render_heatmap_svg.py
       - run: python scripts/make_info_card.py
       - run: python scripts/make_ascii_svg.py
+
+      - uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: refresh contribution graph [skip ci]"
+          commit_message: "chore: refresh contribution graph & snake [skip ci]"
           file_pattern: "data/contributions.json contrib-heatmap.svg info-card.svg snehal-ascii.svg"

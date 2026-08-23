@@ -3,15 +3,45 @@
   <h3><code>snehal@github ~ $ whoami</code></h3>
   <table border="0" cellpadding="0" cellspacing="0">
     <tr>
-      <td valign="top" width="370" align="center"><img src="./snehal-ascii.svg?v=35" width="370" alt="Snehal Ghadge — ASCII portrait" /></td>
-      <td valign="top" width="370" align="center"><img src="./assets/lanyard.svg?v=35" width="330" alt="Snehal Ghadge — Executive ID Card Visual" /></td>
+      <td valign="top" width="370" align="center"><img src="./snehal-ascii.svg?v=40" width="370" alt="Snehal Ghadge — ASCII portrait" /></td>
+      <td valign="top" width="370" align="center"><img src="./assets/lanyard.svg?v=40" width="330" alt="Snehal Ghadge — Executive ID Card Visual" /></td>
     </tr>
   </table>
 
   <br><br>
 
   <h3><code>snehal@github ~ $ ./contributions.sh</code></h3>
-  <img src="./contrib-heatmap.svg?v=35" width="860" alt="Live Contribution Heatmap" />
+  <img src="./contrib-heatmap.svg?v=40" width="860" alt="Live Contribution Heatmap" />
+
+  <br><br>
+
+  <h3><code>snehal@github ~ $ ./snake.sh</code></h3>
+  <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" width="860" alt="Contribution Snake Animation" />
+
+  <br><br>
+
+  <h3><code>snehal@github ~ $ ./experience.sh</code></h3>
+
+  <table width="860" border="0" cellpadding="10" cellspacing="0">
+    <tr>
+      <td width="50%" valign="top" align="left">
+        <h4>💼 Professional Internships &amp; Roles</h4>
+        <ul>
+          <li><b>🤖 AI Intern @ Code A Novus</b> <i>(Current, 3-Month AI Internship)</i><br/>Building intelligent AI models, NLP pipelines &amp; web automation systems.</li>
+          <li><b>📜 Infosys Springboard AI Intern</b><br/>Hands-on AI/ML practitioner, neural network training &amp; cloud deployment.</li>
+          <li><b>🏆 IBM SkillsBuild / AICTE-Edunet Intern</b><br/>Data analytics, predictive modeling &amp; enterprise data pipelines.</li>
+        </ul>
+      </td>
+      <td width="50%" valign="top" align="left">
+        <h4>🏆 Honors &amp; Credentials</h4>
+        <ul>
+          <li><b>🎓 Lenovo LEAP NextGen Scholar 2026</b><br/>Selected among top nationwide engineering scholars in AI &amp; Tech.</li>
+          <li><b>🏫 B.Tech CSE (AI/ML) Candidate</b><br/>PCET's Nutan College of Engineering, Pune (Specialization in AI/ML).</li>
+          <li><b>⭐ Certified AI Specialist</b><br/>Infosys Springboard &amp; IBM SkillsBuild Certified.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
 
   <br><br>
 
