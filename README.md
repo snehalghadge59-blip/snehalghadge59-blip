@@ -3,15 +3,15 @@
   <h3><code>snehal@github ~ $ whoami</code></h3>
   <table border="0" cellpadding="0" cellspacing="0">
     <tr>
-      <td valign="top" width="370"><img src="./snehal-ascii.svg?v=20" width="370" alt="Snehal Ghadge — ASCII portrait" /></td>
-      <td valign="top" width="490"><img src="./info-card.svg?v=20" width="490" alt="Snehal Ghadge — Neofetch Info Card" /></td>
+      <td valign="top" width="370"><img src="./snehal-ascii.svg?v=25" width="370" alt="Snehal Ghadge — ASCII portrait" /></td>
+      <td valign="top" width="490"><img src="./info-card.svg?v=25" width="490" alt="Snehal Ghadge — Neofetch Info Card" /></td>
     </tr>
   </table>
 
   <br><br>
 
   <h3><code>snehal@github ~ $ ./contributions.sh</code></h3>
-  <img src="./contrib-heatmap.svg?v=20" width="860" alt="Live Contribution Heatmap" />
+  <img src="./contrib-heatmap.svg?v=25" width="860" alt="Live Contribution Heatmap" />
 
   <br><br>
 
@@ -47,19 +47,6 @@
       </td>
     </tr>
   </table>
-
-  <br><br>
-
-  <h3><code>snehal@github ~ $ ./analytics.sh</code></h3>
-
-  <p align="center">
-    <img src="https://github-readme-stats.vercel.app/api?username=snehalghadge59-blip&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" width="425" alt="GitHub Stats" />
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=snehalghadge59-blip&layout=compact&theme=tokyonight&hide_border=true" width="425" alt="Top Languages" />
-  </p>
-  <br>
-  <p align="center">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=snehalghadge59-blip&theme=tokyonight&hide_border=true" width="860" alt="GitHub Streak" />
-  </p>
 
   <br><br>
 
