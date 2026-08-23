@@ -1,177 +1,86 @@
 <div align="center">
 
-<!-- Hero Banner (Dark / Light mode auto-switch) -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner.svg?v=4">
-  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg?v=4">
-  <img src="assets/banner.svg?v=4" alt="Snehal Ghadge Banner" width="100%">
-</picture>
+  <!-- Header Banner -->
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=24,25,26&height=180&section=header&text=Snehal%20Ghadge&fontSize=46&fontColor=ffffff&animation=fadeIn" width="100%" alt="Snehal Ghadge Banner"/>
+
+  ### 🤖 AI / ML Engineer &nbsp;|&nbsp; 📊 Data Analyst &nbsp;|&nbsp; 🌐 Full-Stack Developer
+
+  <p align="center">
+    <a href="https://linkedin.com/in/snehal-g-711587312"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+    <a href="https://snehalsportfolio2027.netlify.app"><img src="https://img.shields.io/badge/Portfolio-FF5FD6?style=for-the-badge&logo=netlify&logoColor=white" alt="Portfolio"></a>
+    <a href="mailto:snehalghadge59@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"></a>
+    <a href="https://github.com/snehalghadge59-blip"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
+  </p>
 
 </div>
 
-<br>
-
-<!-- Executive Intro: Lanyard Badge + About Me (2-Column Grid) -->
-<table border="0" width="100%">
-  <tr>
-    <td width="35%" align="center" valign="middle">
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="assets/lanyard.svg?v=4">
-        <source media="(prefers-color-scheme: light)" srcset="assets/lanyard.svg?v=4">
-        <img src="assets/lanyard.svg?v=4" alt="Snehal Ghadge ID Badge" width="100%" style="max-width: 270px;">
-      </picture>
-    </td>
-    <td width="65%" valign="top">
-      <h3>👋 Hi, I'm <a href="https://linkedin.com/in/snehal-g-711587312">Snehal Ghadge</a></h3>
-      <p><b>🤖 AI / ML Engineer &nbsp;|&nbsp; 📊 Data Analyst &nbsp;|&nbsp; 🌐 Full-Stack Developer</b></p>
-      <ul>
-        <li>🎓 Final-year <b>B.Tech CSE (AI/ML)</b> student at PCET's Nutan College of Engineering, Pune, India</li>
-        <li>💡 Architecting <b>Agentic AI systems</b>, <b>RAG pipelines</b>, and <b>Data Analytics Dashboards</b></li>
-        <li>🧪 <b>Industry Internships &amp; Scholar Programs</b>:
-          <ul>
-            <li><b>Lenovo LEAP NextGen Scholar</b> — AI &amp; Data Science Track</li>
-            <li><b>Infosys Springboard</b> — Industry Readiness &amp; Software Foundations</li>
-            <li><b>AICTE‑Edunet / IBM SkillsBuild</b> — Applied Machine Learning &amp; Cloud</li>
-          </ul>
-        </li>
-        <li>📊 <b>Core Expertise</b>: Power BI, LangChain, Groq LLMs, TensorFlow, PyTorch, React.js &amp; MySQL</li>
-        <li>⚡ <b>Fun Fact</b>: Refactored a codebase to cut duplication by 30% purely for the joy of clean architecture!</li>
-      </ul>
-      <br>
-      <div>
-        <a href="https://linkedin.com/in/snehal-g-711587312"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-        <a href="mailto:snehalghadge59@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"></a>
-        <a href="https://snehalsportfolio2027.netlify.app"><img src="https://img.shields.io/badge/Portfolio-FF5FD6?style=for-the-badge&logo=netlify&logoColor=white" alt="Portfolio"></a>
-        <a href="https://github.com/snehalghadge59-blip"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
-      </div>
-    </td>
-  </tr>
-</table>
+<br/>
 
 ---
 
-## 🛠️ Tech Stack & Capabilities
+### 👨‍💻 Executive Summary
 
-<div align="center">
+* 🎓 **Academic Background**: Final-year **B.Tech in Computer Science & Engineering (AI/ML)** at PCET's Nutan College of Engineering, Pune, India.
+* 💡 **Engineering Focus**: Specializing in **Agentic AI Architecture**, **Retrieval-Augmented Generation (RAG)**, and **Enterprise Data Analytics**.
+* 🏆 **Scholarships & Industry Credentials**:
+  * 🌟 **Lenovo LEAP NextGen Scholar** — AI & Data Science Track
+  * 🚀 **Infosys Springboard** — Software Foundations & Industry Readiness
+  * 💻 **AICTE‑Edunet / IBM SkillsBuild** — Applied Machine Learning & Cloud Architecture
 
-### 🤖 AI, Machine Learning & Data Analytics
+---
+
+### 🛠️ Technical Capabilities
+
+#### 🤖 AI, Machine Learning & Data Science
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+![FAISS](https://img.shields.io/badge/FAISS-VectorDB-blue?style=for-the-badge)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=plotly&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 
-<br>
+#### 📊 Data Analytics & Visualization
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
 
-### 🌐 Web & Full-Stack Engineering
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+#### 🌐 Web Engineering & Frameworks
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 
-<br>
-
-### 🗄️ Databases, Cloud & Big Data
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
-![Apache Spark](https://img.shields.io/badge/Apache%20Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)
-![Hadoop](https://img.shields.io/badge/Hadoop-66CCFF?style=for-the-badge&logo=apachehadoop&logoColor=black)
-![Hive](https://img.shields.io/badge/Hive-FDEE21?style=for-the-badge&logo=apachehive&logoColor=black)
-
-<br>
-
-### 💻 Core Languages & Tools
-![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
-![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=openjdk&logoColor=white)
+#### ⚙️ Cloud & DevOps Infrastructure
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-![Canva](https://img.shields.io/badge/Canva-00C4CC?style=for-the-badge&logo=canva&logoColor=white)
-
-</div>
-
----
-
-## 🚀 Featured Projects
-
-| Project | Highlights & Architecture | Tech Stack | Link |
-|:---|:---|:---|:---:|
-| **🩺 MediInsight AI** | Clinical report analysis tool featuring RAG + FAISS vector search, multi-tier Groq LLM fallback cascade, and biomarker parsing across 16 parameters | `Python` `Streamlit` `LangChain` `Groq LLaMA-4` `FAISS` `Plotly` | [📂 Repo](https://github.com/snehalghadge59-blip/mediinsight-ai) |
-| **🌍 Global Income Dashboard** | Comprehensive analytics platform covering 76 countries, 34 years, 13 indicators, and 2,695 records with embedded Power BI and secure role-based auth | `JavaScript` `Power BI Embedded` `Browser Storage` | [📂 Repo](https://github.com/snehalghadge59-blip/globalincome-dashboard) |
-| **📋 Smart Task Manager** | Collaborative team & workflow management system with JWT auth, multi-user sessions, and a normalized MySQL relational schema | `React.js` `Flask` `MySQL` `REST API` `JWT` | [📂 Repo](https://github.com/snehalghadge59-blip/smart-task-manager) |
-| **🔬 DermScan / DermAssist** | On-device skin disease classification system with 86.33% accuracy (12% gain over baseline) optimized under 15 MB for mobile/edge inference | `TensorFlow` `TFLite` `CNN / EfficientNet` | *In Review* |
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
 ---
 
-## 📊 GitHub Analytics & Trophies
+### 📊 GitHub Activity & Metrics
 
 <div align="center">
-
-<table border="0" width="100%">
-  <tr>
-    <td align="center" width="50%">
-      <img src="assets/stats.svg?v=2" alt="GitHub Stats" width="100%">
-    </td>
-    <td align="center" width="50%">
-      <img src="assets/langs.svg?v=2" alt="Top Languages" width="100%">
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<img src="assets/trophies.svg?v=2" alt="GitHub Trophies" width="100%">
-
+  <img src="https://github-readme-stats.vercel.app/api?username=snehalghadge59-blip&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" width="48%" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=snehalghadge59-blip&layout=compact&theme=tokyonight&hide_border=true" width="48%" alt="Top Languages" />
 </div>
 
----
-
-## 📈 Activity & Streak Stats
+<br/>
 
 <div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=snehalghadge59-blip&theme=react-dark&bg_color=150818&color=ff9ff0&line=ff5fd6&point=ffffff&area=true&hide_border=true">
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=snehalghadge59-blip&theme=default&hide_border=true">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=snehalghadge59-blip&theme=react-dark&hide_border=true" alt="Contribution activity graph" width="100%">
-</picture>
-
-<br><br>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=snehalghadge59-blip&theme=radical&hide_border=true&background=150818&ring=ff5fd6&fire=ff9ff0&currStreakLabel=ff9ff0" alt="GitHub Streak" width="100%">
-
-</div>
-
----
-
-## 🐍 Contribution Snake
-
-<div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/snehalghadge59-blip/snehalghadge59-blip/output/github-contribution-grid-snake-dark.svg?v=2">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/snehalghadge59-blip/snehalghadge59-blip/output/github-contribution-grid-snake.svg?v=2">
-  <img src="https://raw.githubusercontent.com/snehalghadge59-blip/snehalghadge59-blip/output/github-contribution-grid-snake.svg?v=2" alt="Contribution snake animation" width="100%">
-</picture>
-
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=snehalghadge59-blip&theme=tokyonight&hide_border=true" width="97%" alt="GitHub Streak" />
 </div>
 
 ---
 
 <div align="center">
+  [![Profile Views](https://komarev.com/ghpvc/?username=snehalghadge59-blip&label=Profile%20Views&color=c04bff&style=for-the-badge)](https://github.com/snehalghadge59-blip)
 
-[![Profile Views](https://komarev.com/ghpvc/?username=snehalghadge59-blip&label=Profile%20Views&color=c04bff&style=for-the-badge)](https://github.com/snehalghadge59-blip)
+  <br/><br/>
 
-<br>
-
-*✨ Thanks for stopping by — always excited to collaborate on Agentic AI, Data Science &amp; Full-Stack systems!*
-
+  🌐 <b>Portfolio:</b> <a href="https://snehalsportfolio2027.netlify.app">snehalsportfolio2027.netlify.app</a> &nbsp;|&nbsp; 💼 <b>LinkedIn:</b> <a href="https://linkedin.com/in/snehal-g-711587312">in/snehal-g-711587312</a> &nbsp;|&nbsp; 📧 <b>Email:</b> <a href="mailto:snehalghadge59@gmail.com">snehalghadge59@gmail.com</a>
 </div>
