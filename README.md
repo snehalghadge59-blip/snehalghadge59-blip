@@ -6,10 +6,10 @@
   <table border="0" cellpadding="0" cellspacing="0">
     <tr>
       <td valign="top" width="370" align="center">
-        <img src="./snehal-ascii.svg?v=70" width="370" alt="Snehal Ghadge — ASCII Portrait" />
+        <img src="./snehal-ascii.svg?v=80" width="370" alt="Snehal Ghadge — ASCII Portrait" />
       </td>
       <td valign="middle" width="370" align="center">
-        <img src="./assets/lanyard.svg?v=70" width="330" alt="Snehal Ghadge — Executive ID Card Visual" />
+        <img src="./assets/lanyard.svg?v=80" width="330" alt="Snehal Ghadge — Executive ID Card Visual" />
       </td>
     </tr>
   </table>
@@ -28,42 +28,6 @@
   <!-- ==================== CONTRIBUTIONS ==================== -->
   <h3><code>snehal@github ~ $ ./contributions.sh</code></h3>
   <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" width="860" alt="Live Contribution Graph with Snake Animation" />
-
-  <br/><br/>
-
-  <!-- ==================== FEATURED PROJECTS ==================== -->
-  <h3><code>snehal@github ~ $ ./projects.sh</code></h3>
-
-  <table width="860" border="0" cellpadding="12" cellspacing="0">
-    <tr>
-      <td width="50%" valign="top" align="left">
-        <h4>🤖 <a href="https://github.com/snehalghadge59-blip/AgentFlow-AI">AgentFlow-AI</a></h4>
-        <p><b>Multi-Agent Research &amp; Decision Intelligence Platform</b></p>
-        <p>Architected multi-agent reasoning graphs and decision workflows applying LangChain, LLMs &amp; autonomous agent orchestration.</p>
-        <p><code>Python</code> • <code>LangChain</code> • <code>Multi-Agent AI</code></p>
-      </td>
-      <td width="50%" valign="top" align="left">
-        <h4>✈️ <a href="https://github.com/snehalghadge59-blip/AeroFaultAI">AeroFaultAI</a></h4>
-        <p><b>Real-time Aerospace Fault Detection System</b></p>
-        <p>Predictive maintenance and sensor fault detection pipeline using the NASA CMAPSS FD001 turbofan engine dataset and machine learning.</p>
-        <p><code>Python</code> • <code>Scikit-Learn</code> • <code>NASA CMAPSS</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td width="50%" valign="top" align="left">
-        <h4>📄 <a href="https://github.com/snehalghadge59-blip/ai-resume-screening-system">AI Resume Screening System</a></h4>
-        <p><b>Automated Candidate Matching &amp; Resume Parsing</b></p>
-        <p>Intelligent NLP resume parser and candidate ranking system built for enterprise talent acquisition and ATS optimization.</p>
-        <p><code>Python</code> • <code>NLP</code> • <code>Text Mining</code></p>
-      </td>
-      <td width="50%" valign="top" align="left">
-        <h4>✍️ <a href="https://github.com/snehalghadge59-blip/Handwritten-Digit-Recognition">Handwritten Digit Recognition</a></h4>
-        <p><b>MNIST Classification with Vectorized NumPy</b></p>
-        <p>High-accuracy computer vision digit classifier optimized with vectorized array operations for sub-millisecond inference.</p>
-        <p><code>Python</code> • <code>NumPy</code> • <code>Computer Vision</code></p>
-      </td>
-    </tr>
-  </table>
 
   <br/><br/>
 
