@@ -20,9 +20,9 @@ def make_info_card():
 
     for idx, (label, val, color) in enumerate(rows):
         y = start_y + idx * line_height
-        delay = round(0.2 + idx * 0.1, 2)
+        delay = round(0.1 + idx * 0.08, 2)
         
-        escaped_label = label.ljust(10).replace("&", "&amp;")
+        escaped_label = label.ljust(10)
         escaped_val = val.replace("&", "&amp;")
         
         row_html = f'''<g class="row" style="animation-delay: {delay}s;">
@@ -35,22 +35,21 @@ def make_info_card():
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}">
   <style>
-    .bg {{ fill: #0d1117; stroke: #30363d; stroke-width: 1px; rx: 8px; }}
     .title-text {{ font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 13px; font-weight: bold; fill: #8b949e; }}
     .label {{ font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 12px; font-weight: bold; fill: #8b949e; white-space: pre; }}
     .val {{ font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 12px; font-weight: 500; }}
     .row {{
       opacity: 0;
-      animation: slideIn 0.35s ease-out forwards;
+      animation: fadeInRow 0.25s linear forwards;
     }}
-    @keyframes slideIn {{
+    @keyframes fadeInRow {{
       to {{
         opacity: 1;
       }}
     }}
   </style>
 
-  <rect width="{width}" height="{height}" class="bg" />
+  <rect width="{width}" height="{height}" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1" />
 
   <!-- Terminal Title Bar Buttons -->
   <circle cx="20" cy="20" r="6" fill="#ff5f56" />
@@ -67,7 +66,7 @@ def make_info_card():
     with open("info-card.svg", "w", encoding="utf-8") as f:
         f.write(svg)
 
-    print("Successfully generated clean valid info-card.svg!")
+    print("Successfully generated clean info-card.svg!")
 
 if __name__ == "__main__":
     make_info_card()
