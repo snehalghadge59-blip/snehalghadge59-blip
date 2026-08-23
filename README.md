@@ -3,15 +3,15 @@
   <h3><code>snehal@github ~ $ whoami</code></h3>
   <table border="0" cellpadding="0" cellspacing="0">
     <tr>
-      <td valign="top" width="370" align="center"><img src="./snehal-ascii.svg?v=45" width="370" alt="Snehal Ghadge — ASCII portrait" /></td>
-      <td valign="top" width="370" align="center"><img src="./assets/lanyard.svg?v=45" width="330" alt="Snehal Ghadge — Executive ID Card Visual" /></td>
+      <td valign="top" width="370" align="center"><img src="./snehal-ascii.svg?v=46" width="370" alt="Snehal Ghadge — ASCII portrait" /></td>
+      <td valign="top" width="370" align="center"><img src="./assets/lanyard.svg?v=46" width="330" alt="Snehal Ghadge — Executive ID Card Visual" /></td>
     </tr>
   </table>
 
   <br><br>
 
   <h3><code>snehal@github ~ $ ./contributions.sh</code></h3>
-  <img src="./contrib-heatmap.svg?v=45" width="860" alt="Live Contribution Heatmap" />
+  <img src="./contrib-heatmap.svg?v=46" width="860" alt="Live Contribution Heatmap" />
 
   <br><br>
 
@@ -27,7 +27,7 @@
       <td width="50%" valign="top" align="left">
         <h4>💼 Professional Internships</h4>
         <ul>
-          <li><b>🤖 AI Intern @ Code A Novus</b> <i>(Current, 3-Month AI Internship)</i><br/>Building intelligent AI models, NLP pipelines &amp; web automation systems.</li>
+          <li><b>🤖 AI Intern @ Code-A-Nova</b> <i>(Current, 3-Month AI Internship)</i><br/>Building intelligent AI models, NLP pipelines &amp; web automation systems.</li>
           <li><b>🧠 Generative AI &amp; Agentic Systems Intern</b> <i>(Jun 2026 – Jul 2026)</i><br/><b>Infosys Springboard (Virtual)</b> — Built GenAI &amp; Agentic workflows.</li>
           <li><b>📊 Data Visualization Intern</b> <i>(Feb 2026 – Apr 2026)</i><br/>Designed interactive data dashboards &amp; business intelligence pipelines.</li>
           <li><b>🏆 AI Intern</b> — <b>Edunet Foundation</b><br/>Applied machine learning algorithms &amp; data analytics solutions.</li>
