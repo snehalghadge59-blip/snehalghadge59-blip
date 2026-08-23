@@ -6,19 +6,91 @@
   <table border="0" cellpadding="0" cellspacing="0">
     <tr>
       <td valign="top" width="370" align="center">
-        <img src="./snehal-ascii.svg?v=60" width="370" alt="Snehal Ghadge — ASCII Portrait" />
+        <img src="./snehal-ascii.svg?v=70" width="370" alt="Snehal Ghadge — ASCII Portrait" />
       </td>
       <td valign="middle" width="370" align="center">
-        <img src="./assets/lanyard.svg?v=60" width="330" alt="Snehal Ghadge — Executive ID Card Visual" />
+        <img src="./assets/lanyard.svg?v=70" width="330" alt="Snehal Ghadge — Executive ID Card Visual" />
       </td>
     </tr>
   </table>
 
   <br/><br/>
 
+  <!-- ==================== MISSION QUOTE ==================== -->
+  <h3><code>snehal@github ~ $ cat mission.txt</code></h3>
+
+  <p align="center">
+    <i>"Building autonomous AI agents, multi-stage reasoning workflows, and enterprise data pipelines that bridge cutting-edge machine learning with real-world impact."</i>
+  </p>
+
+  <br/><br/>
+
   <!-- ==================== CONTRIBUTIONS ==================== -->
   <h3><code>snehal@github ~ $ ./contributions.sh</code></h3>
   <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" width="860" alt="Live Contribution Graph with Snake Animation" />
+
+  <br/><br/>
+
+  <!-- ==================== FEATURED PROJECTS ==================== -->
+  <h3><code>snehal@github ~ $ ./projects.sh</code></h3>
+
+  <table width="860" border="0" cellpadding="12" cellspacing="0">
+    <tr>
+      <td width="50%" valign="top" align="left">
+        <h4>🤖 <a href="https://github.com/snehalghadge59-blip/AgentFlow-AI">AgentFlow-AI</a></h4>
+        <p><b>Multi-Agent Research &amp; Decision Intelligence Platform</b></p>
+        <p>Architected multi-agent reasoning graphs and decision workflows applying LangChain, LLMs &amp; autonomous agent orchestration.</p>
+        <p><code>Python</code> • <code>LangChain</code> • <code>Multi-Agent AI</code></p>
+      </td>
+      <td width="50%" valign="top" align="left">
+        <h4>✈️ <a href="https://github.com/snehalghadge59-blip/AeroFaultAI">AeroFaultAI</a></h4>
+        <p><b>Real-time Aerospace Fault Detection System</b></p>
+        <p>Predictive maintenance and sensor fault detection pipeline using the NASA CMAPSS FD001 turbofan engine dataset and machine learning.</p>
+        <p><code>Python</code> • <code>Scikit-Learn</code> • <code>NASA CMAPSS</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="50%" valign="top" align="left">
+        <h4>📄 <a href="https://github.com/snehalghadge59-blip/ai-resume-screening-system">AI Resume Screening System</a></h4>
+        <p><b>Automated Candidate Matching &amp; Resume Parsing</b></p>
+        <p>Intelligent NLP resume parser and candidate ranking system built for enterprise talent acquisition and ATS optimization.</p>
+        <p><code>Python</code> • <code>NLP</code> • <code>Text Mining</code></p>
+      </td>
+      <td width="50%" valign="top" align="left">
+        <h4>✍️ <a href="https://github.com/snehalghadge59-blip/Handwritten-Digit-Recognition">Handwritten Digit Recognition</a></h4>
+        <p><b>MNIST Classification with Vectorized NumPy</b></p>
+        <p>High-accuracy computer vision digit classifier optimized with vectorized array operations for sub-millisecond inference.</p>
+        <p><code>Python</code> • <code>NumPy</code> • <code>Computer Vision</code></p>
+      </td>
+    </tr>
+  </table>
+
+  <br/><br/>
+
+  <!-- ==================== EXPERIENCE & HONORS ==================== -->
+  <h3><code>snehal@github ~ $ ./experience.sh</code></h3>
+
+  <table width="860" border="0" cellpadding="12" cellspacing="0">
+    <tr>
+      <td width="50%" valign="top" align="left">
+        <h4>💼 Professional Internships</h4>
+        <ul>
+          <li><b>🤖 AI Intern @ Code-A-Nova</b> <i>(Current, 3-Month AI Internship)</i><br/>Building intelligent AI models, NLP pipelines &amp; web automation systems.</li>
+          <li><b>🧠 Generative AI &amp; Agentic Systems Intern</b> <i>(Jun 2026 – Jul 2026)</i><br/><b>Infosys Springboard (Virtual)</b> — Built GenAI &amp; Agentic workflows.</li>
+          <li><b>📊 Data Visualization Intern</b> <i>(Feb 2026 – Apr 2026)</i><br/>Designed interactive data dashboards &amp; business intelligence pipelines.</li>
+          <li><b>🏆 AI Intern</b> — <b>Edunet Foundation</b><br/>Applied machine learning algorithms &amp; data analytics solutions.</li>
+        </ul>
+      </td>
+      <td width="50%" valign="top" align="left">
+        <h4>🎓 Scholars &amp; Honors</h4>
+        <ul>
+          <li><b>🎓 Lenovo LEAP NextGen Scholar</b> <i>(AICTE, Virtual - Remote, India)</i><br/>Developed 2 agentic workflow prototypes applying multi-stage AI reasoning.</li>
+          <li><b>🏫 B.Tech CSE (AI/ML) Candidate</b><br/>PCET's Nutan College of Engineering, Pune (Specialization in AI/ML).</li>
+          <li><b>⭐ Certified AI Specialist</b><br/>Certified in Generative AI, RAG Pipelines &amp; Agentic Architectures.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
 
   <br/><br/>
 
@@ -51,33 +123,6 @@
           <li><b>Backend:</b> Node.js, Express.js, Flask, REST APIs</li>
           <li><b>Databases:</b> MySQL, PostgreSQL, MongoDB, SQLite</li>
           <li><b>Cloud &amp; DevOps:</b> AWS, Docker, Git, GitHub Actions, Linux</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
-
-  <br/><br/>
-
-  <!-- ==================== EXPERIENCE & HONORS ==================== -->
-  <h3><code>snehal@github ~ $ ./experience.sh</code></h3>
-
-  <table width="860" border="0" cellpadding="12" cellspacing="0">
-    <tr>
-      <td width="50%" valign="top" align="left">
-        <h4>💼 Professional Internships</h4>
-        <ul>
-          <li><b>🤖 AI Intern @ Code-A-Nova</b> <i>(Current, 3-Month AI Internship)</i><br/>Building intelligent AI models, NLP pipelines &amp; web automation systems.</li>
-          <li><b>🧠 Generative AI &amp; Agentic Systems Intern</b> <i>(Jun 2026 – Jul 2026)</i><br/><b>Infosys Springboard (Virtual)</b> — Built GenAI &amp; Agentic workflows.</li>
-          <li><b>📊 Data Visualization Intern</b> <i>(Feb 2026 – Apr 2026)</i><br/>Designed interactive data dashboards &amp; business intelligence pipelines.</li>
-          <li><b>🏆 AI Intern</b> — <b>Edunet Foundation</b><br/>Applied machine learning algorithms &amp; data analytics solutions.</li>
-        </ul>
-      </td>
-      <td width="50%" valign="top" align="left">
-        <h4>🎓 Scholars &amp; Honors</h4>
-        <ul>
-          <li><b>🎓 Lenovo LEAP NextGen Scholar</b> <i>(AICTE, Virtual - Remote, India)</i><br/>Developed 2 agentic workflow prototypes applying multi-stage AI reasoning.</li>
-          <li><b>🏫 B.Tech CSE (AI/ML) Candidate</b><br/>PCET's Nutan College of Engineering, Pune (Specialization in AI/ML).</li>
-          <li><b>⭐ Certified AI Specialist</b><br/>Certified in Generative AI, RAG Pipelines &amp; Agentic Architectures.</li>
         </ul>
       </td>
     </tr>
