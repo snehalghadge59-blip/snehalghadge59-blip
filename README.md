@@ -1,9 +1,9 @@
 <a href="https://snehalsportfolio2027.netlify.app">
-  <img src="assets/snehal-hero-portrait.svg" width="100%" alt="Snehal Ghadge — Data Analyst and AI Intern. Transforming complex data into actionable intelligence and building scalable ML systems.">
+  <img src="assets/snehal-hero-portrait.svg?v=3" width="100%" alt="Snehal Ghadge — Data Analyst and AI Intern. Transforming complex data into actionable intelligence and building scalable ML systems.">
 </a>
 
 <p align="center">
-  <img src="assets/snehal-profile.png" width="140" height="140" alt="Snehal Ghadge — Data Analyst &amp; AI Intern" />
+  <img src="assets/snehal-profile.png?v=3" width="140" height="140" alt="Snehal Ghadge — Data Analyst &amp; AI Intern" />
 </p>
 
 <p align="center">
@@ -15,10 +15,10 @@
 </p>
 
 <img src="assets/title-about.svg" width="100%" alt="01 About - Hello, Im Snehal.">
-<img src="assets/about-intro.svg" width="100%" alt="About: Data Analyst and AI Intern. B.Tech in CSE (AI/ML) at Nutan College of Engineering, Pune.">
+<img src="assets/about-intro.svg?v=3" width="100%" alt="About: Data Analyst and AI Intern. B.Tech in CSE (AI/ML) at Nutan College of Engineering, Pune.">
 
 <img src="assets/title-recognition.svg" width="100%" alt="02 Recognition - Proof, on the record.">
-<img src="assets/achievement-motif.svg" width="100%" alt="Lenovo LEAP NextGen Scholar via AICTE; Infosys Springboard Virtual Intern (Data Analytics, Power BI &amp; GenAI); AI Intern at Code-A-Nova; 30+ GitHub projects and dashboards.">
+<img src="assets/achievement-motif.svg?v=3" width="100%" alt="Lenovo LEAP NextGen Scholar via AICTE; Infosys Springboard Virtual Intern (Data Analytics, Power BI &amp; GenAI); AI Intern at Code-A-Nova; 30+ GitHub projects and dashboards.">
 
 <img src="assets/title-work.svg" width="100%" alt="03 Selected work - Products, not assignments.">
 
@@ -44,7 +44,7 @@
 </p>
 
 <img src="assets/title-toolkit.svg" width="100%" alt="04 Toolkit - The tools I reach for.">
-<img src="assets/tech-constellation.svg" width="100%" alt="Full tech stack listing.">
+<img src="assets/tech-constellation.svg?v=3" width="100%" alt="Full tech stack listing.">
 
 <!-- Tech Stack Skill Icons with Logos -->
 <p align="center">
@@ -88,7 +88,7 @@
 
 <img src="assets/title-certifications.svg" width="100%" alt="06 Certifications - Verified credentials and accreditations.">
 <a href="https://snehalsportfolio2027.netlify.app">
-  <img src="assets/certifications.svg" width="100%" alt="Certifications: Lenovo LEAP NextGen Scholar, Infosys Springboard GenAI, Code-A-Nova AI Internship, Edunet Foundation AI, Data Visualization, B.Tech CSE AI/ML.">
+  <img src="assets/certifications.svg?v=3" width="100%" alt="Certifications: Lenovo LEAP NextGen Scholar, Infosys Springboard GenAI, Code-A-Nova AI Internship, Edunet Foundation AI, Data Visualization, B.Tech CSE AI/ML.">
 </a>
 
 <img src="assets/title-connect.svg" width="100%" alt="07 Connect - Lets build something worth explaining.">
@@ -101,5 +101,5 @@
 </p>
 
 <a href="https://snehalsportfolio2027.netlify.app">
-  <img src="assets/footer-signature.svg" width="100%" alt="Snehal - Delivering data-driven intelligence and high-impact AI solutions.">
+  <img src="assets/footer-signature.svg?v=3" width="100%" alt="Snehal - Delivering data-driven intelligence and high-impact AI solutions.">
 </a>
