@@ -1,117 +1,91 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480" role="img" aria-labelledby="hero-title hero-desc">
-  <title id="hero-title">Snehal Ghadge — Data Analyst and AI Intern</title>
-  <desc id="hero-desc">Data Analyst &amp; AI Intern. B.Tech in CSE (AI/ML), Lenovo LEAP NextGen Scholar, AI Intern at Code-A-Nova, Infosys Springboard Virtual Intern (Power BI &amp; Analytics).</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480" role="img" aria-labelledby="h-title h-desc">
+  <title id="h-title">Snehal Ghadge — Data &amp; AI Developer</title>
+  <desc id="h-desc">Snehal Ghadge: Data &amp; AI Developer, Machine Learning Engineer. Building intelligent systems, data-driven applications, and scalable machine learning workflows.</desc>
   <defs>
-    <radialGradient id="h-bg" cx="72%" cy="38%" r="80%">
-      <stop offset="0" stop-color="#24143D"/>
-      <stop offset=".55" stop-color="#140D24"/>
-      <stop offset="1" stop-color="#0B0714"/>
+    <linearGradient id="h-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B0714"/>
+      <stop offset=".45" stop-color="#140D24"/>
+      <stop offset="1" stop-color="#1E1035"/>
+    </linearGradient>
+    <radialGradient id="h-glow-right" cx="80%" cy="40%" r="55%">
+      <stop offset="0" stop-color="#7C3AED" stop-opacity=".7"/>
+      <stop offset=".5" stop-color="#4C1D95" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#0B0714" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="h-la" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#7C3AED" stop-opacity=".75"/>
-      <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+    <radialGradient id="h-glow-left" cx="20%" cy="20%" r="45%">
+      <stop offset="0" stop-color="#4C1D95" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#0B0714" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="h-lb" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#A78BFA" stop-opacity=".25"/>
-      <stop offset="1" stop-color="#A78BFA" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="h-ng" gradientUnits="userSpaceOnUse" x1="60" y1="0" x2="520" y2="0">
+    <linearGradient id="h-ng" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#FFFFFF"/>
-      <stop offset=".55" stop-color="#DDD6FE"/>
-      <stop offset="1" stop-color="#A78BFA"/>
+      <stop offset=".6" stop-color="#EDE9FE"/>
+      <stop offset="1" stop-color="#C4B5FD"/>
     </linearGradient>
-    <linearGradient id="h-sh" gradientUnits="userSpaceOnUse" x1="-260" y1="0" x2="-40" y2="0">
-      <stop offset="0" stop-color="#EDE9FE" stop-opacity="0"/>
+    <linearGradient id="h-sh" gradientUnits="userSpaceOnUse" x1="-300" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
       <stop offset=".5" stop-color="#FFFFFF" stop-opacity=".9"/>
-      <stop offset="1" stop-color="#EDE9FE" stop-opacity="0"/>
-      <animateTransform attributeName="gradientTransform" type="translate" values="0 0;840 0;840 0" keyTimes="0;.35;1" dur="8s" begin="2.5s" repeatCount="indefinite"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="0 0; 1600 0; 1600 0" keyTimes="0; .45; 1" dur="7s" repeatCount="indefinite"/>
     </linearGradient>
-    <linearGradient id="h-rule" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#A78BFA" stop-opacity="0"/>
-      <stop offset=".2" stop-color="#C4B5FD"/>
-      <stop offset=".75" stop-color="#6D28D9"/>
-      <stop offset="1" stop-color="#6D28D9" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="h-og" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#C4B5FD" stop-opacity=".7"/>
-      <stop offset="1" stop-color="#5B21B6" stop-opacity=".05"/>
-    </linearGradient>
-    <pattern id="h-grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0H0V40" fill="none" stroke="#8B5CF6" stroke-opacity=".08" stroke-width="1"/>
-    </pattern>
-    <radialGradient id="h-gf" cx="68%" cy="45%" r="55%">
-      <stop offset="0" stop-color="#fff"/>
-      <stop offset="1" stop-color="#000"/>
-    </radialGradient>
-    <mask id="h-gm"><rect width="1200" height="480" fill="url(#h-gf)"/></mask>
-    <linearGradient id="h-sc" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#A78BFA" stop-opacity="0"/>
-      <stop offset=".5" stop-color="#A78BFA" stop-opacity=".06"/>
-      <stop offset="1" stop-color="#A78BFA" stop-opacity="0"/>
+    <linearGradient id="h-rule" gradientUnits="userSpaceOnUse" x1="60" y1="0" x2="720" y2="0">
+      <stop offset="0" stop-color="#7C3AED"/>
+      <stop offset=".6" stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="h-tr" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#EDE9FE"/>
-      <stop offset=".45" stop-color="#C4B5FD"/>
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset=".35" stop-color="#C4B5FD"/>
+      <stop offset=".7" stop-color="#7C3AED"/>
       <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
     </linearGradient>
-    <clipPath id="h-clip"><rect width="1200" height="480" rx="20"/></clipPath>
-    <clipPath id="h-arch"><path d="M850 390 V208 A115 115 0 0 1 1080 208 V390 Z"/></clipPath>
+    <!-- True Arch Clip Path -->
+    <clipPath id="h-arch">
+      <path d="M850 390 V202 A116 116 0 0 1 1082 202 V390 Z"/>
+    </clipPath>
   </defs>
   <style>
-    .h-serif { font-family: Georgia,"Iowan Old Style","Palatino Linotype","Times New Roman",serif; }
-    .h-mono  { font-family: ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace; }
-    .h-sans  { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; }
-    .h-rise  { animation: h-rise 1.4s cubic-bezier(.16,1,.3,1) both; }
-    .h-fade  { animation: h-fade 1.6s cubic-bezier(.16,1,.3,1) both; }
-    .d1{animation-delay:.15s} .d2{animation-delay:.35s} .d3{animation-delay:.6s}
-    .d4{animation-delay:.9s}  .d5{animation-delay:1.2s}
-    .h-draw  { stroke-dasharray:900;stroke-dashoffset:900;animation:h-draw 2.4s cubic-bezier(.65,0,.35,1) .9s forwards; }
-    .h-trace { stroke-dasharray:600 2760;stroke-dashoffset:3360;animation:h-trace 8s linear infinite; }
-    @keyframes h-rise  { from{opacity:0} to{opacity:1} }
-    @keyframes h-fade  { from{opacity:0} to{opacity:1} }
-    @keyframes h-draw  { to{stroke-dashoffset:0} }
-    @keyframes h-trace { to{stroke-dashoffset:0} }
-    .h-float { animation: h-float 6s ease-in-out infinite; }
-    @keyframes h-float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
-    @media (prefers-reduced-motion:reduce) {
-      .h-rise,.h-fade,.h-float{animation:none}
-      .h-draw{animation:none;stroke-dashoffset:0}
-      .h-trace{display:none}
+    .h-serif { font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif; }
+    .h-sans  { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .h-mono  { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .h-rise  { animation: h-rise 1s ease both; }
+    .d1 { animation-delay: .1s; }
+    .d2 { animation-delay: .25s; }
+    .d3 { animation-delay: .4s; }
+    .d4 { animation-delay: .55s; }
+    .d5 { animation-delay: .7s; }
+    @keyframes h-rise { from { opacity: 0; } to { opacity: 1; } }
+    .h-draw { stroke-dasharray: 800; stroke-dashoffset: 800; animation: h-draw 2s cubic-bezier(.16,1,.3,1) .3s forwards; }
+    @keyframes h-draw { to { stroke-dashoffset: 0; } }
+    .h-trace { stroke-dasharray: 600 2760; stroke-dashoffset: 3360; animation: h-trace 9s linear infinite; }
+    @keyframes h-trace { to { stroke-dashoffset: 0; } }
+    .h-spin-cw  { transform-origin: 966px 208px; animation: h-cw 40s linear infinite; }
+    .h-spin-ccw { transform-origin: 966px 208px; animation: h-ccw 55s linear infinite; }
+    @keyframes h-cw  { to { transform: rotate(360deg); } }
+    @keyframes h-ccw { to { transform: rotate(-360deg); } }
+    @media (prefers-reduced-motion: reduce) {
+      .h-rise { animation: none; opacity: 1; }
+      .h-draw { stroke-dashoffset: 0; }
+      .h-trace, .h-spin-cw, .h-spin-ccw { animation: none; }
     }
   </style>
-  <g clip-path="url(#h-clip)">
-    <rect width="1200" height="480" fill="url(#h-bg)"/>
-    <ellipse cx="920" cy="140" rx="420" ry="300" fill="url(#h-la)">
-      <animateTransform attributeName="transform" type="translate" values="0 0;-50 25;0 0" dur="20s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1"/>
-    </ellipse>
-    <ellipse cx="180" cy="460" rx="360" ry="220" fill="url(#h-lb)">
-      <animateTransform attributeName="transform" type="translate" values="0 0;60 -20;0 0" dur="26s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1"/>
-    </ellipse>
-    <rect width="1200" height="480" fill="url(#h-grid)" mask="url(#h-gm)"/>
-    <rect x="0" y="-140" width="1200" height="140" fill="url(#h-sc)">
-      <animate attributeName="y" values="-140;480" dur="11s" begin="2s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Drifting particles -->
-    <g fill="#DDD6FE">
-      <circle cx="560" cy="120" r="1.5"><animate attributeName="opacity" values="0;.9;0" dur="4.2s" repeatCount="indefinite"/><animate attributeName="cy" values="120;96" dur="4.2s" repeatCount="indefinite"/></circle>
-      <circle cx="700" cy="70" r="1.2"><animate attributeName="opacity" values="0;.8;0" dur="5.6s" begin="1s" repeatCount="indefinite"/><animate attributeName="cy" values="70;48" dur="5.6s" begin="1s" repeatCount="indefinite"/></circle>
-      <circle cx="760" cy="420" r="1.3"><animate attributeName="opacity" values="0;.7;0" dur="6s" begin=".5s" repeatCount="indefinite"/><animate attributeName="cy" values="420;396" dur="6s" begin=".5s" repeatCount="indefinite"/></circle>
-    </g>
-    <!-- Orbital System -->
-    <g transform="translate(965 232)" class="h-fade d3">
-      <circle r="210" fill="none" stroke="#8B5CF6" stroke-opacity=".12" stroke-dasharray="1 10">
-        <animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="140s" repeatCount="indefinite"/>
-      </circle>
-      <circle r="188" fill="none" stroke="url(#h-og)" stroke-width="1.2"/>
-      <circle r="160" fill="none" stroke="#A78BFA" stroke-opacity=".18" stroke-dasharray="2 7"/>
-      <g>
-        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="90s" repeatCount="indefinite"/>
-        <circle cx="0" cy="160" r="3" fill="#EDE9FE"/>
-        <circle cx="-160" cy="0" r="2.2" fill="#A78BFA" fill-opacity=".8"/>
-      </g>
-    </g>
-    <!-- Formal Portrait in Arch -->
-    <g class="h-fade d3 h-float">
+  <rect width="1200" height="480" rx="20" fill="url(#h-bg)"/>
+  <rect width="1200" height="480" rx="20" fill="url(#h-glow-right)"/>
+  <rect width="1200" height="480" rx="20" fill="url(#h-glow-left)"/>
+  <g opacity=".1">
+    <line x1="0" y1="80" x2="1200" y2="80" stroke="#EDE9FE" stroke-dasharray="2 6"/>
+    <line x1="0" y1="160" x2="1200" y2="160" stroke="#EDE9FE" stroke-dasharray="2 6"/>
+    <line x1="0" y1="240" x2="1200" y2="240" stroke="#EDE9FE" stroke-dasharray="2 6"/>
+    <line x1="0" y1="320" x2="1200" y2="320" stroke="#EDE9FE" stroke-dasharray="2 6"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke="#EDE9FE" stroke-dasharray="2 6"/>
+  </g>
+  <g>
+    <!-- Right Arch Orbit Graphic -->
+    <g class="h-rise d2">
+      <!-- Orbit Rings -->
+      <circle class="h-spin-cw" cx="966" cy="208" r="170" fill="none" stroke="#7C3AED" stroke-opacity=".25" stroke-dasharray="4 8"/>
+      <circle class="h-spin-ccw" cx="966" cy="208" r="215" fill="none" stroke="#A78BFA" stroke-opacity=".18" stroke-dasharray="2 10"/>
+      <!-- Arch Backing Halo -->
+      <path d="M844 394 V204 A122 122 0 0 1 1088 204 V394 Z" fill="#24143D" fill-opacity=".7"/>
       <!-- Arch frame -->
       <path d="M838 394 V208 A127 127 0 0 1 1092 208 V394 Z" fill="none" stroke="#A78BFA" stroke-opacity=".3">
         <animate attributeName="stroke-opacity" values=".15;.5;.15" dur="5s" repeatCount="indefinite"/>
@@ -129,21 +103,21 @@
       </g>
       <!-- Frame border -->
       <path class="h-draw" d="M850 390 V208 A116 116 0 0 1 1082 208 V390 Z" fill="none" stroke="#DDD6FE" stroke-width="1.5" stroke-opacity=".6"/>
-      <!-- Glowing data tags beside portrait -->
+      <!-- Data tags beside portrait -->
       <g class="h-rise d4">
-        <rect x="724" y="190" width="114" height="28" rx="14" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".4"/>
-        <circle cx="740" cy="204" r="4" fill="#38BDF8"/>
-        <text font-family="ui-monospace,monospace" x="750" y="208" font-size="10" fill="#DDD6FE">Data Analyst</text>
+        <rect x="714" y="190" width="124" height="28" rx="14" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".4"/>
+        <circle cx="730" cy="204" r="4" fill="#38BDF8"/>
+        <text font-family="ui-monospace,monospace" x="742" y="208" font-size="10.5" fill="#DDD6FE">Data &amp; Analytics</text>
       </g>
       <g class="h-rise d5">
-        <rect x="1092" y="240" width="96" height="28" rx="14" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".4"/>
+        <rect x="1092" y="240" width="86" height="28" rx="14" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".4"/>
         <circle cx="1108" cy="254" r="4" fill="#10B981"/>
-        <text font-family="ui-monospace,monospace" x="1118" y="258" font-size="10" fill="#DDD6FE">AI Intern</text>
+        <text font-family="ui-monospace,monospace" x="1118" y="258" font-size="10.5" fill="#DDD6FE">AI &amp; ML</text>
       </g>
       <g class="h-rise d5">
         <rect x="730" y="300" width="108" height="28" rx="14" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".4"/>
         <circle cx="746" cy="314" r="4" fill="#A78BFA"/>
-        <text font-family="ui-monospace,monospace" x="756" y="318" font-size="10" fill="#DDD6FE">Pune, India</text>
+        <text font-family="ui-monospace,monospace" x="756" y="318" font-size="10.5" fill="#DDD6FE">Pune, India</text>
       </g>
     </g>
     <!-- Left Typography -->
@@ -154,7 +128,7 @@
           <animate attributeName="r" values="6;14;6" dur="3s" repeatCount="indefinite"/>
           <animate attributeName="opacity" values="1;0;1" dur="3s" repeatCount="indefinite"/>
         </circle>
-        <text class="h-mono" x="24" y="10" font-size="11.5" letter-spacing="2.8" fill="#C4B5FD">AVAILABLE FOR DATA ANALYST &amp; AI INTERN ROLES</text>
+        <text class="h-mono" x="24" y="10" font-size="11.5" letter-spacing="2.8" fill="#C4B5FD">OPEN TO OPPORTUNITIES IN DATA &amp; AI</text>
       </g>
     </g>
     <g class="h-rise d2">
@@ -162,19 +136,19 @@
       <text class="h-serif" x="58" y="162" font-size="64" font-weight="300" letter-spacing="-1.5" fill="url(#h-sh)">Snehal Ghadge</text>
     </g>
     <g class="h-rise d3">
-      <text class="h-sans" x="60" y="210" font-size="20" font-weight="400" fill="#EDE9FE">Data Analyst <tspan fill="#A78BFA">·</tspan> AI &amp; Machine Learning Intern</text>
-      <text class="h-serif" x="60" y="244" font-size="16" font-style="italic" fill="#C4B5FD">Uncovering actionable intelligence from data. Designing robust ML models &amp; pipelines.</text>
+      <text class="h-sans" x="60" y="210" font-size="20" font-weight="400" fill="#EDE9FE">Data &amp; AI Developer <tspan fill="#A78BFA">·</tspan> Machine Learning Engineer</text>
+      <text class="h-serif" x="60" y="244" font-size="16" font-style="italic" fill="#C4B5FD">Transforming data into insights, building intelligent models &amp; scalable workflows.</text>
     </g>
     <path class="h-draw" d="M60 274 H720" stroke="url(#h-rule)" stroke-width="1"/>
     <!-- Metadata Chips -->
     <g class="h-rise d4" transform="translate(60 306)">
       <g transform="translate(0 0)">
-        <rect width="190" height="34" rx="17" fill="#1A1230" stroke="#8B5CF6" stroke-opacity=".35"/>
-        <text class="h-mono" x="95" y="21" text-anchor="middle" font-size="11" fill="#DDD6FE">SQL &amp; Power BI</text>
-      </g>
-      <g transform="translate(202 0)">
         <rect width="180" height="34" rx="17" fill="#1A1230" stroke="#8B5CF6" stroke-opacity=".35"/>
-        <text class="h-mono" x="90" y="21" text-anchor="middle" font-size="11" fill="#DDD6FE">Python · Pandas · ML</text>
+        <text class="h-mono" x="90" y="21" text-anchor="middle" font-size="11" fill="#DDD6FE">Data Analytics &amp; BI</text>
+      </g>
+      <g transform="translate(192 0)">
+        <rect width="190" height="34" rx="17" fill="#1A1230" stroke="#8B5CF6" stroke-opacity=".35"/>
+        <text class="h-mono" x="95" y="21" text-anchor="middle" font-size="11" fill="#DDD6FE">Machine Learning &amp; AI</text>
       </g>
       <g transform="translate(394 0)">
         <rect width="180" height="34" rx="17" fill="#1A1230" stroke="#8B5CF6" stroke-opacity=".35"/>
@@ -184,15 +158,15 @@
     <g class="h-rise d5" transform="translate(60 366)">
       <g transform="translate(0 0)">
         <text class="h-serif" font-size="26" font-weight="300" fill="#FFFFFF">30+</text>
-        <text class="h-sans" y="22" font-size="11.5" fill="#A79FB5">repos &amp; dashboards</text>
+        <text class="h-sans" y="22" font-size="11.5" fill="#A79FB5">repos &amp; projects</text>
       </g>
       <g transform="translate(170 0)">
-        <text class="h-serif" font-size="26" font-weight="300" fill="#FFFFFF">Power BI &amp; SQL</text>
-        <text class="h-sans" y="22" font-size="11.5" fill="#A79FB5">analytics &amp; ETL</text>
+        <text class="h-serif" font-size="26" font-weight="300" fill="#FFFFFF">Data &amp; AI</text>
+        <text class="h-sans" y="22" font-size="11.5" fill="#A79FB5">analytics &amp; pipelines</text>
       </g>
       <g transform="translate(360 0)">
-        <text class="h-serif" font-size="26" font-weight="300" fill="#FFFFFF">AI Intern</text>
-        <text class="h-sans" y="22" font-size="11.5" fill="#A79FB5">Code-A-Nova &amp; Infosys</text>
+        <text class="h-serif" font-size="26" font-weight="300" fill="#FFFFFF">Industry Experience</text>
+        <text class="h-sans" y="22" font-size="11.5" fill="#A79FB5">Infosys &amp; Code-A-Nova</text>
       </g>
     </g>
     <!-- Frame & Trace -->

@@ -1,9 +1,9 @@
 <a href="https://snehalsportfolio2027.netlify.app">
-  <img src="assets/snehal-hero-portrait.svg" width="100%" alt="Snehal Ghadge — Data Analyst and AI Intern. Transforming complex data into actionable intelligence and building scalable ML systems.">
+  <img src="assets/snehal-hero-portrait.svg" width="100%" alt="Snehal Ghadge — Data &amp; AI Developer. Transforming data into insights and building scalable machine learning systems.">
 </a>
 
 <p align="center">
-  <img src="assets/snehal-profile.png" width="140" height="140" alt="Snehal Ghadge — Data Analyst &amp; AI Intern" />
+  <img src="assets/snehal-profile.png" width="140" height="140" alt="Snehal Ghadge" />
 </p>
 
 <p align="center">
@@ -15,10 +15,10 @@
 </p>
 
 <img src="assets/title-about.svg" width="100%" alt="01 About - Hello, Im Snehal.">
-<img src="assets/about-intro.svg" width="100%" alt="About: Data Analyst and AI Intern. B.Tech in CSE (AI/ML) at Nutan College of Engineering, Pune.">
+<img src="assets/about-intro.svg" width="100%" alt="About: Snehal Ghadge. Data &amp; AI Developer. B.Tech in CSE (AI/ML) at Nutan College of Engineering, Pune.">
 
 <img src="assets/title-recognition.svg" width="100%" alt="02 Recognition - Proof, on the record.">
-<img src="assets/achievement-motif.svg" width="100%" alt="Lenovo LEAP NextGen Scholar via AICTE; Infosys Springboard Virtual Intern (Data Analytics, Power BI &amp; GenAI); AI Intern at Code-A-Nova; 30+ GitHub projects and dashboards.">
+<img src="assets/achievement-motif.svg" width="100%" alt="Lenovo LEAP NextGen Scholar via AICTE; Infosys Springboard Virtual Intern (Data Analytics, Power BI &amp; GenAI); Code-A-Nova; 30+ GitHub projects and dashboards.">
 
 <img src="assets/title-work.svg" width="100%" alt="03 Selected work - Products, not assignments.">
 

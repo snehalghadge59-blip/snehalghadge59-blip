@@ -1,177 +1,110 @@
-import os, base64, io
-from PIL import Image, ImageDraw
+import os
+import xml.etree.ElementTree as ET
 
-BASE_DIR = r"C:\Users\snehal\.gemini\antigravity-ide\scratch\snehalghadge59-blip"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ASSETS_DIR = os.path.join(BASE_DIR, "assets")
 os.makedirs(ASSETS_DIR, exist_ok=True)
 
-# ─── 1. PROCESS FORMAL USER PHOTO (Exact Match to Profile Avatar) ────────────
-photo_path = r"C:\Users\snehal\.gemini\antigravity-ide\brain\8141d071-d340-4a41-b36f-feee0a5f8e99\.user_uploaded\media_1792602228673.jpg"
+# Read the base64 photo already in assets/snehal-hero-portrait.svg
+hero_file = os.path.join(ASSETS_DIR, "snehal-hero-portrait.svg")
+with open(hero_file, "r", encoding="utf-8") as f:
+    old_hero = f.read()
 
-img = Image.open(photo_path).convert('RGB')
-w, h = img.size
+import re
+b64_match = re.search(r'data:image/jpeg;base64,([A-Za-z0-9+/=]+)', old_hero)
+if not b64_match:
+    raise ValueError("Could not find base64 portrait photo in old hero svg!")
+b64_data = b64_match.group(1)
 
-# A) Generate circular assets/snehal-profile.png for Markdown
-min_dim = min(w, h)
-left = (w - min_dim) // 2
-top = (h - min_dim) // 2
-img_square = img.crop((left, top, left + min_dim, top + min_dim))
-
-TARGET_SIZE = 400
-SCALE = 4
-RENDER_SIZE = TARGET_SIZE * SCALE
-
-img_scaled = img_square.resize((RENDER_SIZE - 40 * SCALE, RENDER_SIZE - 40 * SCALE), Image.Resampling.LANCZOS)
-canvas = Image.new('RGBA', (RENDER_SIZE, RENDER_SIZE), (0, 0, 0, 0))
-draw = ImageDraw.Draw(canvas)
-center = RENDER_SIZE // 2
-radius = (RENDER_SIZE // 2) - 8 * SCALE
-
-for i in range(12 * SCALE):
-    r = radius + i
-    alpha = int(max(0, 180 * (1 - i / (12 * SCALE))))
-    draw.ellipse([center - r, center - r, center + r, center + r], outline=(124, 58, 237, alpha), width=SCALE)
-
-draw.ellipse([center - radius, center - radius, center + radius, center + radius], fill=(20, 13, 36, 255), outline=(167, 139, 250, 255), width=6 * SCALE)
-inner_border_r = radius - 8 * SCALE
-draw.ellipse([center - inner_border_r, center - inner_border_r, center + inner_border_r, center + inner_border_r], outline=(124, 58, 237, 255), width=3 * SCALE)
-
-photo_r = inner_border_r - 6 * SCALE
-photo_mask = Image.new('L', (photo_r * 2, photo_r * 2), 0)
-mask_draw = ImageDraw.Draw(photo_mask)
-mask_draw.ellipse([0, 0, photo_r * 2, photo_r * 2], fill=255)
-
-photo_cropped = img_scaled.resize((photo_r * 2, photo_r * 2), Image.Resampling.LANCZOS)
-canvas.paste(photo_cropped, (center - photo_r, center - photo_r), photo_mask)
-final_png = canvas.resize((TARGET_SIZE, TARGET_SIZE), Image.Resampling.LANCZOS)
-final_png.save(os.path.join(ASSETS_DIR, "snehal-profile.png"), format='PNG', optimize=True)
-print("Generated assets/snehal-profile.png from exact formal portrait!")
-
-# B) Crop for arch in Hero Banner SVG
-arch_aspect = 232.0 / 308.0
-arch_w = int(h * arch_aspect)
-arch_left = (w - arch_w) // 2
-arch_img = img.crop((arch_left, 0, arch_left + arch_w, h))
-arch_img = arch_img.resize((350, 464), Image.Resampling.LANCZOS)
-buf = io.BytesIO()
-arch_img.save(buf, format='JPEG', quality=88, optimize=True)
-b64_portrait = base64.b64encode(buf.getvalue()).decode('ascii')
-
-# ─── 2. HERO BANNER SVG (Data Analyst & AI Intern Target) ─────────────────────
-hero_svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480" role="img" aria-labelledby="hero-title hero-desc">
-  <title id="hero-title">Snehal Ghadge — Data Analyst and AI Intern</title>
-  <desc id="hero-desc">Data Analyst &amp; AI Intern. B.Tech in CSE (AI/ML), Lenovo LEAP NextGen Scholar, AI Intern at Code-A-Nova, Infosys Springboard Virtual Intern (Power BI &amp; Analytics).</desc>
+# ─── 1. HERO PORTRAIT SVG ────────────────────────────────────────────────────
+hero_svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480" role="img" aria-labelledby="h-title h-desc">
+  <title id="h-title">Snehal Ghadge — Data &amp; AI Developer</title>
+  <desc id="h-desc">Snehal Ghadge: Data &amp; AI Developer, Machine Learning Engineer. Building intelligent systems, data-driven applications, and scalable machine learning workflows.</desc>
   <defs>
-    <radialGradient id="h-bg" cx="72%" cy="38%" r="80%">
-      <stop offset="0" stop-color="#24143D"/>
-      <stop offset=".55" stop-color="#140D24"/>
-      <stop offset="1" stop-color="#0B0714"/>
+    <linearGradient id="h-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B0714"/>
+      <stop offset=".45" stop-color="#140D24"/>
+      <stop offset="1" stop-color="#1E1035"/>
+    </linearGradient>
+    <radialGradient id="h-glow-right" cx="80%" cy="40%" r="55%">
+      <stop offset="0" stop-color="#7C3AED" stop-opacity=".7"/>
+      <stop offset=".5" stop-color="#4C1D95" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#0B0714" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="h-la" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#7C3AED" stop-opacity=".75"/>
-      <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+    <radialGradient id="h-glow-left" cx="20%" cy="20%" r="45%">
+      <stop offset="0" stop-color="#4C1D95" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#0B0714" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="h-lb" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#A78BFA" stop-opacity=".25"/>
-      <stop offset="1" stop-color="#A78BFA" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="h-ng" gradientUnits="userSpaceOnUse" x1="60" y1="0" x2="520" y2="0">
+    <linearGradient id="h-ng" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#FFFFFF"/>
-      <stop offset=".55" stop-color="#DDD6FE"/>
-      <stop offset="1" stop-color="#A78BFA"/>
+      <stop offset=".6" stop-color="#EDE9FE"/>
+      <stop offset="1" stop-color="#C4B5FD"/>
     </linearGradient>
-    <linearGradient id="h-sh" gradientUnits="userSpaceOnUse" x1="-260" y1="0" x2="-40" y2="0">
-      <stop offset="0" stop-color="#EDE9FE" stop-opacity="0"/>
+    <linearGradient id="h-sh" gradientUnits="userSpaceOnUse" x1="-300" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
       <stop offset=".5" stop-color="#FFFFFF" stop-opacity=".9"/>
-      <stop offset="1" stop-color="#EDE9FE" stop-opacity="0"/>
-      <animateTransform attributeName="gradientTransform" type="translate" values="0 0;840 0;840 0" keyTimes="0;.35;1" dur="8s" begin="2.5s" repeatCount="indefinite"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="0 0; 1600 0; 1600 0" keyTimes="0; .45; 1" dur="7s" repeatCount="indefinite"/>
     </linearGradient>
-    <linearGradient id="h-rule" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#A78BFA" stop-opacity="0"/>
-      <stop offset=".2" stop-color="#C4B5FD"/>
-      <stop offset=".75" stop-color="#6D28D9"/>
-      <stop offset="1" stop-color="#6D28D9" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="h-og" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#C4B5FD" stop-opacity=".7"/>
-      <stop offset="1" stop-color="#5B21B6" stop-opacity=".05"/>
-    </linearGradient>
-    <pattern id="h-grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0H0V40" fill="none" stroke="#8B5CF6" stroke-opacity=".08" stroke-width="1"/>
-    </pattern>
-    <radialGradient id="h-gf" cx="68%" cy="45%" r="55%">
-      <stop offset="0" stop-color="#fff"/>
-      <stop offset="1" stop-color="#000"/>
-    </radialGradient>
-    <mask id="h-gm"><rect width="1200" height="480" fill="url(#h-gf)"/></mask>
-    <linearGradient id="h-sc" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#A78BFA" stop-opacity="0"/>
-      <stop offset=".5" stop-color="#A78BFA" stop-opacity=".06"/>
-      <stop offset="1" stop-color="#A78BFA" stop-opacity="0"/>
+    <linearGradient id="h-rule" gradientUnits="userSpaceOnUse" x1="60" y1="0" x2="720" y2="0">
+      <stop offset="0" stop-color="#7C3AED"/>
+      <stop offset=".6" stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="h-tr" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#EDE9FE"/>
-      <stop offset=".45" stop-color="#C4B5FD"/>
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset=".35" stop-color="#C4B5FD"/>
+      <stop offset=".7" stop-color="#7C3AED"/>
       <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
     </linearGradient>
-    <clipPath id="h-clip"><rect width="1200" height="480" rx="20"/></clipPath>
-    <clipPath id="h-arch"><path d="M850 390 V208 A115 115 0 0 1 1080 208 V390 Z"/></clipPath>
+    <!-- True Arch Clip Path -->
+    <clipPath id="h-arch">
+      <path d="M850 390 V202 A116 116 0 0 1 1082 202 V390 Z"/>
+    </clipPath>
   </defs>
   <style>
-    .h-serif {{ font-family: Georgia,\"Iowan Old Style\",\"Palatino Linotype\",\"Times New Roman\",serif; }}
-    .h-mono  {{ font-family: ui-monospace,SFMono-Regular,Menlo,Consolas,\"Liberation Mono\",monospace; }}
-    .h-sans  {{ font-family: -apple-system,BlinkMacSystemFont,\"Segoe UI\",Helvetica,Arial,sans-serif; }}
-    .h-rise  {{ animation: h-rise 1.4s cubic-bezier(.16,1,.3,1) both; }}
-    .h-fade  {{ animation: h-fade 1.6s cubic-bezier(.16,1,.3,1) both; }}
-    .d1{{animation-delay:.15s}} .d2{{animation-delay:.35s}} .d3{{animation-delay:.6s}}
-    .d4{{animation-delay:.9s}}  .d5{{animation-delay:1.2s}}
-    .h-draw  {{ stroke-dasharray:900;stroke-dashoffset:900;animation:h-draw 2.4s cubic-bezier(.65,0,.35,1) .9s forwards; }}
-    .h-trace {{ stroke-dasharray:600 2760;stroke-dashoffset:3360;animation:h-trace 8s linear infinite; }}
-    @keyframes h-rise  {{ from{{opacity:0}} to{{opacity:1}} }}
-    @keyframes h-fade  {{ from{{opacity:0}} to{{opacity:1}} }}
-    @keyframes h-draw  {{ to{{stroke-dashoffset:0}} }}
-    @keyframes h-trace {{ to{{stroke-dashoffset:0}} }}
-    .h-float {{ animation: h-float 6s ease-in-out infinite; }}
-    @keyframes h-float {{ 0%,100%{{transform:translateY(0)}} 50%{{transform:translateY(-8px)}} }}
-    @media (prefers-reduced-motion:reduce) {{
-      .h-rise,.h-fade,.h-float{{animation:none}}
-      .h-draw{{animation:none;stroke-dashoffset:0}}
-      .h-trace{{display:none}}
+    .h-serif {{ font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif; }}
+    .h-sans  {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }}
+    .h-mono  {{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }}
+    .h-rise  {{ animation: h-rise 1s ease both; }}
+    .d1 {{ animation-delay: .1s; }}
+    .d2 {{ animation-delay: .25s; }}
+    .d3 {{ animation-delay: .4s; }}
+    .d4 {{ animation-delay: .55s; }}
+    .d5 {{ animation-delay: .7s; }}
+    @keyframes h-rise {{ from {{ opacity: 0; }} to {{ opacity: 1; }} }}
+    .h-draw {{ stroke-dasharray: 800; stroke-dashoffset: 800; animation: h-draw 2s cubic-bezier(.16,1,.3,1) .3s forwards; }}
+    @keyframes h-draw {{ to {{ stroke-dashoffset: 0; }} }}
+    .h-trace {{ stroke-dasharray: 600 2760; stroke-dashoffset: 3360; animation: h-trace 9s linear infinite; }}
+    @keyframes h-trace {{ to {{ stroke-dashoffset: 0; }} }}
+    .h-spin-cw  {{ transform-origin: 966px 208px; animation: h-cw 40s linear infinite; }}
+    .h-spin-ccw {{ transform-origin: 966px 208px; animation: h-ccw 55s linear infinite; }}
+    @keyframes h-cw  {{ to {{ transform: rotate(360deg); }} }}
+    @keyframes h-ccw {{ to {{ transform: rotate(-360deg); }} }}
+    @media (prefers-reduced-motion: reduce) {{
+      .h-rise {{ animation: none; opacity: 1; }}
+      .h-draw {{ stroke-dashoffset: 0; }}
+      .h-trace, .h-spin-cw, .h-spin-ccw {{ animation: none; }}
     }}
   </style>
-  <g clip-path="url(#h-clip)">
-    <rect width="1200" height="480" fill="url(#h-bg)"/>
-    <ellipse cx="920" cy="140" rx="420" ry="300" fill="url(#h-la)">
-      <animateTransform attributeName="transform" type="translate" values="0 0;-50 25;0 0" dur="20s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1"/>
-    </ellipse>
-    <ellipse cx="180" cy="460" rx="360" ry="220" fill="url(#h-lb)">
-      <animateTransform attributeName="transform" type="translate" values="0 0;60 -20;0 0" dur="26s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1"/>
-    </ellipse>
-    <rect width="1200" height="480" fill="url(#h-grid)" mask="url(#h-gm)"/>
-    <rect x="0" y="-140" width="1200" height="140" fill="url(#h-sc)">
-      <animate attributeName="y" values="-140;480" dur="11s" begin="2s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Drifting particles -->
-    <g fill="#DDD6FE">
-      <circle cx="560" cy="120" r="1.5"><animate attributeName="opacity" values="0;.9;0" dur="4.2s" repeatCount="indefinite"/><animate attributeName="cy" values="120;96" dur="4.2s" repeatCount="indefinite"/></circle>
-      <circle cx="700" cy="70" r="1.2"><animate attributeName="opacity" values="0;.8;0" dur="5.6s" begin="1s" repeatCount="indefinite"/><animate attributeName="cy" values="70;48" dur="5.6s" begin="1s" repeatCount="indefinite"/></circle>
-      <circle cx="760" cy="420" r="1.3"><animate attributeName="opacity" values="0;.7;0" dur="6s" begin=".5s" repeatCount="indefinite"/><animate attributeName="cy" values="420;396" dur="6s" begin=".5s" repeatCount="indefinite"/></circle>
-    </g>
-    <!-- Orbital System -->
-    <g transform="translate(965 232)" class="h-fade d3">
-      <circle r="210" fill="none" stroke="#8B5CF6" stroke-opacity=".12" stroke-dasharray="1 10">
-        <animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="140s" repeatCount="indefinite"/>
-      </circle>
-      <circle r="188" fill="none" stroke="url(#h-og)" stroke-width="1.2"/>
-      <circle r="160" fill="none" stroke="#A78BFA" stroke-opacity=".18" stroke-dasharray="2 7"/>
-      <g>
-        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="90s" repeatCount="indefinite"/>
-        <circle cx="0" cy="160" r="3" fill="#EDE9FE"/>
-        <circle cx="-160" cy="0" r="2.2" fill="#A78BFA" fill-opacity=".8"/>
-      </g>
-    </g>
-    <!-- Formal Portrait in Arch -->
-    <g class="h-fade d3 h-float">
+  <rect width="1200" height="480" rx="20" fill="url(#h-bg)"/>
+  <rect width="1200" height="480" rx="20" fill="url(#h-glow-right)"/>
+  <rect width="1200" height="480" rx="20" fill="url(#h-glow-left)"/>
+  <g opacity=".1">
+    <line x1="0" y1="80" x2="1200" y2="80" stroke="#EDE9FE" stroke-dasharray="2 6"/>
+    <line x1="0" y1="160" x2="1200" y2="160" stroke="#EDE9FE" stroke-dasharray="2 6"/>
+    <line x1="0" y1="240" x2="1200" y2="240" stroke="#EDE9FE" stroke-dasharray="2 6"/>
+    <line x1="0" y1="320" x2="1200" y2="320" stroke="#EDE9FE" stroke-dasharray="2 6"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke="#EDE9FE" stroke-dasharray="2 6"/>
+  </g>
+  <g>
+    <!-- Right Arch Orbit Graphic -->
+    <g class="h-rise d2">
+      <!-- Orbit Rings -->
+      <circle class="h-spin-cw" cx="966" cy="208" r="170" fill="none" stroke="#7C3AED" stroke-opacity=".25" stroke-dasharray="4 8"/>
+      <circle class="h-spin-ccw" cx="966" cy="208" r="215" fill="none" stroke="#A78BFA" stroke-opacity=".18" stroke-dasharray="2 10"/>
+      <!-- Arch Backing Halo -->
+      <path d="M844 394 V204 A122 122 0 0 1 1088 204 V394 Z" fill="#24143D" fill-opacity=".7"/>
       <!-- Arch frame -->
       <path d="M838 394 V208 A127 127 0 0 1 1092 208 V394 Z" fill="none" stroke="#A78BFA" stroke-opacity=".3">
         <animate attributeName="stroke-opacity" values=".15;.5;.15" dur="5s" repeatCount="indefinite"/>
@@ -179,7 +112,7 @@ hero_svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" wi
       <!-- Real Portrait Photo -->
       <g clip-path="url(#h-arch)">
         <rect x="850" y="86" width="232" height="308" fill="#140D24"/>
-        <image href="data:image/jpeg;base64,{b64_portrait}" x="850" y="86" width="232" height="308" preserveAspectRatio="xMidYMin slice"/>
+        <image href="data:image/jpeg;base64,{b64_data}" x="850" y="86" width="232" height="308" preserveAspectRatio="xMidYMin slice"/>
         <linearGradient id="h-photo-fade" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stop-color="#7C3AED" stop-opacity=".15"/>
           <stop offset=".6" stop-color="#140D24" stop-opacity="0"/>
@@ -189,21 +122,21 @@ hero_svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" wi
       </g>
       <!-- Frame border -->
       <path class="h-draw" d="M850 390 V208 A116 116 0 0 1 1082 208 V390 Z" fill="none" stroke="#DDD6FE" stroke-width="1.5" stroke-opacity=".6"/>
-      <!-- Glowing data tags beside portrait -->
+      <!-- Data tags beside portrait -->
       <g class="h-rise d4">
-        <rect x="724" y="190" width="114" height="28" rx="14" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".4"/>
-        <circle cx="740" cy="204" r="4" fill="#38BDF8"/>
-        <text font-family="ui-monospace,monospace" x="750" y="208" font-size="10" fill="#DDD6FE">Data Analyst</text>
+        <rect x="714" y="190" width="124" height="28" rx="14" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".4"/>
+        <circle cx="730" cy="204" r="4" fill="#38BDF8"/>
+        <text font-family="ui-monospace,monospace" x="742" y="208" font-size="10.5" fill="#DDD6FE">Data &amp; Analytics</text>
       </g>
       <g class="h-rise d5">
-        <rect x="1092" y="240" width="96" height="28" rx="14" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".4"/>
+        <rect x="1092" y="240" width="86" height="28" rx="14" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".4"/>
         <circle cx="1108" cy="254" r="4" fill="#10B981"/>
-        <text font-family="ui-monospace,monospace" x="1118" y="258" font-size="10" fill="#DDD6FE">AI Intern</text>
+        <text font-family="ui-monospace,monospace" x="1118" y="258" font-size="10.5" fill="#DDD6FE">AI &amp; ML</text>
       </g>
       <g class="h-rise d5">
         <rect x="730" y="300" width="108" height="28" rx="14" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".4"/>
         <circle cx="746" cy="314" r="4" fill="#A78BFA"/>
-        <text font-family="ui-monospace,monospace" x="756" y="318" font-size="10" fill="#DDD6FE">Pune, India</text>
+        <text font-family="ui-monospace,monospace" x="756" y="318" font-size="10.5" fill="#DDD6FE">Pune, India</text>
       </g>
     </g>
     <!-- Left Typography -->
@@ -214,7 +147,7 @@ hero_svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" wi
           <animate attributeName="r" values="6;14;6" dur="3s" repeatCount="indefinite"/>
           <animate attributeName="opacity" values="1;0;1" dur="3s" repeatCount="indefinite"/>
         </circle>
-        <text class="h-mono" x="24" y="10" font-size="11.5" letter-spacing="2.8" fill="#C4B5FD">AVAILABLE FOR DATA ANALYST &amp; AI INTERN ROLES</text>
+        <text class="h-mono" x="24" y="10" font-size="11.5" letter-spacing="2.8" fill="#C4B5FD">OPEN TO OPPORTUNITIES IN DATA &amp; AI</text>
       </g>
     </g>
     <g class="h-rise d2">
@@ -222,19 +155,19 @@ hero_svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" wi
       <text class="h-serif" x="58" y="162" font-size="64" font-weight="300" letter-spacing="-1.5" fill="url(#h-sh)">Snehal Ghadge</text>
     </g>
     <g class="h-rise d3">
-      <text class="h-sans" x="60" y="210" font-size="20" font-weight="400" fill="#EDE9FE">Data Analyst <tspan fill="#A78BFA">·</tspan> AI &amp; Machine Learning Intern</text>
-      <text class="h-serif" x="60" y="244" font-size="16" font-style="italic" fill="#C4B5FD">Uncovering actionable intelligence from data. Designing robust ML models &amp; pipelines.</text>
+      <text class="h-sans" x="60" y="210" font-size="20" font-weight="400" fill="#EDE9FE">Data &amp; AI Developer <tspan fill="#A78BFA">·</tspan> Machine Learning Engineer</text>
+      <text class="h-serif" x="60" y="244" font-size="16" font-style="italic" fill="#C4B5FD">Transforming data into insights, building intelligent models &amp; scalable workflows.</text>
     </g>
     <path class="h-draw" d="M60 274 H720" stroke="url(#h-rule)" stroke-width="1"/>
     <!-- Metadata Chips -->
     <g class="h-rise d4" transform="translate(60 306)">
       <g transform="translate(0 0)">
-        <rect width="190" height="34" rx="17" fill="#1A1230" stroke="#8B5CF6" stroke-opacity=".35"/>
-        <text class="h-mono" x="95" y="21" text-anchor="middle" font-size="11" fill="#DDD6FE">SQL &amp; Power BI</text>
-      </g>
-      <g transform="translate(202 0)">
         <rect width="180" height="34" rx="17" fill="#1A1230" stroke="#8B5CF6" stroke-opacity=".35"/>
-        <text class="h-mono" x="90" y="21" text-anchor="middle" font-size="11" fill="#DDD6FE">Python · Pandas · ML</text>
+        <text class="h-mono" x="90" y="21" text-anchor="middle" font-size="11" fill="#DDD6FE">Data Analytics &amp; BI</text>
+      </g>
+      <g transform="translate(192 0)">
+        <rect width="190" height="34" rx="17" fill="#1A1230" stroke="#8B5CF6" stroke-opacity=".35"/>
+        <text class="h-mono" x="95" y="21" text-anchor="middle" font-size="11" fill="#DDD6FE">Machine Learning &amp; AI</text>
       </g>
       <g transform="translate(394 0)">
         <rect width="180" height="34" rx="17" fill="#1A1230" stroke="#8B5CF6" stroke-opacity=".35"/>
@@ -244,15 +177,15 @@ hero_svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" wi
     <g class="h-rise d5" transform="translate(60 366)">
       <g transform="translate(0 0)">
         <text class="h-serif" font-size="26" font-weight="300" fill="#FFFFFF">30+</text>
-        <text class="h-sans" y="22" font-size="11.5" fill="#A79FB5">repos &amp; dashboards</text>
+        <text class="h-sans" y="22" font-size="11.5" fill="#A79FB5">repos &amp; projects</text>
       </g>
       <g transform="translate(170 0)">
-        <text class="h-serif" font-size="26" font-weight="300" fill="#FFFFFF">Power BI &amp; SQL</text>
-        <text class="h-sans" y="22" font-size="11.5" fill="#A79FB5">analytics &amp; ETL</text>
+        <text class="h-serif" font-size="26" font-weight="300" fill="#FFFFFF">Data &amp; AI</text>
+        <text class="h-sans" y="22" font-size="11.5" fill="#A79FB5">analytics &amp; pipelines</text>
       </g>
       <g transform="translate(360 0)">
-        <text class="h-serif" font-size="26" font-weight="300" fill="#FFFFFF">AI Intern</text>
-        <text class="h-sans" y="22" font-size="11.5" fill="#A79FB5">Code-A-Nova &amp; Infosys</text>
+        <text class="h-serif" font-size="26" font-weight="300" fill="#FFFFFF">Industry Experience</text>
+        <text class="h-sans" y="22" font-size="11.5" fill="#A79FB5">Infosys &amp; Code-A-Nova</text>
       </g>
     </g>
     <!-- Frame & Trace -->
@@ -263,51 +196,55 @@ hero_svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" wi
 
 with open(os.path.join(ASSETS_DIR, "snehal-hero-portrait.svg"), "w", encoding="utf-8") as f:
     f.write(hero_svg)
-print("snehal-hero-portrait.svg generated")
+print("snehal-hero-portrait.svg updated")
 
-# ─── 3. SECTION TITLE HELPER ─────────────────────────────────────────────────
+# ─── 2. SECTION TITLE HELPER ─────────────────────────────────────────────────
 def make_title_svg(num_str, mono_label, serif_main, serif_italic, right_label, filename):
-    svg = (
-        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" width="1200" height="120" role="img" aria-label="'
-        + num_str + ' ' + mono_label + ': ' + serif_main + ' ' + serif_italic + '">\n'
-        + '  <defs>\n'
-        + '    <linearGradient id="ta-line" gradientUnits="userSpaceOnUse" x1="40" y1="0" x2="1160" y2="0">\n'
-        + '      <stop offset="0" stop-color="#A78BFA"/><stop offset=".6" stop-color="#6D28D9"/><stop offset="1" stop-color="#6D28D9" stop-opacity="0"/>\n'
-        + '    </linearGradient>\n'
-        + '    <linearGradient id="ta-sheen" gradientUnits="userSpaceOnUse" x1="-300" y1="0" x2="0" y2="0">\n'
-        + '      <stop offset="0" stop-color="#DDD6FE"/><stop offset=".5" stop-color="#FFFFFF"/><stop offset="1" stop-color="#DDD6FE"/>\n'
-        + '      <animateTransform attributeName="gradientTransform" type="translate" values="0 0;1500 0;1500 0" keyTimes="0;.4;1" dur="7s" begin="1.5s" repeatCount="indefinite"/>\n'
-        + '    </linearGradient>\n'
-        + '  </defs>\n'
-        + '  <style>\n'
-        + '    .ta-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }\n'
-        + '    .ta-serif { font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif; }\n'
-        + '  </style>\n'
-        + '  <g transform="translate(40 40)">\n'
-        + '    <text class="ta-mono" font-size="11" letter-spacing="2.8" fill="#C4B5FD">' + num_str + ' · ' + mono_label + '</text>\n'
-        + '    <text class="ta-serif" y="44" font-size="34" font-weight="300" fill="#FFFFFF">' + serif_main + ' <tspan fill="#C4B5FD" font-style="italic">' + serif_italic + '</tspan></text>\n'
-        + '    <text class="ta-serif" y="44" font-size="34" font-weight="300" fill="url(#ta-sheen)">' + serif_main + ' <tspan fill="#C4B5FD" font-style="italic">' + serif_italic + '</tspan></text>\n'
-        + '    <text class="ta-mono" x="1120" y="14" text-anchor="end" font-size="10.5" letter-spacing="2" fill="#A79FB5">' + right_label + '</text>\n'
-        + '  </g>\n'
-        + '  <line x1="40" y1="104" x2="1160" y2="104" stroke="url(#ta-line)" stroke-width="1"/>\n'
-        + '</svg>\n'
-    )
+    safe_aria = (num_str + " " + mono_label + ": " + serif_main + " " + serif_italic).replace("&", "&amp;")
+    safe_main = serif_main.replace("&", "&amp;")
+    safe_italic = serif_italic.replace("&", "&amp;")
+    safe_right = right_label.replace("&", "&amp;")
+    safe_mono = mono_label.replace("&", "&amp;")
+
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" width="1200" height="120" role="img" aria-label="{safe_aria}">
+  <defs>
+    <linearGradient id="ta-line" gradientUnits="userSpaceOnUse" x1="40" y1="0" x2="1160" y2="0">
+      <stop offset="0" stop-color="#A78BFA"/><stop offset=".6" stop-color="#6D28D9"/><stop offset="1" stop-color="#6D28D9" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ta-sheen" gradientUnits="userSpaceOnUse" x1="-300" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#DDD6FE"/><stop offset=".5" stop-color="#FFFFFF"/><stop offset="1" stop-color="#DDD6FE"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="0 0;1500 0;1500 0" keyTimes="0;.4;1" dur="7s" begin="1.5s" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .ta-mono {{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }}
+    .ta-serif {{ font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif; }}
+  </style>
+  <g transform="translate(40 40)">
+    <text class="ta-mono" font-size="11" letter-spacing="2.8" fill="#C4B5FD">{num_str} · {safe_mono}</text>
+    <text class="ta-serif" y="44" font-size="34" font-weight="300" fill="#FFFFFF">{safe_main} <tspan fill="#C4B5FD" font-style="italic">{safe_italic}</tspan></text>
+    <text class="ta-serif" y="44" font-size="34" font-weight="300" fill="url(#ta-sheen)">{safe_main} <tspan fill="#C4B5FD" font-style="italic">{safe_italic}</tspan></text>
+    <text class="ta-mono" x="1120" y="14" text-anchor="end" font-size="10.5" letter-spacing="2" fill="#A79FB5">{safe_right}</text>
+  </g>
+  <line x1="40" y1="104" x2="1160" y2="104" stroke="url(#ta-line)" stroke-width="1"/>
+</svg>
+'''
     with open(os.path.join(ASSETS_DIR, filename), "w", encoding="utf-8") as f:
         f.write(svg)
     print(f"{filename} generated")
 
 make_title_svg("01", "ABOUT", "Hello, I'm", "Snehal.", "WHO I AM", "title-about.svg")
 make_title_svg("02", "RECOGNITION", "Proof,", "on the record.", "HONORS & FELLOWSHIPS", "title-recognition.svg")
-make_title_svg("03", "SELECTED WORK", "Analytics & AI Projects,", "tested & deployed.", "FEATURED SYSTEMS", "title-work.svg")
-make_title_svg("04", "TOOLKIT", "The tools", "I analyze & build with.", "TECH STACK", "title-toolkit.svg")
+make_title_svg("03", "SELECTED WORK", "Featured Systems,", "tested & deployed.", "APPLICATIONS", "title-work.svg")
+make_title_svg("04", "TOOLKIT", "The tools", "I build & analyze with.", "TECH STACK", "title-toolkit.svg")
 make_title_svg("05", "COMMIT LOG", "A year of", "continuous building.", "CONTRIBUTIONS", "title-commits.svg")
 make_title_svg("06", "CERTIFICATIONS", "Verified credentials", "and accreditations.", "SIX CREDENTIALS", "title-certifications.svg")
 make_title_svg("07", "CONNECT", "Let's build", "something impactful.", "GET IN TOUCH", "title-connect.svg")
 
-# ─── 4. ABOUT INTRO SVG ───────────────────────────────────────────────────────
+# ─── 3. ABOUT INTRO SVG ───────────────────────────────────────────────────────
 about_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-labelledby="ab-t ab-d">
   <title id="ab-t">About Snehal Ghadge</title>
-  <desc id="ab-d">Data Analyst and AI Intern. B.Tech in CSE (AI/ML) at Nutan College of Engineering, Pune. Virtual Intern at Infosys Springboard and Code-A-Nova. Specialized in SQL, Python, Power BI, EDA, and predictive machine learning models.</desc>
+  <desc id="ab-d">Data &amp; AI Developer. B.Tech in CSE (AI/ML) at Nutan College of Engineering, Pune. Experience with Infosys Springboard and Code-A-Nova. Specialized in SQL, Python, Power BI, EDA, predictive modeling, and AI systems.</desc>
   <defs>
     <linearGradient id="ab-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#140D24"/><stop offset="1" stop-color="#0B0714"/></linearGradient>
     <radialGradient id="ab-glow" cx="80%" cy="20%" r="70%"><stop offset="0" stop-color="#6D28D9" stop-opacity=".55"/><stop offset="1" stop-color="#3B0764" stop-opacity="0"/></radialGradient>
@@ -324,16 +261,16 @@ about_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" wi
     <clipPath id="ab-c9"><rect class="ab-type" x="68" y="337" width="560" height="22" style="animation-delay:6.70s;animation-duration:0.53s;animation-timing-function:steps(1)"/></clipPath>
   </defs>
   <style>
-    .ab-serif {{ font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif; }}
-    .ab-mono {{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }}
-    .ab-sans {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }}
-    .ab-type {{ transform-box: fill-box; transform-origin: left center; animation-name: ab-type; animation-fill-mode: both; }}
-    .ab-card {{ animation: ab-in 1s cubic-bezier(.16,1,.3,1) both; }}
-    .ab-fade {{ animation: ab-fade 1s ease both; }}
-    @keyframes ab-type {{ 0% {{ transform: scaleX(0); }} 85%, 100% {{ transform: scaleX(1); }} }}
-    @keyframes ab-in {{ from {{ opacity: 0; transform: translateX(24px); }} to {{ opacity: 1; transform: none; }} }}
-    @keyframes ab-fade {{ from {{ opacity: 0; }} to {{ opacity: 1; }} }}
-    @media (prefers-reduced-motion: reduce) {{ .ab-type, .ab-card, .ab-fade {{ animation: none; }} }}
+    .ab-serif { font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif; }
+    .ab-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .ab-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .ab-type { transform-box: fill-box; transform-origin: left center; animation-name: ab-type; animation-fill-mode: both; }
+    .ab-card { animation: ab-in 1s cubic-bezier(.16,1,.3,1) both; }
+    .ab-fade { animation: ab-fade 1s ease both; }
+    @keyframes ab-type { 0% { transform: scaleX(0); } 85%, 100% { transform: scaleX(1); } }
+    @keyframes ab-in { from { opacity: 0; transform: translateX(24px); } to { opacity: 1; transform: none; } }
+    @keyframes ab-fade { from { opacity: 0; } to { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { .ab-type, .ab-card, .ab-fade { animation: none; } }
   </style>
   <rect width="1200" height="420" rx="20" fill="url(#ab-bg)"/>
   <rect width="1200" height="420" rx="20" fill="url(#ab-glow)"/>
@@ -350,15 +287,15 @@ about_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" wi
   </g>
   <g class="ab-mono" font-size="13">
     <g clip-path="url(#ab-c0)"><text x="72" y="128" fill="#A78BFA">$</text><text x="94" y="128" fill="#FFFFFF">whoami</text></g>
-    <g clip-path="url(#ab-c1)"><text x="72" y="153" fill="#6D28D9">→</text><text x="94" y="153" fill="#DDD6FE">Snehal Ghadge · Data Analyst &amp; AI Intern · B.Tech AI/ML</text></g>
+    <g clip-path="url(#ab-c1)"><text x="72" y="153" fill="#6D28D9">→</text><text x="94" y="153" fill="#DDD6FE">Snehal Ghadge · Data &amp; AI Developer · B.Tech CSE (AI/ML)</text></g>
     <g clip-path="url(#ab-c2)"><text x="72" y="178" fill="#A78BFA">$</text><text x="94" y="178" fill="#FFFFFF">cat core_domains.txt</text></g>
-    <g clip-path="url(#ab-c3)"><text x="72" y="203" fill="#6D28D9">→</text><text x="94" y="203" fill="#DDD6FE">Data Analytics (SQL, Power BI, EDA) · Predictive Modeling &amp; ML</text></g>
+    <g clip-path="url(#ab-c3)"><text x="72" y="203" fill="#6D28D9">→</text><text x="94" y="203" fill="#DDD6FE">Data Analytics (SQL, Power BI, EDA) · Machine Learning &amp; AI Systems</text></g>
     <g clip-path="url(#ab-c4)"><text x="72" y="228" fill="#A78BFA">$</text><text x="94" y="228" fill="#FFFFFF">cat experience.txt</text></g>
-    <g clip-path="url(#ab-c5)"><text x="72" y="253" fill="#6D28D9">→</text><text x="94" y="253" fill="#DDD6FE">Infosys Springboard (Power BI Analytics) · Code-A-Nova AI Intern</text></g>
+    <g clip-path="url(#ab-c5)"><text x="72" y="253" fill="#6D28D9">→</text><text x="94" y="253" fill="#DDD6FE">Infosys Springboard (Analytics &amp; GenAI) · Code-A-Nova (AI Systems)</text></g>
     <g clip-path="url(#ab-c6)"><text x="72" y="278" fill="#A78BFA">$</text><text x="94" y="278" fill="#FFFFFF">ls ./projects</text></g>
     <g clip-path="url(#ab-c7)"><text x="72" y="303" fill="#6D28D9">→</text><text x="94" y="303" fill="#DDD6FE">AeroFaultAI (Telemetry ML)  AgentFlow-AI   InsightRAG   CustomerIQ</text></g>
     <g clip-path="url(#ab-c8)"><text x="72" y="328" fill="#A78BFA">$</text><text x="94" y="328" fill="#FFFFFF">echo $PRINCIPLE</text></g>
-    <g clip-path="url(#ab-c9)"><text x="72" y="353" fill="#6D28D9">→</text><text x="94" y="353" fill="#DDD6FE">uncovering insights from data · delivering high-impact predictive AI</text></g>
+    <g clip-path="url(#ab-c9)"><text x="72" y="353" fill="#6D28D9">→</text><text x="94" y="353" fill="#DDD6FE">engineering data-driven insights and reliable, intelligent software</text></g>
   </g>
   <rect x="72" y="364" width="8" height="16" fill="#DDD6FE" class="ab-fade" style="animation-delay:7.4s">
     <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.5;.5;1" dur="1.1s" repeatCount="indefinite"/>
@@ -368,46 +305,46 @@ about_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" wi
   <g class="ab-card" style="animation-delay:1.2s"><g transform="translate(836 70)">
     <rect width="324" height="88" rx="14" fill="#140D24" stroke="#8B5CF6" stroke-opacity=".32"/>
     <rect x="0" y="0" width="3.5" height="88" rx="1.5" fill="#38BDF8"/>
-    <text class="ab-mono" x="22" y="26" font-size="10" letter-spacing="2" fill="#38BDF8">DATA ANALYTICS &amp; BI</text>
+    <text class="ab-mono" x="22" y="26" font-size="10" letter-spacing="2" fill="#38BDF8">DATA &amp; ANALYTICS</text>
     <text class="ab-serif" x="22" y="58" font-size="26" font-weight="300" fill="#FFFFFF">SQL, Python &amp; Power BI</text>
-    <text class="ab-sans" x="22" y="78" font-size="12" fill="#A79FB5">Pandas · NumPy · EDA · Visual Dashboards</text>
+    <text class="ab-sans" x="22" y="78" font-size="12" fill="#A79FB5">Exploratory Analysis · Dashboards · Data Insights</text>
   </g></g>
   <g class="ab-card" style="animation-delay:1.7s"><g transform="translate(836 174)">
     <rect width="324" height="88" rx="14" fill="#140D24" stroke="#8B5CF6" stroke-opacity=".32"/>
     <rect x="0" y="0" width="3.5" height="88" rx="1.5" fill="#10B981"/>
     <text class="ab-mono" x="22" y="26" font-size="10" letter-spacing="2" fill="#10B981">AI &amp; MACHINE LEARNING</text>
-    <text class="ab-serif" x="22" y="58" font-size="26" font-weight="300" fill="#FFFFFF">Predictive ML &amp; RAG</text>
+    <text class="ab-serif" x="22" y="58" font-size="26" font-weight="300" fill="#FFFFFF">Predictive Models &amp; GenAI</text>
     <text class="ab-sans" x="22" y="78" font-size="12" fill="#A79FB5">Scikit-Learn · PyTorch · LangChain · FAISS</text>
   </g></g>
   <g class="ab-card" style="animation-delay:2.2s"><g transform="translate(836 278)">
     <rect width="324" height="88" rx="14" fill="#140D24" stroke="#8B5CF6" stroke-opacity=".32"/>
     <rect x="0" y="0" width="3.5" height="88" rx="1.5" fill="#A78BFA"/>
-    <text class="ab-mono" x="22" y="26" font-size="10" letter-spacing="2" fill="#A78BFA">TARGET ROLES</text>
-    <text class="ab-serif" x="22" y="58" font-size="26" font-weight="300" fill="#FFFFFF">Data Analyst &amp; AI Intern</text>
-    <text class="ab-sans" x="22" y="78" font-size="12" fill="#A79FB5">Business Analytics · ML Pipelines · Insights</text>
+    <text class="ab-mono" x="22" y="26" font-size="10" letter-spacing="2" fill="#A78BFA">SOFTWARE &amp; PIPELINES</text>
+    <text class="ab-serif" x="22" y="58" font-size="26" font-weight="300" fill="#FFFFFF">Full-Stack &amp; Cloud APIs</text>
+    <text class="ab-sans" x="22" y="78" font-size="12" fill="#A79FB5">FastAPI · Databases · Clean Code &amp; Algorithms</text>
   </g></g>
 </svg>'''
 
 with open(os.path.join(ASSETS_DIR, "about-intro.svg"), "w", encoding="utf-8") as f:
     f.write(about_svg)
-print("about-intro.svg generated")
+print("about-intro.svg updated")
 
-# ─── 5. ACHIEVEMENT MOTIF SVG ─────────────────────────────────────────────────
+# ─── 4. ACHIEVEMENT MOTIF SVG ─────────────────────────────────────────────────
 ach_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" role="img" aria-labelledby="ach-title ach-desc">
   <title id="ach-title">Recognition and Honors</title>
-  <desc id="ach-desc">Lenovo LEAP NextGen Scholar via AICTE; Infosys Springboard Virtual Intern (Data Analytics, Power BI &amp; GenAI); AI Intern at Code-A-Nova; 30+ GitHub projects and dashboards.</desc>
+  <desc id="ach-desc">Lenovo LEAP NextGen Scholar via AICTE; Infosys Springboard Virtual Intern (Data Analytics, Power BI &amp; GenAI); Code-A-Nova AI Intern; 30+ GitHub projects and algorithmic problem solver.</desc>
   <defs>
     <linearGradient id="ach-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#140D24"/><stop offset="1" stop-color="#0B0714"/></linearGradient>
     <radialGradient id="ach-glow" cx="80%" cy="20%" r="70%"><stop offset="0" stop-color="#7C3AED" stop-opacity=".65"/><stop offset="1" stop-color="#4C1D95" stop-opacity="0"/></radialGradient>
     <linearGradient id="ach-trace" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EDE9FE"/><stop offset=".45" stop-color="#C4B5FD"/><stop offset="1" stop-color="#7C3AED" stop-opacity="0"/></linearGradient>
   </defs>
   <style>
-    .ach-serif {{ font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif; }}
-    .ach-mono {{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }}
-    .ach-sans {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }}
-    .ach-trace {{ stroke-dasharray: 600 2600; stroke-dashoffset: 3200; animation: ach-trace 8s linear infinite; }}
-    @keyframes ach-trace {{ to {{ stroke-dashoffset: 0; }} }}
-    @media (prefers-reduced-motion: reduce) {{ .ach-trace {{ display: none; }} }}
+    .ach-serif { font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif; }
+    .ach-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .ach-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .ach-trace { stroke-dasharray: 600 2600; stroke-dashoffset: 3200; animation: ach-trace 8s linear infinite; }
+    @keyframes ach-trace { to { stroke-dashoffset: 0; } }
+    @media (prefers-reduced-motion: reduce) { .ach-trace { display: none; } }
   </style>
   <rect width="1200" height="400" rx="18" fill="url(#ach-bg)"/>
   <rect width="1200" height="400" rx="18" fill="url(#ach-glow)"/>
@@ -428,9 +365,9 @@ ach_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" widt
     <g transform="translate(580 0)">
       <rect width="540" height="145" rx="14" fill="#0B0714" stroke="#8B5CF6" stroke-opacity=".32"/>
       <rect x="0" y="0" width="3.5" height="145" rx="1.5" fill="#38BDF8"/>
-      <text class="ach-mono" x="26" y="32" font-size="11" letter-spacing="2.2" fill="#38BDF8">DATA ANALYTICS INTERNSHIP</text>
+      <text class="ach-mono" x="26" y="32" font-size="11" letter-spacing="2.2" fill="#38BDF8">VIRTUAL INTERNSHIP</text>
       <text class="ach-serif" x="26" y="66" font-size="24" font-weight="300" fill="#FFFFFF">Infosys Springboard</text>
-      <text class="ach-sans" x="26" y="94" font-size="13" fill="#C4B5FD">Power BI Data Pipelines &amp; Generative AI Virtual Intern.</text>
+      <text class="ach-sans" x="26" y="94" font-size="13" fill="#C4B5FD">Data Analytics, Power BI &amp; Generative AI.</text>
       <text class="ach-mono" x="26" y="118" font-size="11" fill="#A79FB5">Built interactive Power BI dashboards, ETL pipelines &amp; prompt optimization systems.</text>
     </g>
 
@@ -438,9 +375,9 @@ ach_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" widt
     <g transform="translate(0 175)">
       <rect width="540" height="145" rx="14" fill="#0B0714" stroke="#8B5CF6" stroke-opacity=".32"/>
       <rect x="0" y="0" width="3.5" height="145" rx="1.5" fill="#10B981"/>
-      <text class="ach-mono" x="26" y="32" font-size="11" letter-spacing="2.2" fill="#10B981">AI &amp; NLP INTERNSHIP</text>
-      <text class="ach-serif" x="26" y="66" font-size="24" font-weight="300" fill="#FFFFFF">Code-A-Nova AI Intern</text>
-      <text class="ach-sans" x="26" y="94" font-size="13" fill="#C4B5FD">Intelligent AI models, NLP pipelines &amp; analytics automation.</text>
+      <text class="ach-mono" x="26" y="32" font-size="11" letter-spacing="2.2" fill="#10B981">INDUSTRY INTERNSHIP</text>
+      <text class="ach-serif" x="26" y="66" font-size="24" font-weight="300" fill="#FFFFFF">Code-A-Nova</text>
+      <text class="ach-sans" x="26" y="94" font-size="13" fill="#C4B5FD">Artificial Intelligence, NLP &amp; Analytics Automation.</text>
       <text class="ach-mono" x="26" y="118" font-size="11" fill="#A79FB5">Document intelligence, semantic search and enterprise backend integration.</text>
     </g>
 
@@ -448,7 +385,7 @@ ach_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" widt
     <g transform="translate(580 175)">
       <rect width="540" height="145" rx="14" fill="#0B0714" stroke="#8B5CF6" stroke-opacity=".32"/>
       <rect x="0" y="0" width="3.5" height="145" rx="1.5" fill="#A78BFA"/>
-      <text class="ach-mono" x="26" y="32" font-size="11" letter-spacing="2.2" fill="#A78BFA">ANALYTICS &amp; ALGORITHMIC CODEBASE</text>
+      <text class="ach-mono" x="26" y="32" font-size="11" letter-spacing="2.2" fill="#A78BFA">ANALYTICS &amp; PROBLEM SOLVING</text>
       <text class="ach-serif" x="26" y="66" font-size="24" font-weight="300" fill="#FFFFFF">30+ Repos &amp; LeetCode Problem Solver</text>
       <text class="ach-sans" x="26" y="94" font-size="13" fill="#C4B5FD">Exploratory data analysis, SQL problem solving &amp; Python DSA.</text>
       <text class="ach-mono" x="26" y="118" font-size="11" fill="#A79FB5">End-to-end data pipelines, predictive models &amp; web platforms.</text>
@@ -461,168 +398,174 @@ ach_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" widt
 
 with open(os.path.join(ASSETS_DIR, "achievement-motif.svg"), "w", encoding="utf-8") as f:
     f.write(ach_svg)
-print("achievement-motif.svg generated")
+print("achievement-motif.svg updated")
 
-# ─── 6. TECH CONSTELLATION SVG ───────────────────────────────────────────────
-tech_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img" aria-labelledby="tc-title tc-desc">
-  <title id="tc-title">Snehal Ghadge Tech Stack</title>
-  <desc id="tc-desc">SQL, Python, Power BI, Pandas, NumPy, Scikit-Learn, PyTorch, LangChain, FastAPI, Flask, PostgreSQL, MySQL, Redis, AWS, Docker, Git.</desc>
+# ─── 5. FOOTER SIGNATURE SVG ──────────────────────────────────────────────────
+footer_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 230" width="1200" height="230" role="img" aria-labelledby="sig-title">
+  <title id="sig-title">Snehal — Engineering data-driven intelligence and high-impact AI solutions.</title>
   <defs>
-    <linearGradient id="tc-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#140D24"/><stop offset="1" stop-color="#0B0714"/></linearGradient>
-    <radialGradient id="tc-glow" cx="50%" cy="50%" r="60%"><stop offset="0" stop-color="#5B21B6" stop-opacity=".7"/><stop offset="1" stop-color="#24143D" stop-opacity="0"/></radialGradient>
-    <linearGradient id="tc-trace" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".45" stop-color="#C4B5FD"/><stop offset="1" stop-color="#7C3AED" stop-opacity="0"/></linearGradient>
+    <linearGradient id="sig-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B0714"/><stop offset="1" stop-color="#140D24"/></linearGradient>
+    <radialGradient id="sig-glow" cx="50%" cy="100%" r="70%"><stop offset="0" stop-color="#6D28D9" stop-opacity=".7"/><stop offset="1" stop-color="#3B0764" stop-opacity="0"/></radialGradient>
+    <linearGradient id="sig-line" gradientUnits="userSpaceOnUse" x1="100" y1="0" x2="1100" y2="0">
+      <stop offset="0" stop-color="#6D28D9" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#6D28D9" stop-opacity="0"/>
+    </linearGradient>
   </defs>
   <style>
-    .tc-serif{font-family:Georgia,"Iowan Old Style","Palatino Linotype","Times New Roman",serif}
-    .tc-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
-    .tc-sans{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
-    .tc-trace{stroke-dasharray:600 2760;stroke-dashoffset:3360;animation:tc-trace 8s linear infinite}
-    @keyframes tc-trace{to{stroke-dashoffset:0}}
-    @media(prefers-reduced-motion:reduce){.tc-trace{display:none}}
+    .sig-serif { font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif; }
+    .sig-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .sig-name {
+      stroke: #DDD6FE; stroke-width: 1.2; fill: #FFFFFF; fill-opacity: 0;
+      stroke-dasharray: 900; stroke-dashoffset: 900;
+      animation: sig-write 3.6s cubic-bezier(.65,0,.35,1) .3s forwards;
+    }
+    .sig-rule { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: sig-draw 2.4s cubic-bezier(.65,0,.35,1) 1.6s forwards; }
+    .sig-in { animation: sig-in 1.4s cubic-bezier(.16,1,.3,1) 2s both; }
+    @keyframes sig-write { to { stroke-dashoffset: 0; fill-opacity: 1; } }
+    @keyframes sig-draw { to { stroke-dashoffset: 0; } }
+    @keyframes sig-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) {
+      .sig-name { animation: none; stroke-dashoffset: 0; fill-opacity: 1; }
+      .sig-rule { animation: none; stroke-dashoffset: 0; }
+      .sig-in { animation: none; }
+    }
   </style>
-  <rect width="1200" height="560" rx="18" fill="url(#tc-bg)"/>
-  <rect width="1200" height="560" rx="18" fill="url(#tc-glow)"/>
-  <g transform="translate(40 30)">
-    <text class="tc-mono" x="0" y="22" font-size="10.5" letter-spacing="2" fill="#38BDF8">01 · DATA ANALYTICS &amp; BUSINESS INTELLIGENCE</text>
-    <text class="tc-mono" x="0" y="42" font-size="11" fill="#DDD6FE">SQL (PostgreSQL, MySQL)  ·  Python (Pandas, NumPy)  ·  Power BI  ·  Tableau  ·  Excel  ·  EDA  ·  Statistical Modeling</text>
-    <text class="tc-mono" x="0" y="82" font-size="10.5" letter-spacing="2" fill="#10B981">02 · AI, MACHINE LEARNING &amp; RAG</text>
-    <text class="tc-mono" x="0" y="102" font-size="11" fill="#DDD6FE">Scikit-Learn  ·  PyTorch  ·  TensorFlow  ·  LangChain  ·  LangGraph  ·  FAISS  ·  HuggingFace  ·  Computer Vision (OpenCV)</text>
-    <text class="tc-mono" x="0" y="142" font-size="10.5" letter-spacing="2" fill="#A78BFA">03 · DATA PIPELINES &amp; APIS</text>
-    <text class="tc-mono" x="0" y="162" font-size="11" fill="#DDD6FE">FastAPI  ·  Flask  ·  Node.js  ·  REST APIs  ·  ETL Pipelines  ·  Data Cleaning  ·  Streamlit</text>
-    <text class="tc-mono" x="0" y="202" font-size="10.5" letter-spacing="2" fill="#A78BFA">04 · CORE PROGRAMMING LANGUAGES</text>
-    <text class="tc-mono" x="0" y="222" font-size="11" fill="#DDD6FE">Python (Advanced)  ·  SQL (Advanced)  ·  C++  ·  TypeScript  ·  JavaScript  ·  HTML5  ·  CSS3</text>
-    <text class="tc-mono" x="0" y="262" font-size="10.5" letter-spacing="2" fill="#A78BFA">05 · DATABASES &amp; STORAGE</text>
-    <text class="tc-mono" x="0" y="282" font-size="11" fill="#DDD6FE">PostgreSQL  ·  MySQL  ·  MongoDB  ·  SQLite  ·  Redis  ·  Vector DBs (FAISS, ChromaDB)</text>
-    <text class="tc-mono" x="0" y="322" font-size="10.5" letter-spacing="2" fill="#A78BFA">06 · CLOUD &amp; DEVOPS</text>
-    <text class="tc-mono" x="0" y="342" font-size="11" fill="#DDD6FE">AWS  ·  Docker  ·  GitHub Actions  ·  Linux  ·  Git  ·  CI/CD</text>
-    <text class="tc-mono" x="0" y="382" font-size="10.5" letter-spacing="2" fill="#A78BFA">07 · ANALYTICS &amp; DEVELOPER TOOLS</text>
-    <text class="tc-mono" x="0" y="402" font-size="11" fill="#DDD6FE">Jupyter Notebook  ·  Power BI Desktop  ·  VS Code  ·  Postman  ·  Plotly  ·  Matplotlib  ·  Seaborn</text>
+  <rect width="1200" height="230" fill="url(#sig-bg)"/>
+  <rect width="1200" height="230" fill="url(#sig-glow)"/>
+  <path class="sig-rule" d="M100 40 H1100" stroke="url(#sig-line)" stroke-width="1"/>
+  
+  <g transform="translate(600 115)">
+    <text class="sig-serif sig-name" text-anchor="middle" font-size="52" font-style="italic" font-weight="300" letter-spacing="-1">Snehal Ghadge</text>
   </g>
-  <line x1="40" y1="56" x2="1160" y2="56" stroke="#8B5CF6" stroke-opacity=".15"/>
-  <line x1="40" y1="116" x2="1160" y2="116" stroke="#8B5CF6" stroke-opacity=".15"/>
-  <line x1="40" y1="176" x2="1160" y2="176" stroke="#8B5CF6" stroke-opacity=".15"/>
-  <line x1="40" y1="236" x2="1160" y2="236" stroke="#8B5CF6" stroke-opacity=".15"/>
-  <line x1="40" y1="296" x2="1160" y2="296" stroke="#8B5CF6" stroke-opacity=".15"/>
-  <line x1="40" y1="356" x2="1160" y2="356" stroke="#8B5CF6" stroke-opacity=".15"/>
-  <line x1="40" y1="416" x2="1160" y2="416" stroke="#8B5CF6" stroke-opacity=".15"/>
-  <rect x=".5" y=".5" width="1199" height="559" rx="17.5" fill="none" stroke="#8B5CF6" stroke-opacity=".2"/>
-  <rect class="tc-trace" x=".5" y=".5" width="1199" height="559" rx="17.5" fill="none" stroke="url(#tc-trace)" stroke-width="1.6" stroke-linecap="round"/>
+  <g class="sig-in">
+    <text class="sig-mono" x="600" y="162" text-anchor="middle" font-size="12" letter-spacing="2.8" fill="#C4B5FD">BUILDING DATA-DRIVEN INTELLIGENCE &amp; SCALABLE AI WORKFLOWS</text>
+    <text class="sig-mono" x="600" y="188" text-anchor="middle" font-size="10.5" letter-spacing="1.8" fill="#A79FB5">PUNE, INDIA · OPEN TO OPPORTUNITIES IN DATA &amp; AI</text>
+  </g>
 </svg>'''
 
-with open(os.path.join(ASSETS_DIR, "tech-constellation.svg"), "w", encoding="utf-8") as f:
-    f.write(tech_svg)
-print("tech-constellation.svg generated")
+with open(os.path.join(ASSETS_DIR, "footer-signature.svg"), "w", encoding="utf-8") as f:
+    f.write(footer_svg)
+print("footer-signature.svg updated")
 
-# ─── 7. ASSEMBLE README.md ───────────────────────────────────────────────────
-readme = (
-    '<a href="https://snehalsportfolio2027.netlify.app">\n'
-    '  <img src="assets/snehal-hero-portrait.svg" width="100%" alt="Snehal Ghadge — Data Analyst and AI Intern. Transforming complex data into actionable intelligence and building scalable ML systems.">\n'
-    '</a>\n'
-    '\n'
-    '<p align="center">\n'
-    '  <img src="assets/snehal-profile.png" width="140" height="140" alt="Snehal Ghadge — Data Analyst &amp; AI Intern" />\n'
-    '</p>\n'
-    '\n'
-    '<p align="center">\n'
-    '  <a href="https://snehalsportfolio2027.netlify.app"><img src="https://img.shields.io/badge/Portfolio-snehalsportfolio2027-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=netlify" alt="Portfolio"></a>\n'
-    '  <a href="https://linkedin.com/in/snehal-g-711587312"><img src="https://img.shields.io/badge/LinkedIn-snehal--g-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=linkedin" alt="LinkedIn"></a>\n'
-    '  <a href="https://leetcode.com/u/snehalghadge/"><img src="https://img.shields.io/badge/LeetCode-snehalghadge-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=leetcode" alt="LeetCode"></a>\n'
-    '  <a href="mailto:snehalghadge59@gmail.com"><img src="https://img.shields.io/badge/Email-snehalghadge59@gmail.com-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=gmail" alt="Email"></a>\n'
-    '  <a href="https://github.com/snehalghadge59-blip"><img src="https://img.shields.io/badge/GitHub-snehalghadge59--blip-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=github" alt="GitHub"></a>\n'
-    '</p>\n'
-    '\n'
-    '<img src="assets/title-about.svg" width="100%" alt="01 About - Hello, Im Snehal.">\n'
-    '<img src="assets/about-intro.svg" width="100%" alt="About: Data Analyst and AI Intern. B.Tech in CSE (AI/ML) at Nutan College of Engineering, Pune.">\n'
-    '\n'
-    '<img src="assets/title-recognition.svg" width="100%" alt="02 Recognition - Proof, on the record.">\n'
-    '<img src="assets/achievement-motif.svg" width="100%" alt="Lenovo LEAP NextGen Scholar via AICTE; Infosys Springboard Virtual Intern (Data Analytics, Power BI &amp; GenAI); AI Intern at Code-A-Nova; 30+ GitHub projects and dashboards.">\n'
-    '\n'
-    '<img src="assets/title-work.svg" width="100%" alt="03 Selected work - Products, not assignments.">\n'
-    '\n'
-    '<a href="https://github.com/snehalghadge59-blip/AeroFaultAI">\n'
-    '  <img src="assets/project-aerofault.svg" width="100%" alt="AeroFaultAI: Real-time aerospace telemetry anomaly detection, exploratory data analysis and predictive diagnostics.">\n'
-    '</a>\n'
-    '<p align="center">\n'
-    '  <a href="https://github.com/snehalghadge59-blip/AeroFaultAI"><img src="https://img.shields.io/badge/Repository-AeroFaultAI-4C1D95?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=github" alt="AeroFaultAI repository"></a>\n'
-    '</p>\n'
-    '\n'
-    '<a href="https://github.com/snehalghadge59-blip/AgentFlow-AI">\n'
-    '  <img src="assets/project-agentflow.svg" width="100%" alt="AgentFlow-AI: Multi-agent orchestration framework for autonomous decision intelligence and task execution.">\n'
-    '</a>\n'
-    '<p align="center">\n'
-    '  <a href="https://github.com/snehalghadge59-blip/AgentFlow-AI"><img src="https://img.shields.io/badge/Repository-AgentFlow--AI-4C1D95?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=github" alt="AgentFlow-AI repository"></a>\n'
-    '</p>\n'
-    '\n'
-    '<a href="https://github.com/snehalghadge59-blip/InsightRAG">\n'
-    '  <img src="assets/project-insightrag.svg" width="100%" alt="InsightRAG: Production-grade enterprise analytics and RAG with hybrid search and semantic cache.">\n'
-    '</a>\n'
-    '<p align="center">\n'
-    '  <a href="https://github.com/snehalghadge59-blip/InsightRAG"><img src="https://img.shields.io/badge/Repository-InsightRAG-4C1D95?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=github" alt="InsightRAG repository"></a>\n'
-    '</p>\n'
-    '\n'
-    '<img src="assets/title-toolkit.svg" width="100%" alt="04 Toolkit - The tools I reach for.">\n'
-    '<img src="assets/tech-constellation.svg" width="100%" alt="Full tech stack listing.">\n'
-    '\n'
-    '<!-- Tech Stack Skill Icons with Logos -->\n'
-    '<p align="center">\n'
-    '  <b>📊 Data Analytics &amp; Business Intelligence</b><br/>\n'
-    '  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=python,postgres,mysql,mongodb&amp;perline=6" alt="Python PostgreSQL MySQL MongoDB" /></a>\n'
-    '</p>\n'
-    '<p align="center">\n'
-    '  <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&amp;logo=powerbi&amp;logoColor=black" alt="Power BI" />\n'
-    '  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&amp;logo=pandas&amp;logoColor=white" alt="Pandas" />\n'
-    '  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&amp;logo=numpy&amp;logoColor=white" alt="NumPy" />\n'
-    '  <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&amp;logo=tableau&amp;logoColor=white" alt="Tableau" />\n'
-    '</p>\n'
-    '<p align="center">\n'
-    '  <b>🤖 AI, Machine Learning &amp; Deep Learning</b><br/>\n'
-    '  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=pytorch,tensorflow,sklearn,fastapi,flask" alt="PyTorch TensorFlow Scikit-Learn FastAPI Flask" /></a>\n'
-    '</p>\n'
-    '<p align="center">\n'
-    '  <b>💻 Programming Languages &amp; Core</b><br/>\n'
-    '  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=python,cpp,c,ts,js,html,css,bash" alt="Python C++ C TypeScript JavaScript HTML5 CSS3 Bash" /></a>\n'
-    '</p>\n'
-    '<p align="center">\n'
-    '  <b>☁️ Cloud, Databases &amp; DevOps</b><br/>\n'
-    '  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=aws,docker,linux,git,github,githubactions,redis" alt="AWS Docker Linux Git GitHub GitHub Actions Redis" /></a>\n'
-    '</p>\n'
-    '<p align="center">\n'
-    '  <b>🛠️ Developer &amp; Data Tools</b><br/>\n'
-    '  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=vscode,postman,figma" alt="VS Code Postman Figma" /></a>\n'
-    '</p>\n'
-    '\n'
-    '<img src="assets/title-commits.svg" width="100%" alt="05 Commit log - A year of continuous building.">\n'
-    '\n'
-    '<p align="center">\n'
-    '  <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" width="100%" alt="GitHub Contribution Grid Snake Animation" />\n'
-    '</p>\n'
-    '\n'
-    '<p align="center">\n'
-    '  <img src="https://github-readme-stats.vercel.app/api?username=snehalghadge59-blip&amp;show_icons=true&amp;hide_rank=true&amp;hide_border=true&amp;border_radius=16&amp;bg_color=0B0714&amp;title_color=DDD6FE&amp;text_color=A79FB5&amp;icon_color=A78BFA&amp;custom_title=GitHub%20at%20a%20glance" width="410" alt="GitHub stats" />\n'
-    '  &nbsp;\n'
-    '  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=snehalghadge59-blip&amp;layout=compact&amp;hide_border=true&amp;border_radius=16&amp;bg_color=0B0714&amp;title_color=DDD6FE&amp;text_color=A79FB5" width="370" alt="Top languages" />\n'
-    '</p>\n'
-    '\n'
-    '<img src="assets/title-certifications.svg" width="100%" alt="06 Certifications - Verified credentials and accreditations.">\n'
-    '<a href="https://snehalsportfolio2027.netlify.app">\n'
-    '  <img src="assets/certifications.svg" width="100%" alt="Certifications: Lenovo LEAP NextGen Scholar, Infosys Springboard GenAI, Code-A-Nova AI Internship, Edunet Foundation AI, Data Visualization, B.Tech CSE AI/ML.">\n'
-    '</a>\n'
-    '\n'
-    '<img src="assets/title-connect.svg" width="100%" alt="07 Connect - Lets build something worth explaining.">\n'
-    '\n'
-    '<p align="center">\n'
-    '  <a href="mailto:snehalghadge59@gmail.com"><img src="https://img.shields.io/badge/Email-snehalghadge59@gmail.com-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=gmail" alt="Email"></a>\n'
-    '  <a href="https://linkedin.com/in/snehal-g-711587312"><img src="https://img.shields.io/badge/LinkedIn-snehal--g-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=linkedin" alt="LinkedIn"></a>\n'
-    '  <a href="https://leetcode.com/u/snehalghadge/"><img src="https://img.shields.io/badge/LeetCode-snehalghadge-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=leetcode" alt="LeetCode"></a>\n'
-    '  <a href="https://snehalsportfolio2027.netlify.app"><img src="https://img.shields.io/badge/Portfolio-snehalsportfolio2027-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=netlify" alt="Portfolio"></a>\n'
-    '</p>\n'
-    '\n'
-    '<a href="https://snehalsportfolio2027.netlify.app">\n'
-    '  <img src="assets/footer-signature.svg" width="100%" alt="Snehal - Delivering data-driven intelligence and high-impact AI solutions.">\n'
-    '</a>\n'
-)
+# ─── 6. ASSEMBLE README.md ───────────────────────────────────────────────────
+readme = '''<a href="https://snehalsportfolio2027.netlify.app">
+  <img src="assets/snehal-hero-portrait.svg" width="100%" alt="Snehal Ghadge — Data &amp; AI Developer. Transforming data into insights and building scalable machine learning systems.">
+</a>
+
+<p align="center">
+  <img src="assets/snehal-profile.png" width="140" height="140" alt="Snehal Ghadge" />
+</p>
+
+<p align="center">
+  <a href="https://snehalsportfolio2027.netlify.app"><img src="https://img.shields.io/badge/Portfolio-snehalsportfolio2027-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=netlify" alt="Portfolio"></a>
+  <a href="https://linkedin.com/in/snehal-g-711587312"><img src="https://img.shields.io/badge/LinkedIn-snehal--g-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=linkedin" alt="LinkedIn"></a>
+  <a href="https://leetcode.com/u/snehalghadge/"><img src="https://img.shields.io/badge/LeetCode-snehalghadge-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=leetcode" alt="LeetCode"></a>
+  <a href="mailto:snehalghadge59@gmail.com"><img src="https://img.shields.io/badge/Email-snehalghadge59@gmail.com-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=gmail" alt="Email"></a>
+  <a href="https://github.com/snehalghadge59-blip"><img src="https://img.shields.io/badge/GitHub-snehalghadge59--blip-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=github" alt="GitHub"></a>
+</p>
+
+<img src="assets/title-about.svg" width="100%" alt="01 About - Hello, Im Snehal.">
+<img src="assets/about-intro.svg" width="100%" alt="About: Snehal Ghadge. Data &amp; AI Developer. B.Tech in CSE (AI/ML) at Nutan College of Engineering, Pune.">
+
+<img src="assets/title-recognition.svg" width="100%" alt="02 Recognition - Proof, on the record.">
+<img src="assets/achievement-motif.svg" width="100%" alt="Lenovo LEAP NextGen Scholar via AICTE; Infosys Springboard Virtual Intern (Data Analytics, Power BI &amp; GenAI); Code-A-Nova; 30+ GitHub projects and dashboards.">
+
+<img src="assets/title-work.svg" width="100%" alt="03 Selected work - Products, not assignments.">
+
+<a href="https://github.com/snehalghadge59-blip/AeroFaultAI">
+  <img src="assets/project-aerofault.svg" width="100%" alt="AeroFaultAI: Real-time aerospace telemetry anomaly detection, exploratory data analysis and predictive diagnostics.">
+</a>
+<p align="center">
+  <a href="https://github.com/snehalghadge59-blip/AeroFaultAI"><img src="https://img.shields.io/badge/Repository-AeroFaultAI-4C1D95?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=github" alt="AeroFaultAI repository"></a>
+</p>
+
+<a href="https://github.com/snehalghadge59-blip/AgentFlow-AI">
+  <img src="assets/project-agentflow.svg" width="100%" alt="AgentFlow-AI: Multi-agent orchestration framework for autonomous decision intelligence and task execution.">
+</a>
+<p align="center">
+  <a href="https://github.com/snehalghadge59-blip/AgentFlow-AI"><img src="https://img.shields.io/badge/Repository-AgentFlow--AI-4C1D95?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=github" alt="AgentFlow-AI repository"></a>
+</p>
+
+<a href="https://github.com/snehalghadge59-blip/InsightRAG">
+  <img src="assets/project-insightrag.svg" width="100%" alt="InsightRAG: Production-grade enterprise analytics and RAG with hybrid search and semantic cache.">
+</a>
+<p align="center">
+  <a href="https://github.com/snehalghadge59-blip/InsightRAG"><img src="https://img.shields.io/badge/Repository-InsightRAG-4C1D95?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=github" alt="InsightRAG repository"></a>
+</p>
+
+<img src="assets/title-toolkit.svg" width="100%" alt="04 Toolkit - The tools I reach for.">
+<img src="assets/tech-constellation.svg" width="100%" alt="Full tech stack listing.">
+
+<!-- Tech Stack Skill Icons with Logos -->
+<p align="center">
+  <b>📊 Data Analytics &amp; Business Intelligence</b><br/>
+  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=python,postgres,mysql,mongodb&amp;perline=6" alt="Python PostgreSQL MySQL MongoDB" /></a>
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&amp;logo=powerbi&amp;logoColor=black" alt="Power BI" />
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&amp;logo=pandas&amp;logoColor=white" alt="Pandas" />
+  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&amp;logo=numpy&amp;logoColor=white" alt="NumPy" />
+  <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&amp;logo=tableau&amp;logoColor=white" alt="Tableau" />
+</p>
+<p align="center">
+  <b>🤖 AI, Machine Learning &amp; Deep Learning</b><br/>
+  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=pytorch,tensorflow,sklearn,fastapi,flask" alt="PyTorch TensorFlow Scikit-Learn FastAPI Flask" /></a>
+</p>
+<p align="center">
+  <b>💻 Programming Languages &amp; Core</b><br/>
+  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=python,cpp,c,ts,js,html,css,bash" alt="Python C++ C TypeScript JavaScript HTML5 CSS3 Bash" /></a>
+</p>
+<p align="center">
+  <b>☁️ Cloud, Databases &amp; DevOps</b><br/>
+  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=aws,docker,linux,git,github,githubactions,redis" alt="AWS Docker Linux Git GitHub GitHub Actions Redis" /></a>
+</p>
+<p align="center">
+  <b>🛠️ Developer &amp; Data Tools</b><br/>
+  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=vscode,postman,figma" alt="VS Code Postman Figma" /></a>
+</p>
+
+<img src="assets/title-commits.svg" width="100%" alt="05 Commit log - A year of continuous building.">
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" width="100%" alt="GitHub Contribution Grid Snake Animation" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=snehalghadge59-blip&amp;show_icons=true&amp;hide_rank=true&amp;hide_border=true&amp;border_radius=16&amp;bg_color=0B0714&amp;title_color=DDD6FE&amp;text_color=A79FB5&amp;icon_color=A78BFA&amp;custom_title=GitHub%20at%20a%20glance" width="410" alt="GitHub stats" />
+  &nbsp;
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=snehalghadge59-blip&amp;layout=compact&amp;hide_border=true&amp;border_radius=16&amp;bg_color=0B0714&amp;title_color=DDD6FE&amp;text_color=A79FB5" width="370" alt="Top languages" />
+</p>
+
+<img src="assets/title-certifications.svg" width="100%" alt="06 Certifications - Verified credentials and accreditations.">
+<a href="https://snehalsportfolio2027.netlify.app">
+  <img src="assets/certifications.svg" width="100%" alt="Certifications: Lenovo LEAP NextGen Scholar, Infosys Springboard GenAI, Code-A-Nova AI Internship, Edunet Foundation AI, Data Visualization, B.Tech CSE AI/ML.">
+</a>
+
+<img src="assets/title-connect.svg" width="100%" alt="07 Connect - Lets build something worth explaining.">
+
+<p align="center">
+  <a href="mailto:snehalghadge59@gmail.com"><img src="https://img.shields.io/badge/Email-snehalghadge59@gmail.com-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=gmail" alt="Email"></a>
+  <a href="https://linkedin.com/in/snehal-g-711587312"><img src="https://img.shields.io/badge/LinkedIn-snehal--g-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=linkedin" alt="LinkedIn"></a>
+  <a href="https://leetcode.com/u/snehalghadge/"><img src="https://img.shields.io/badge/LeetCode-snehalghadge-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=leetcode" alt="LeetCode"></a>
+  <a href="https://snehalsportfolio2027.netlify.app"><img src="https://img.shields.io/badge/Portfolio-snehalsportfolio2027-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=netlify" alt="Portfolio"></a>
+</p>
+
+<a href="https://snehalsportfolio2027.netlify.app">
+  <img src="assets/footer-signature.svg" width="100%" alt="Snehal - Delivering data-driven intelligence and high-impact AI solutions.">
+</a>
+'''
 
 with open(os.path.join(BASE_DIR, "README.md"), "w", encoding="utf-8") as f:
     f.write(readme)
+print("README.md updated")
 
-print("All Data Analyst & AI Intern assets and README successfully generated!")
+# Validate all SVGs
+import glob
+print("\nValidating SVGs:")
+for f in glob.glob(os.path.join(ASSETS_DIR, "*.svg")):
+    try:
+        ET.parse(f)
+        print("OK:", os.path.basename(f))
+    except Exception as e:
+        print("ERROR in", os.path.basename(f), ":", e)
