@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 370" width="1200" height="370" role="img" aria-labelledby="p-aerofault-t">
-  <title id="p-aerofault-t">AeroFaultAI: Real-time aerospace telemetry anomaly detection and predictive diagnostics.</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 370" width="1200" height="370" role="img" aria-labelledby="p-analytics-t">
+  <title id="p-analytics-t">Product Funnel &amp; Cohort Retention Analytics: End-to-end user conversion, cohort retention, and customer analytics.</title>
   <defs>
     <linearGradient id="p-aerofault-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#140D24"/><stop offset="1" stop-color="#0B0714"/></linearGradient>
     <radialGradient id="p-aerofault-glow" cx="82%" cy="30%" r="55%"><stop offset="0" stop-color="#7C3AED" stop-opacity=".7"/><stop offset="1" stop-color="#3B0764" stop-opacity="0"/></radialGradient>
@@ -27,36 +27,45 @@
     <rect x="720" width="480" height="370" fill="url(#p-aerofault-grid)"/>
     <rect width="1200" height="370" fill="url(#p-aerofault-glow)"/>
     <g class="p-in p-d1">
-      <text class="p-mono" x="56" y="62" font-size="12" letter-spacing="2.6" fill="#A78BFA">03 · PREDICTIVE ML · TIME-SERIES TELEMETRY · 2026</text>
-      <text class="p-serif" x="54" y="126" font-size="52" font-weight="300" letter-spacing="-1.5" fill="#FFFFFF">AeroFaultAI</text>
-      <text class="p-sans" x="56" y="166" font-size="17" fill="#C4B5FD">Real-time aerospace telemetry anomaly detection and predictive diagnostics.</text>
-      <text class="p-mono" x="56" y="200" font-size="12.5" fill="#DDD6FE"><tspan fill="#A78BFA">BUILT ›</tspan> Multi-sensor time-series modeling, anomaly classification, and automated alerts</text>
+      <text class="p-mono" x="56" y="62" font-size="12" letter-spacing="2.6" fill="#38BDF8">01 · PRODUCT ANALYTICS · FUNNEL &amp; RETENTION · SQL &amp; BI</text>
+      <text class="p-serif" x="54" y="126" font-size="46" font-weight="300" letter-spacing="-1.2" fill="#FFFFFF">Product Funnel &amp; Retention</text>
+      <text class="p-sans" x="56" y="166" font-size="17" fill="#C4B5FD">End-to-end product funnel conversion, cohort retention &amp; customer analytics.</text>
+      <text class="p-mono" x="56" y="200" font-size="12.5" fill="#DDD6FE"><tspan fill="#38BDF8">BUILT ›</tspan> SQL CTEs &amp; window functions, cohort retention matrix, conversion drop-off &amp; BI</text>
       <line class="p-draw" x1="56" y1="226" x2="680" y2="226" stroke="#8B5CF6" stroke-opacity=".3"/>
-      <g transform="translate(56 266)"><text class="p-serif" font-size="34" font-weight="300" fill="#FFFFFF">98.2%</text><text class="p-sans" y="24" font-size="12.5" fill="#A79FB5">anomaly F1-score</text></g>
-      <g transform="translate(261 266)"><text class="p-serif" font-size="34" font-weight="300" fill="#FFFFFF">&lt;50ms</text><text class="p-sans" y="24" font-size="12.5" fill="#A79FB5">inference latency</text></g>
-      <g transform="translate(466 266)"><text class="p-serif" font-size="34" font-weight="300" fill="#FFFFFF">100k+</text><text class="p-sans" y="24" font-size="12.5" fill="#A79FB5">telemetry records</text></g>
+      <g transform="translate(56 266)"><text class="p-serif" font-size="34" font-weight="300" fill="#FFFFFF">84.6%</text><text class="p-sans" y="24" font-size="12.5" fill="#A79FB5">checkout conversion</text></g>
+      <g transform="translate(261 266)"><text class="p-serif" font-size="34" font-weight="300" fill="#FFFFFF">&lt;100ms</text><text class="p-sans" y="24" font-size="12.5" fill="#A79FB5">analytical query latency</text></g>
+      <g transform="translate(466 266)"><text class="p-serif" font-size="34" font-weight="300" fill="#FFFFFF">500k+</text><text class="p-sans" y="24" font-size="12.5" fill="#A79FB5">event logs parsed</text></g>
       <g class="p-chip" style="animation-delay:1.00s"><rect x="56" y="314" width="78" height="26" rx="13" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".35"/><text class="p-mono" x="95.0" y="331" text-anchor="middle" font-size="11.5" fill="#DDD6FE">Python</text></g>
-      <g class="p-chip" style="animation-delay:1.12s"><rect x="144" y="314" width="87" height="26" rx="13" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".35"/><text class="p-mono" x="187.5" y="331" text-anchor="middle" font-size="11.5" fill="#DDD6FE">PyTorch</text></g>
-      <g class="p-chip" style="animation-delay:1.24s"><rect x="241" y="314" width="132" height="26" rx="13" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".35"/><text class="p-mono" x="307.0" y="331" text-anchor="middle" font-size="11.5" fill="#DDD6FE">Scikit-Learn</text></g>
-      <g class="p-chip" style="animation-delay:1.36s"><rect x="383" y="314" width="87" height="26" rx="13" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".35"/><text class="p-mono" x="426.5" y="331" text-anchor="middle" font-size="11.5" fill="#DDD6FE">FastAPI</text></g>
-      <g class="p-chip" style="animation-delay:1.48s"><rect x="480" y="314" width="78" height="26" rx="13" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".35"/><text class="p-mono" x="519.0" y="331" text-anchor="middle" font-size="11.5" fill="#DDD6FE">Plotly</text></g>
+      <g class="p-chip" style="animation-delay:1.12s"><rect x="144" y="314" width="78" height="26" rx="13" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".35"/><text class="p-mono" x="183.0" y="331" text-anchor="middle" font-size="11.5" fill="#DDD6FE">SQL</text></g>
+      <g class="p-chip" style="animation-delay:1.24s"><rect x="232" y="314" width="94" height="26" rx="13" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".35"/><text class="p-mono" x="279.0" y="331" text-anchor="middle" font-size="11.5" fill="#DDD6FE">Streamlit</text></g>
+      <g class="p-chip" style="animation-delay:1.36s"><rect x="336" y="314" width="78" height="26" rx="13" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".35"/><text class="p-mono" x="375.0" y="331" text-anchor="middle" font-size="11.5" fill="#DDD6FE">Plotly</text></g>
+      <g class="p-chip" style="animation-delay:1.48s"><rect x="424" y="314" width="82" height="26" rx="13" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".35"/><text class="p-mono" x="465.0" y="331" text-anchor="middle" font-size="11.5" fill="#DDD6FE">Pandas</text></g>
     </g>
     <g class="p-in p-d2">
     <g transform="translate(780 35)">
       <rect x="0" y="0" width="380" height="295" rx="14" fill="#0B0714" stroke="#8B5CF6" stroke-opacity=".35"/>
-      <text class="p-mono" x="35" y="34" font-size="10.5" letter-spacing="1.5" fill="#A78BFA">LIVE TELEMETRY STREAM</text>
-      <!-- Waveform -->
-      <path d="M30 110 L80 110 L100 82 L120 138 L140 110 L190 110 L210 58 L230 162 L250 110 L300 110 L350 110" fill="none" stroke="#8B5CF6" stroke-width="2"/>
-      <!-- Fault circle pulse -->
-      <circle cx="220" cy="110" r="26" fill="#EF4444" fill-opacity=".12" stroke="#EF4444" stroke-width="1.2">
-        <animate attributeName="r" values="18;30;18" dur="2s" repeatCount="indefinite"/>
-      </circle>
-      <text class="p-mono" x="220" y="52" text-anchor="middle" font-size="10" fill="#EF4444">FAULT SPIKE DETECTED</text>
-      <!-- Diagnostics -->
-      <rect x="30" y="195" width="320" height="72" rx="10" fill="#140D24" stroke="#8B5CF6" stroke-opacity=".3"/>
-      <text class="p-mono" x="48" y="220" font-size="11" fill="#FFFFFF">STATUS: Component #4 Failure Risk</text>
-      <text class="p-mono" x="48" y="240" font-size="10.5" fill="#DDD6FE">Confidence: 98.2%  ·  TTF: 48h</text>
-      <text class="p-mono" x="48" y="258" font-size="10" fill="#10B981">Action: Maintenance Ticket Dispatched</text>
+      <text class="p-mono" x="25" y="32" font-size="10.5" letter-spacing="1.5" fill="#38BDF8">FUNNEL CONVERSION STAGES</text>
+      <!-- Funnel Bar 1 -->
+      <rect x="25" y="52" width="330" height="28" rx="6" fill="#3B82F6" fill-opacity=".25" stroke="#3B82F6" stroke-opacity=".5"/>
+      <text class="p-mono" x="35" y="70" font-size="11" fill="#FFFFFF">1. Landing Page</text>
+      <text class="p-mono" x="345" y="70" text-anchor="end" font-size="11" fill="#93C5FD">100% · 500k</text>
+      <!-- Funnel Bar 2 -->
+      <rect x="25" y="88" width="220" height="28" rx="6" fill="#6366F1" fill-opacity=".25" stroke="#6366F1" stroke-opacity=".5"/>
+      <text class="p-mono" x="35" y="106" font-size="11" fill="#FFFFFF">2. Product View</text>
+      <text class="p-mono" x="235" y="106" text-anchor="end" font-size="11" fill="#C4B5FD">62.4% · 312k</text>
+      <!-- Funnel Bar 3 -->
+      <rect x="25" y="124" width="130" height="28" rx="6" fill="#8B5CF6" fill-opacity=".25" stroke="#8B5CF6" stroke-opacity=".5"/>
+      <text class="p-mono" x="35" y="142" font-size="11" fill="#FFFFFF">3. Add to Cart</text>
+      <text class="p-mono" x="145" y="142" text-anchor="end" font-size="11" fill="#DDD6FE">28.1% · 140k</text>
+      <!-- Funnel Bar 4 -->
+      <rect x="25" y="160" width="85" height="28" rx="6" fill="#10B981" fill-opacity=".3" stroke="#10B981" stroke-opacity=".6"/>
+      <text class="p-mono" x="35" y="178" font-size="11" fill="#FFFFFF">4. Checkout</text>
+      <text class="p-mono" x="102" y="178" text-anchor="start" font-size="11" fill="#34D399">18.2% · 91k</text>
+      <!-- Cohort Summary Box -->
+      <rect x="25" y="204" width="330" height="66" rx="8" fill="#140D24" stroke="#8B5CF6" stroke-opacity=".3"/>
+      <text class="p-mono" x="38" y="226" font-size="10.5" letter-spacing="1" fill="#A78BFA">COHORT RETENTION ENGINE</text>
+      <text class="p-mono" x="38" y="244" font-size="11" fill="#FFFFFF">Day 1: 58.2%  ·  Day 7: 34.6%  ·  Day 30: 22.1%</text>
+      <text class="p-mono" x="38" y="260" font-size="10.5" fill="#10B981">✓ Automated SQL Window Function Engine</text>
     </g>
     </g>
     <rect x=".5" y=".5" width="1199" height="369" rx="17.5" fill="none" stroke="#8B5CF6" stroke-opacity=".2"/>

@@ -19,11 +19,11 @@
 
 <img src="assets/title-work.svg" width="100%" alt="03 Selected work - Products, not assignments.">
 
-<a href="https://github.com/snehalghadge59-blip/AeroFaultAI">
-  <img src="assets/project-aerofault.svg" width="100%" alt="AeroFaultAI: Real-time aerospace telemetry anomaly detection, exploratory data analysis and predictive diagnostics.">
+<a href="https://github.com/snehalghadge59-blip/product-funnel-retention-analytics">
+  <img src="assets/project-aerofault.svg" width="100%" alt="Product Funnel &amp; Cohort Retention Analytics: End-to-end user conversion, cohort retention, and customer analytics.">
 </a>
 <p align="center">
-  <a href="https://github.com/snehalghadge59-blip/AeroFaultAI"><img src="https://img.shields.io/badge/Repository-AeroFaultAI-4C1D95?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=github" alt="AeroFaultAI repository"></a>
+  <a href="https://github.com/snehalghadge59-blip/product-funnel-retention-analytics"><img src="https://img.shields.io/badge/Repository-Product_Funnel_Analytics-4C1D95?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=github" alt="Product Funnel Analytics repository"></a>
 </p>
 
 <a href="https://github.com/snehalghadge59-blip/AgentFlow-AI">
