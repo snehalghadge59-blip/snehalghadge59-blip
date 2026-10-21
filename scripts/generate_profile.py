@@ -1,10 +1,34 @@
-import os
+import os, base64, io
+from PIL import Image
 
 BASE_DIR = r"C:\Users\snehal\.gemini\antigravity-ide\scratch\snehalghadge59-blip"
 ASSETS_DIR = os.path.join(BASE_DIR, "assets")
 os.makedirs(ASSETS_DIR, exist_ok=True)
 
-# ─── HERO BANNER (pure SVG, no embedded image — GitHub-safe) ─────────────────
+# ─── PREPARE PORTRAIT PHOTO ──────────────────────────────────────────────────
+photo_path = r"C:\Users\snehal\.gemini\antigravity-ide\brain\2379b4f1-4787-45a9-ba43-2ce1181beec8\.user_uploaded\media_1787487431098.jpg"
+if not os.path.exists(photo_path):
+    photo_path = os.path.join(ASSETS_DIR, "snehal-profile.png")
+
+img = Image.open(photo_path).convert('RGB')
+w, h = img.size
+target_aspect = 232.0 / 308.0
+curr_aspect = w / h
+if curr_aspect > target_aspect:
+    new_w = int(h * target_aspect)
+    left = (w - new_w) // 2
+    img = img.crop((left, 0, left + new_w, h))
+else:
+    new_h = int(w / target_aspect)
+    top = (h - new_h) // 2
+    img = img.crop((0, top, w, top + new_h))
+
+img = img.resize((350, 464), Image.Resampling.LANCZOS)
+buf = io.BytesIO()
+img.save(buf, format='JPEG', quality=88, optimize=True)
+b64_portrait = base64.b64encode(buf.getvalue()).decode('ascii')
+
+# ─── HERO BANNER ─────────────────────────────────────────────────────────────
 hero_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480" role="img" aria-labelledby="hero-title hero-desc">
   <title id="hero-title">Snehal Ghadge — AI and Agentic Systems Engineer.</title>
   <desc id="hero-desc">AI and Agentic Systems Engineer, Machine Learning Developer. B.Tech CSE (AI/ML), Lenovo LEAP NextGen Scholar, AI Intern at Code-A-Nova and Infosys Springboard.</desc>
@@ -85,7 +109,7 @@ hero_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" wid
     .d4{animation-delay:.9s}  .d5{animation-delay:1.2s}
     .h-draw  { stroke-dasharray:900;stroke-dashoffset:900;animation:h-draw 2.4s cubic-bezier(.65,0,.35,1) .9s forwards; }
     .h-trace { stroke-dasharray:600 2760;stroke-dashoffset:3360;animation:h-trace 8s linear infinite; }
-    @keyframes h-rise  { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:none} }
+    @keyframes h-rise  { from{opacity:0} to{opacity:1} }
     @keyframes h-fade  { from{opacity:0} to{opacity:1} }
     @keyframes h-draw  { to{stroke-dashoffset:0} }
     @keyframes h-trace { to{stroke-dashoffset:0} }
@@ -134,44 +158,16 @@ hero_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" wid
       <path d="M838 394 V208 A127 127 0 0 1 1092 208 V394 Z" fill="none" stroke="#A78BFA" stroke-opacity=".3">
         <animate attributeName="stroke-opacity" values=".15;.5;.15" dur="5s" repeatCount="indefinite"/>
       </path>
-      <!-- Portrait Background -->
+      <!-- Real Portrait Photo -->
       <g clip-path="url(#h-arch)">
-        <rect x="850" y="90" width="232" height="308" fill="url(#h-pg)"/>
-        <!-- Stylised person silhouette -->
-        <!-- Body/shoulders -->
-        <ellipse cx="966" cy="340" rx="110" ry="70" fill="#3B0764" fill-opacity=".9"/>
-        <!-- Neck -->
-        <rect x="950" y="268" width="32" height="40" rx="8" fill="#C4AE8A"/>
-        <!-- Face -->
-        <ellipse cx="966" cy="248" rx="52" ry="60" fill="#C4AE8A"/>
-        <!-- Hair top -->
-        <ellipse cx="966" cy="200" rx="55" ry="28" fill="#2C1A10"/>
-        <!-- Hair sides -->
-        <path d="M914 230 Q905 200 920 180 Q940 165 966 168 Q992 165 1012 180 Q1027 200 1018 230 Q1010 210 966 208 Q922 210 914 230 Z" fill="#2C1A10"/>
-        <!-- Hair falling left -->
-        <path d="M914 230 Q900 260 905 300 Q908 320 918 310 Q920 270 930 250 Z" fill="#2C1A10"/>
-        <!-- Hair falling right -->
-        <path d="M1018 230 Q1032 260 1027 300 Q1024 320 1014 310 Q1012 270 1002 250 Z" fill="#2C1A10"/>
-        <!-- Eyes -->
-        <ellipse cx="950" cy="248" rx="8" ry="9" fill="#2C1A10"/>
-        <ellipse cx="982" cy="248" rx="8" ry="9" fill="#2C1A10"/>
-        <circle cx="953" cy="246" r="3" fill="#fff" fill-opacity=".4"/>
-        <circle cx="985" cy="246" r="3" fill="#fff" fill-opacity=".4"/>
-        <!-- Eyebrows -->
-        <path d="M940 234 Q950 229 960 233" fill="none" stroke="#2C1A10" stroke-width="2.5" stroke-linecap="round"/>
-        <path d="M972 233 Q982 229 992 234" fill="none" stroke="#2C1A10" stroke-width="2.5" stroke-linecap="round"/>
-        <!-- Nose -->
-        <path d="M963 255 Q961 268 956 272 Q963 274 970 272 Q965 268 963 255" fill="#B89A78"/>
-        <!-- Smile -->
-        <path d="M952 284 Q966 296 980 284" fill="none" stroke="#8B6040" stroke-width="2.5" stroke-linecap="round"/>
-        <!-- Teeth hint -->
-        <path d="M954 285 Q966 292 978 285" fill="white" opacity=".5"/>
-        <!-- Collar / top clothing -->
-        <path d="M930 310 L850 394 L1082 394 L1052 310 Q1040 300 1020 305 L1010 312 Q986 326 966 326 Q946 326 922 312 L912 305 Q892 300 880 310 Z" fill="#1C1236"/>
-        <!-- Collar white -->
-        <path d="M940 308 L966 330 L992 308 Q986 300 966 298 Q946 300 940 308 Z" fill="white" opacity=".15"/>
-        <!-- Gradient overlay bottom fade -->
-        <rect x="850" y="330" width="232" height="64" fill="url(#h-pg)" opacity=".5"/>
+        <rect x="850" y="86" width="232" height="308" fill="#140D24"/>
+        <image href="data:image/jpeg;base64,''' + b64_portrait + '''" x="850" y="86" width="232" height="308" preserveAspectRatio="xMidYMin slice"/>
+        <linearGradient id="h-photo-fade" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#7C3AED" stop-opacity=".15"/>
+          <stop offset=".6" stop-color="#140D24" stop-opacity="0"/>
+          <stop offset="1" stop-color="#0B0714" stop-opacity=".85"/>
+        </linearGradient>
+        <rect x="850" y="86" width="232" height="308" fill="url(#h-photo-fade)"/>
       </g>
       <!-- Frame border -->
       <path class="h-draw" d="M850 390 V208 A116 116 0 0 1 1082 208 V390 Z" fill="none" stroke="#DDD6FE" stroke-width="1.5" stroke-opacity=".6"/>
@@ -559,10 +555,6 @@ readme = (
     '<a href="https://snehalsportfolio2027.netlify.app">\n'
     '  <img src="assets/snehal-hero-portrait.svg" width="100%" alt="Snehal Ghadge — AI and Agentic Systems Engineer. Building autonomous intelligence. Designing scalable reasoning workflows.">\n'
     '</a>\n'
-    '\n'
-    '<p align="center">\n'
-    '  <img src="assets/snehal-profile.png" width="140" height="140" alt="Snehal Ghadge — Profile Photo" />\n'
-    '</p>\n'
     '\n'
     '<p align="center">\n'
     '  <a href="https://snehalsportfolio2027.netlify.app"><img src="https://img.shields.io/badge/Portfolio-snehalsportfolio2027-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=netlify" alt="Portfolio"></a>\n'
