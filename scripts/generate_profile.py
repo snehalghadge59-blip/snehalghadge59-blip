@@ -229,30 +229,30 @@ hero_svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" wi
     <!-- Metadata Chips -->
     <g class="h-rise d4" transform="translate(60 306)">
       <g transform="translate(0 0)">
-        <rect width="210" height="34" rx="17" fill="#1A1230" stroke="#8B5CF6" stroke-opacity=".35"/>
-        <text class="h-mono" x="105" y="21" text-anchor="middle" font-size="11" fill="#DDD6FE">SQL &amp; Power BI Analytics</text>
+        <rect width="190" height="34" rx="17" fill="#1A1230" stroke="#8B5CF6" stroke-opacity=".35"/>
+        <text class="h-mono" x="95" y="21" text-anchor="middle" font-size="11" fill="#DDD6FE">SQL &amp; Power BI</text>
       </g>
-      <g transform="translate(222 0)">
-        <rect width="195" height="34" rx="17" fill="#1A1230" stroke="#8B5CF6" stroke-opacity=".35"/>
-        <text class="h-mono" x="97" y="21" text-anchor="middle" font-size="11" fill="#DDD6FE">Python · Pandas · ML</text>
+      <g transform="translate(202 0)">
+        <rect width="180" height="34" rx="17" fill="#1A1230" stroke="#8B5CF6" stroke-opacity=".35"/>
+        <text class="h-mono" x="90" y="21" text-anchor="middle" font-size="11" fill="#DDD6FE">Python · Pandas · ML</text>
       </g>
-      <g transform="translate(429 0)">
-        <rect width="185" height="34" rx="17" fill="#1A1230" stroke="#8B5CF6" stroke-opacity=".35"/>
-        <text class="h-mono" x="92" y="21" text-anchor="middle" font-size="11" fill="#DDD6FE">B.Tech CSE (AI/ML)</text>
+      <g transform="translate(394 0)">
+        <rect width="180" height="34" rx="17" fill="#1A1230" stroke="#8B5CF6" stroke-opacity=".35"/>
+        <text class="h-mono" x="90" y="21" text-anchor="middle" font-size="11" fill="#DDD6FE">B.Tech CSE (AI/ML)</text>
       </g>
     </g>
     <g class="h-rise d5" transform="translate(60 366)">
       <g transform="translate(0 0)">
-        <text class="h-serif" font-size="28" font-weight="300" fill="#FFFFFF">30+</text>
-        <text class="h-sans" y="22" font-size="12" fill="#A79FB5">repos &amp; analytics dashboards</text>
+        <text class="h-serif" font-size="26" font-weight="300" fill="#FFFFFF">30+</text>
+        <text class="h-sans" y="22" font-size="11.5" fill="#A79FB5">repos &amp; dashboards</text>
       </g>
-      <g transform="translate(210 0)">
-        <text class="h-serif" font-size="28" font-weight="300" fill="#FFFFFF">Power BI &amp; SQL</text>
-        <text class="h-sans" y="22" font-size="12" fill="#A79FB5">data pipelines &amp; ETL</text>
+      <g transform="translate(170 0)">
+        <text class="h-serif" font-size="26" font-weight="300" fill="#FFFFFF">Power BI &amp; SQL</text>
+        <text class="h-sans" y="22" font-size="11.5" fill="#A79FB5">analytics &amp; ETL</text>
       </g>
-      <g transform="translate(390 0)">
-        <text class="h-serif" font-size="28" font-weight="300" fill="#FFFFFF">AI Intern</text>
-        <text class="h-sans" y="22" font-size="12" fill="#A79FB5">Code-A-Nova &amp; Infosys</text>
+      <g transform="translate(360 0)">
+        <text class="h-serif" font-size="26" font-weight="300" fill="#FFFFFF">AI Intern</text>
+        <text class="h-sans" y="22" font-size="11.5" fill="#A79FB5">Code-A-Nova &amp; Infosys</text>
       </g>
     </g>
     <!-- Frame & Trace -->
