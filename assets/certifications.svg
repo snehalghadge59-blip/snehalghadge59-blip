@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380" role="img" aria-labelledby="ce-t ce-d">
+  <title id="ce-t">Snehal Ghadge's Certifications</title>
+  <desc id="ce-d">Lenovo LEAP NextGen Scholar (AICTE); Infosys Springboard Generative AI and Agentic Systems; Code-A-Nova Artificial Intelligence Internship; Edunet Foundation AI and Analytics; Data Visualization and Analytics; B.Tech Computer Science and Engineering.</desc>
+  <defs>
+    <linearGradient id="ce-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#140D24"/><stop offset="1" stop-color="#0B0714"/></linearGradient>
+    <radialGradient id="ce-glow" cx="15%" cy="100%" r="70%"><stop offset="0" stop-color="#6D28D9" stop-opacity=".5"/><stop offset="1" stop-color="#3B0764" stop-opacity="0"/></radialGradient>
+    <linearGradient id="ce-edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".5" stop-color="#C4B5FD"/><stop offset="1" stop-color="#7C3AED" stop-opacity="0"/></linearGradient>
+  </defs>
+  <style>
+    .ce-serif { font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif; }
+    .ce-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .ce-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .ce-edge { stroke-dasharray: 600 2500; stroke-dashoffset: 3100; animation: ce-edge 8s linear infinite; }
+    @keyframes ce-edge { to { stroke-dashoffset: 0; } }
+    @media (prefers-reduced-motion: reduce) { .ce-edge { display: none; } }
+  </style>
+  <rect width="1200" height="380" rx="18" fill="url(#ce-bg)"/>
+  <rect width="1200" height="380" rx="18" fill="url(#ce-glow)"/>
+
+  <!-- 6 Cert Cards Grid (3x2) -->
+  <g transform="translate(40 40)">
+    <!-- Cert 1 -->
+    <g transform="translate(0 0)">
+      <rect width="350" height="135" rx="12" fill="#0B0714" stroke="#8B5CF6" stroke-opacity=".32"/>
+      <rect x="0" y="0" width="3.5" height="135" rx="1.5" fill="#8B5CF6"/>
+      <text class="ce-mono" x="20" y="28" font-size="10.5" letter-spacing="1.8" fill="#A78BFA">AICTE &amp; LENOVO</text>
+      <text class="ce-serif" x="20" y="58" font-size="20" fill="#FFFFFF">Lenovo LEAP NextGen Scholar</text>
+      <text class="ce-sans" x="20" y="84" font-size="12" fill="#C4B5FD">Selected national scholar for AI and multi-stage agentic workflow prototyping.</text>
+      <text class="ce-mono" x="20" y="112" font-size="10" fill="#10B981">✓ VERIFIED CREDENTIAL</text>
+    </g>
+
+    <!-- Cert 2 -->
+    <g transform="translate(385 0)">
+      <rect width="350" height="135" rx="12" fill="#0B0714" stroke="#8B5CF6" stroke-opacity=".32"/>
+      <rect x="0" y="0" width="3.5" height="135" rx="1.5" fill="#8B5CF6"/>
+      <text class="ce-mono" x="20" y="28" font-size="10.5" letter-spacing="1.8" fill="#A78BFA">INFOSYS SPRINGBOARD</text>
+      <text class="ce-serif" x="20" y="58" font-size="20" fill="#FFFFFF">Generative AI &amp; Agentic Systems</text>
+      <text class="ce-sans" x="20" y="84" font-size="12" fill="#C4B5FD">Advanced training and virtual internship in GenAI, RAG, and LLM applications.</text>
+      <text class="ce-mono" x="20" y="112" font-size="10" fill="#10B981">✓ VERIFIED CREDENTIAL</text>
+    </g>
+
+    <!-- Cert 3 -->
+    <g transform="translate(770 0)">
+      <rect width="350" height="135" rx="12" fill="#0B0714" stroke="#8B5CF6" stroke-opacity=".32"/>
+      <rect x="0" y="0" width="3.5" height="135" rx="1.5" fill="#8B5CF6"/>
+      <text class="ce-mono" x="20" y="28" font-size="10.5" letter-spacing="1.8" fill="#A78BFA">CODE-A-NOVA</text>
+      <text class="ce-serif" x="20" y="58" font-size="20" fill="#FFFFFF">AI &amp; NLP Systems Internship</text>
+      <text class="ce-sans" x="20" y="84" font-size="12" fill="#C4B5FD">3-month industrial AI internship developing intelligent NLP automation systems.</text>
+      <text class="ce-mono" x="20" y="112" font-size="10" fill="#10B981">✓ VERIFIED CREDENTIAL</text>
+    </g>
+
+    <!-- Cert 4 -->
+    <g transform="translate(0 165)">
+      <rect width="350" height="135" rx="12" fill="#0B0714" stroke="#8B5CF6" stroke-opacity=".32"/>
+      <rect x="0" y="0" width="3.5" height="135" rx="1.5" fill="#8B5CF6"/>
+      <text class="ce-mono" x="20" y="28" font-size="10.5" letter-spacing="1.8" fill="#A78BFA">EDUNET FOUNDATION</text>
+      <text class="ce-serif" x="20" y="58" font-size="20" fill="#FFFFFF">Artificial Intelligence &amp; Analytics</text>
+      <text class="ce-sans" x="20" y="84" font-size="12" fill="#C4B5FD">Hands-on applied machine learning algorithms and predictive data pipelines.</text>
+      <text class="ce-mono" x="20" y="112" font-size="10" fill="#10B981">✓ VERIFIED CREDENTIAL</text>
+    </g>
+
+    <!-- Cert 5 -->
+    <g transform="translate(385 165)">
+      <rect width="350" height="135" rx="12" fill="#0B0714" stroke="#8B5CF6" stroke-opacity=".32"/>
+      <rect x="0" y="0" width="3.5" height="135" rx="1.5" fill="#8B5CF6"/>
+      <text class="ce-mono" x="20" y="28" font-size="10.5" letter-spacing="1.8" fill="#A78BFA">BUSINESS INTELLIGENCE</text>
+      <text class="ce-serif" x="20" y="58" font-size="20" fill="#FFFFFF">Data Visualization &amp; BI</text>
+      <text class="ce-sans" x="20" y="84" font-size="12" fill="#C4B5FD">Interactive dashboards, telemetry tracking and data visualization pipelines.</text>
+      <text class="ce-mono" x="20" y="112" font-size="10" fill="#10B981">✓ VERIFIED CREDENTIAL</text>
+    </g>
+
+    <!-- Cert 6 -->
+    <g transform="translate(770 165)">
+      <rect width="350" height="135" rx="12" fill="#0B0714" stroke="#8B5CF6" stroke-opacity=".32"/>
+      <rect x="0" y="0" width="3.5" height="135" rx="1.5" fill="#8B5CF6"/>
+      <text class="ce-mono" x="20" y="28" font-size="10.5" letter-spacing="1.8" fill="#A78BFA">ACADEMIC DEGREE</text>
+      <text class="ce-serif" x="20" y="58" font-size="20" fill="#FFFFFF">B.Tech CSE (AI &amp; ML)</text>
+      <text class="ce-sans" x="20" y="84" font-size="12" fill="#C4B5FD">PCET's Nutan College of Engineering, Pune. Specialization in Artificial Intelligence.</text>
+      <text class="ce-mono" x="20" y="112" font-size="10" fill="#10B981">✓ CANDIDATE IN GOOD STANDING</text>
+    </g>
+  </g>
+
+  <rect x=".5" y=".5" width="1199" height="379" rx="17.5" fill="none" stroke="#8B5CF6" stroke-opacity=".2"/>
+  <rect class="ce-edge" x=".5" y=".5" width="1199" height="379" rx="17.5" fill="none" stroke="url(#ce-edge)" stroke-width="1.6" stroke-linecap="round"/>
+</svg>

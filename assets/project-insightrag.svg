@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 370" width="1200" height="370" role="img" aria-labelledby="project-insightrag-t">
+  <title id="project-insightrag-t">InsightRAG: Production-grade enterprise RAG with semantic cache and hybrid search.</title>
+  <defs>
+    <linearGradient id="project-insightrag-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#140D24"/><stop offset="1" stop-color="#0B0714"/></linearGradient>
+    <radialGradient id="project-insightrag-glow" cx="82%" cy="30%" r="55%"><stop offset="0" stop-color="#7C3AED" stop-opacity=".7"/><stop offset="1" stop-color="#3B0764" stop-opacity="0"/></radialGradient>
+    <pattern id="project-insightrag-grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#8B5CF6" stroke-opacity=".08"/></pattern>
+    <clipPath id="project-insightrag-clip"><rect width="1200" height="370" rx="18"/></clipPath>
+    <linearGradient id="project-insightrag-trace" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".45" stop-color="#C4B5FD"/><stop offset="1" stop-color="#7C3AED" stop-opacity="0"/></linearGradient>
+  </defs>
+  <style>
+    .p-serif { font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif; }
+    .p-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .p-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .p-in { animation: p-in 1.2s cubic-bezier(.16,1,.3,1) both; }
+    .p-d1 { animation-delay: .15s; } .p-d2 { animation-delay: .4s; }
+    .p-draw { stroke-dasharray: 600; stroke-dashoffset: 600; animation: p-draw 2s cubic-bezier(.65,0,.35,1) .5s forwards; }
+    .p-trace { stroke-dasharray: 564 3136; stroke-dashoffset: 3700; animation: p-trace 7s linear infinite; }
+    @keyframes p-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+    @keyframes p-draw { to { stroke-dashoffset: 0; } }
+    @keyframes p-trace { to { stroke-dashoffset: 0; } }
+    @media (prefers-reduced-motion: reduce) { .p-in { animation: none; } .p-draw { animation: none; stroke-dashoffset: 0; } .p-trace { display: none; } }
+  </style>
+  <g clip-path="url(#project-insightrag-clip)">
+    <rect width="1200" height="370" fill="url(#project-insightrag-bg)"/>
+    <rect x="720" width="480" height="370" fill="url(#project-insightrag-grid)"/>
+    <rect width="1200" height="370" fill="url(#project-insightrag-glow)"/>
+    <g class="p-in p-d1">
+      <text class="p-mono" x="56" y="62" font-size="12" letter-spacing="2.6" fill="#A78BFA">02 · ENTERPRISE RAG · HYBRID SEARCH · VECTOR DBS · 2026</text>
+      <text class="p-serif" x="54" y="126" font-size="52" font-weight="300" letter-spacing="-1.5" fill="#FFFFFF">InsightRAG</text>
+      <text class="p-sans" x="56" y="166" font-size="17" fill="#C4B5FD">Production-grade enterprise RAG with semantic cache and hybrid search.</text>
+      <text class="p-mono" x="56" y="200" font-size="12.5" fill="#DDD6FE"><tspan fill="#A78BFA">BUILT ›</tspan> Hybrid vector & BM25 retrieval, document re-ranking, and low-latency cache</text>
+      <line class="p-draw" x1="56" y1="226" x2="680" y2="226" stroke="#8B5CF6" stroke-opacity=".3"/>
+      <g transform="translate(56 266)"><text class="p-serif" font-size="34" font-weight="300" fill="#FFFFFF">10k+</text><text class="p-sans" y="24" font-size="12.5" fill="#A79FB5">chunks indexed</text></g>
+      <g transform="translate(261 266)"><text class="p-serif" font-size="34" font-weight="300" fill="#FFFFFF">94.8%</text><text class="p-sans" y="24" font-size="12.5" fill="#A79FB5">retrieval precision</text></g>
+      <g transform="translate(466 266)"><text class="p-serif" font-size="34" font-weight="300" fill="#FFFFFF">4x</text><text class="p-sans" y="24" font-size="12.5" fill="#A79FB5">faster response time</text></g>
+      <g class="p-chip" style="animation-delay:1.00s">
+          <rect x="56" y="314" width="78" height="26" rx="13" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".35"/>
+          <text class="p-mono" x="95.0" y="331" text-anchor="middle" font-size="11.5" fill="#DDD6FE">Python</text>
+        </g>\n<g class="p-chip" style="animation-delay:1.12s">
+          <rect x="144" y="314" width="114" height="26" rx="13" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".35"/>
+          <text class="p-mono" x="201.0" y="331" text-anchor="middle" font-size="11.5" fill="#DDD6FE">LlamaIndex</text>
+        </g>\n<g class="p-chip" style="animation-delay:1.24s">
+          <rect x="268" y="314" width="69" height="26" rx="13" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".35"/>
+          <text class="p-mono" x="302.5" y="331" text-anchor="middle" font-size="11.5" fill="#DDD6FE">FAISS</text>
+        </g>\n<g class="p-chip" style="animation-delay:1.36s">
+          <rect x="347" y="314" width="105" height="26" rx="13" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".35"/>
+          <text class="p-mono" x="399.5" y="331" text-anchor="middle" font-size="11.5" fill="#DDD6FE">LangChain</text>
+        </g>\n<g class="p-chip" style="animation-delay:1.48s">
+          <rect x="462" y="314" width="105" height="26" rx="13" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".35"/>
+          <text class="p-mono" x="514.5" y="331" text-anchor="middle" font-size="11.5" fill="#DDD6FE">Streamlit</text>
+        </g>
+    </g>
+    <!-- Right Diagram Area -->
+    <g class="p-in p-d2">
+      <g transform="translate(780 40)">
+  <rect x="0" y="0" width="370" height="290" rx="14" fill="#0B0714" stroke="#8B5CF6" stroke-opacity=".35"/>
+  <!-- Document Ingestion Layers -->
+  <g transform="translate(30 30)">
+    <rect width="310" height="42" rx="8" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".3"/>
+    <text class="p-mono" x="155" y="26" text-anchor="middle" font-size="11" fill="#FFFFFF">1. Chunking &amp; Hybrid Ingestion</text>
+  </g>
+  <g transform="translate(30 90)">
+    <rect width="145" height="46" rx="8" fill="#140D24" stroke="#A78BFA" stroke-opacity=".3"/>
+    <text class="p-mono" x="72" y="22" text-anchor="middle" font-size="10" fill="#DDD6FE">Vector Index</text>
+    <text class="p-mono" x="72" y="38" text-anchor="middle" font-size="9" fill="#A79FB5">FAISS Dense</text>
+    
+    <rect x="165" width="145" height="46" rx="8" fill="#140D24" stroke="#A78BFA" stroke-opacity=".3"/>
+    <text class="p-mono" x="237" y="22" text-anchor="middle" font-size="10" fill="#DDD6FE">Sparse Index</text>
+    <text class="p-mono" x="237" y="38" text-anchor="middle" font-size="9" fill="#A79FB5">BM25 Keyword</text>
+  </g>
+  <g transform="translate(30 156)">
+    <rect width="310" height="42" rx="8" fill="#1C1236" stroke="#C084FC" stroke-opacity=".4"/>
+    <text class="p-mono" x="155" y="26" text-anchor="middle" font-size="11" fill="#FFFFFF">2. Reranking &amp; Semantic Cache</text>
+  </g>
+  <g transform="translate(30 218)">
+    <rect width="310" height="46" rx="8" fill="#140D24" stroke="#10B981" stroke-opacity=".4"/>
+    <text class="p-mono" x="155" y="24" text-anchor="middle" font-size="11" fill="#10B981">3. Grounded LLM Response</text>
+    <text class="p-mono" x="155" y="38" text-anchor="middle" font-size="9" fill="#A79FB5">Zero Hallucination Guardrail</text>
+  </g>
+</g>
+    </g>
+    <rect x=".5" y=".5" width="1199" height="369" rx="17.5" fill="none" stroke="#8B5CF6" stroke-opacity=".2"/>
+    <rect class="p-trace" x=".5" y=".5" width="1199" height="369" rx="17.5" fill="none" stroke="url(#project-insightrag-trace)" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+</svg>

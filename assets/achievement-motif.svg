@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" role="img" aria-labelledby="ach-title ach-desc">
+  <title id="ach-title">Recognition and Honors</title>
+  <desc id="ach-desc">Lenovo LEAP NextGen Scholar via AICTE; Infosys Springboard Virtual Intern; AI Intern at Code-A-Nova; Certified AI Specialist in Generative AI and RAG architectures; 30+ GitHub projects; LeetCode algorithmic problem solver.</desc>
+  <defs>
+    <linearGradient id="ach-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#140D24"/><stop offset="1" stop-color="#0B0714"/></linearGradient>
+    <radialGradient id="ach-glow" cx="80%" cy="20%" r="70%"><stop offset="0" stop-color="#7C3AED" stop-opacity=".65"/><stop offset="1" stop-color="#4C1D95" stop-opacity="0"/></radialGradient>
+    <linearGradient id="ach-trace" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EDE9FE"/><stop offset=".45" stop-color="#C4B5FD"/><stop offset="1" stop-color="#7C3AED" stop-opacity="0"/></linearGradient>
+  </defs>
+  <style>
+    .ach-serif { font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif; }
+    .ach-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .ach-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .ach-trace { stroke-dasharray: 600 2600; stroke-dashoffset: 3200; animation: ach-trace 8s linear infinite; }
+    @keyframes ach-trace { to { stroke-dashoffset: 0; } }
+    @media (prefers-reduced-motion: reduce) { .ach-trace { display: none; } }
+  </style>
+  <rect width="1200" height="400" rx="18" fill="url(#ach-bg)"/>
+  <rect width="1200" height="400" rx="18" fill="url(#ach-glow)"/>
+
+  <!-- Grid of 4 Achievement Cards -->
+  <g transform="translate(40 40)">
+    <!-- Card 1 -->
+    <g transform="translate(0 0)">
+      <rect width="540" height="145" rx="14" fill="#0B0714" stroke="#8B5CF6" stroke-opacity=".32"/>
+      <rect x="0" y="0" width="3.5" height="145" rx="1.5" fill="#8B5CF6"/>
+      <text class="ach-mono" x="26" y="32" font-size="11" letter-spacing="2.2" fill="#A78BFA">NATIONAL SCHOLARSHIP</text>
+      <text class="ach-serif" x="26" y="66" font-size="24" font-weight="300" fill="#FFFFFF">Lenovo LEAP NextGen Scholar</text>
+      <text class="ach-sans" x="26" y="94" font-size="13" fill="#C4B5FD">Selected under AICTE Virtual Remote Initiative.</text>
+      <text class="ach-mono" x="26" y="118" font-size="11" fill="#A79FB5">Engineered 2 agentic workflow prototypes applying multi-stage reasoning.</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(580 0)">
+      <rect width="540" height="145" rx="14" fill="#0B0714" stroke="#8B5CF6" stroke-opacity=".32"/>
+      <rect x="0" y="0" width="3.5" height="145" rx="1.5" fill="#8B5CF6"/>
+      <text class="ach-mono" x="26" y="32" font-size="11" letter-spacing="2.2" fill="#A78BFA">VIRTUAL INDUSTRY INTERNSHIP</text>
+      <text class="ach-serif" x="26" y="66" font-size="24" font-weight="300" fill="#FFFFFF">Infosys Springboard</text>
+      <text class="ach-sans" x="26" y="94" font-size="13" fill="#C4B5FD">Generative AI &amp; Agentic Systems Intern (Jun 2026 – Jul 2026).</text>
+      <text class="ach-mono" x="26" y="118" font-size="11" fill="#A79FB5">Built production GenAI workflows, prompt optimization &amp; RAG architectures.</text>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(0 175)">
+      <rect width="540" height="145" rx="14" fill="#0B0714" stroke="#8B5CF6" stroke-opacity=".32"/>
+      <rect x="0" y="0" width="3.5" height="145" rx="1.5" fill="#8B5CF6"/>
+      <text class="ach-mono" x="26" y="32" font-size="11" letter-spacing="2.2" fill="#A78BFA">AI &amp; NLP INTERNSHIP</text>
+      <text class="ach-serif" x="26" y="66" font-size="24" font-weight="300" fill="#FFFFFF">Code-A-Nova AI Intern</text>
+      <text class="ach-sans" x="26" y="94" font-size="13" fill="#C4B5FD">Intelligent AI models, NLP pipelines &amp; web automation systems.</text>
+      <text class="ach-mono" x="26" y="118" font-size="11" fill="#A79FB5">Document intelligence, semantic search and enterprise backend integration.</text>
+    </g>
+
+    <!-- Card 4 -->
+    <g transform="translate(580 175)">
+      <rect width="540" height="145" rx="14" fill="#0B0714" stroke="#8B5CF6" stroke-opacity=".32"/>
+      <rect x="0" y="0" width="3.5" height="145" rx="1.5" fill="#8B5CF6"/>
+      <text class="ach-mono" x="26" y="32" font-size="11" letter-spacing="2.2" fill="#A78BFA">ALGORITHMIC SKILLS &amp; CODEBASE</text>
+      <text class="ach-serif" x="26" y="66" font-size="24" font-weight="300" fill="#FFFFFF">30+ Repos &amp; LeetCode Solver</text>
+      <text class="ach-sans" x="26" y="94" font-size="13" fill="#C4B5FD">Active competitive problem solving across DSA in Python &amp; C++.</text>
+      <text class="ach-mono" x="26" y="118" font-size="11" fill="#A79FB5">Full-stack apps, autonomous agents, and end-to-end data pipelines.</text>
+    </g>
+  </g>
+
+  <!-- Outer Frame & Trace -->
+  <rect x=".5" y=".5" width="1199" height="399" rx="17.5" fill="none" stroke="#8B5CF6" stroke-opacity=".2"/>
+  <rect class="ach-trace" x=".5" y=".5" width="1199" height="399" rx="17.5" fill="none" stroke="url(#ach-trace)" stroke-width="1.6" stroke-linecap="round"/>
+</svg>

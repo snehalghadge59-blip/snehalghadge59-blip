@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480" role="img" aria-labelledby="tc-title tc-desc">
+  <title id="tc-title">Snehal's Tech Stack</title>
+  <desc id="tc-desc">Languages: Python (primary), C++, TypeScript, JavaScript, SQL. AI/ML and RAG: PyTorch, LangChain, LangGraph, LlamaIndex, FAISS, Transformers. Backend: FastAPI, Flask, Node.js, Express, REST APIs. Data: PostgreSQL, MongoDB, MySQL, Redis, Vector DBs. Cloud and DevOps: AWS, Docker, Git, GitHub Actions, Linux. Tools: Postman, PowerBI, Streamlit, Jupyter.</desc>
+  <defs>
+    <linearGradient id="tc-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#140D24"/><stop offset="1" stop-color="#0B0714"/></linearGradient>
+    <radialGradient id="tc-glow" cx="50%" cy="50%" r="60%"><stop offset="0" stop-color="#5B21B6" stop-opacity=".7"/><stop offset="1" stop-color="#24143D" stop-opacity="0"/></radialGradient>
+    <linearGradient id="tc-trace" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".45" stop-color="#C4B5FD"/><stop offset="1" stop-color="#7C3AED" stop-opacity="0"/></linearGradient>
+  </defs>
+  <style>
+    .tc-serif { font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif; }
+    .tc-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .tc-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .tc-trace { stroke-dasharray: 600 2760; stroke-dashoffset: 3360; animation: tc-trace 8s linear infinite; }
+    @keyframes tc-trace { to { stroke-dashoffset: 0; } }
+    @media (prefers-reduced-motion: reduce) { .tc-trace { display: none; } }
+  </style>
+  <rect width="1200" height="480" rx="18" fill="url(#tc-bg)"/>
+  <rect width="1200" height="480" rx="18" fill="url(#tc-glow)"/>
+
+  <!-- 6 Categorized Panels -->
+  <g transform="translate(40 40)">
+    <!-- 1. Languages -->
+    <g transform="translate(0 0)">
+      <rect width="350" height="180" rx="12" fill="#0B0714" stroke="#8B5CF6" stroke-opacity=".32"/>
+      <rect x="0" y="0" width="3.5" height="180" rx="1.5" fill="#8B5CF6"/>
+      <text class="tc-mono" x="22" y="28" font-size="10.5" letter-spacing="2" fill="#A78BFA">01 · PROGRAMMING LANGUAGES</text>
+      <text class="tc-serif" x="22" y="60" font-size="22" fill="#FFFFFF">Python &amp; C++</text>
+      <text class="tc-sans" x="22" y="86" font-size="12.5" fill="#C4B5FD">Primary languages for AI, Machine Learning, algorithm design and backend microservices.</text>
+      <text class="tc-mono" x="22" y="124" font-size="11" fill="#DDD6FE">Python · C++ · TypeScript · JavaScript · SQL</text>
+    </g>
+
+    <!-- 2. AI & RAG -->
+    <g transform="translate(385 0)">
+      <rect width="350" height="180" rx="12" fill="#0B0714" stroke="#8B5CF6" stroke-opacity=".32"/>
+      <rect x="0" y="0" width="3.5" height="180" rx="1.5" fill="#8B5CF6"/>
+      <text class="tc-mono" x="22" y="28" font-size="10.5" letter-spacing="2" fill="#A78BFA">02 · AI, GENAI &amp; RAG</text>
+      <text class="tc-serif" x="22" y="60" font-size="22" fill="#FFFFFF">Agentic &amp; Reasoning AI</text>
+      <text class="tc-sans" x="22" y="86" font-size="12.5" fill="#C4B5FD">Multi-agent frameworks, hybrid retrieval RAG, semantic caching, vector search &amp; LLM fine-tuning.</text>
+      <text class="tc-mono" x="22" y="124" font-size="11" fill="#DDD6FE">PyTorch · LangChain · LangGraph · FAISS · LlamaIndex</text>
+    </g>
+
+    <!-- 3. Backend -->
+    <g transform="translate(770 0)">
+      <rect width="350" height="180" rx="12" fill="#0B0714" stroke="#8B5CF6" stroke-opacity=".32"/>
+      <rect x="0" y="0" width="3.5" height="180" rx="1.5" fill="#8B5CF6"/>
+      <text class="tc-mono" x="22" y="28" font-size="10.5" letter-spacing="2" fill="#A78BFA">03 · BACKEND &amp; APIS</text>
+      <text class="tc-serif" x="22" y="60" font-size="22" fill="#FFFFFF">Distributed Backends</text>
+      <text class="tc-sans" x="22" y="86" font-size="12.5" fill="#C4B5FD">Asynchronous high-throughput microservices, rate-limiters, event systems &amp; REST APIs.</text>
+      <text class="tc-mono" x="22" y="124" font-size="11" fill="#DDD6FE">FastAPI · Flask · Node.js · Express · REST · Redis</text>
+    </g>
+
+    <!-- 4. Data & Storage -->
+    <g transform="translate(0 210)">
+      <rect width="350" height="180" rx="12" fill="#0B0714" stroke="#8B5CF6" stroke-opacity=".32"/>
+      <rect x="0" y="0" width="3.5" height="180" rx="1.5" fill="#8B5CF6"/>
+      <text class="tc-mono" x="22" y="28" font-size="10.5" letter-spacing="2" fill="#A78BFA">04 · DATA &amp; STORAGE</text>
+      <text class="tc-serif" x="22" y="60" font-size="22" fill="#FFFFFF">Relational &amp; Vector</text>
+      <text class="tc-sans" x="22" y="86" font-size="12.5" fill="#C4B5FD">Structured SQL, document stores, in-memory caching and high-dimensional vector databases.</text>
+      <text class="tc-mono" x="22" y="124" font-size="11" fill="#DDD6FE">PostgreSQL · MongoDB · MySQL · Redis · Vector DBs</text>
+    </g>
+
+    <!-- 5. Cloud & DevOps -->
+    <g transform="translate(385 210)">
+      <rect width="350" height="180" rx="12" fill="#0B0714" stroke="#8B5CF6" stroke-opacity=".32"/>
+      <rect x="0" y="0" width="3.5" height="180" rx="1.5" fill="#8B5CF6"/>
+      <text class="tc-mono" x="22" y="28" font-size="10.5" letter-spacing="2" fill="#A78BFA">05 · CLOUD &amp; DEVOPS</text>
+      <text class="tc-serif" x="22" y="60" font-size="22" fill="#FFFFFF">Containerized Deployments</text>
+      <text class="tc-sans" x="22" y="86" font-size="12.5" fill="#C4B5FD">Automated CI/CD pipelines, container orchestration, Linux environments &amp; cloud hosting.</text>
+      <text class="tc-mono" x="22" y="124" font-size="11" fill="#DDD6FE">AWS · Docker · GitHub Actions · Linux · Git</text>
+    </g>
+
+    <!-- 6. Developer Tools -->
+    <g transform="translate(770 210)">
+      <rect width="350" height="180" rx="12" fill="#0B0714" stroke="#8B5CF6" stroke-opacity=".32"/>
+      <rect x="0" y="0" width="3.5" height="180" rx="1.5" fill="#8B5CF6"/>
+      <text class="tc-mono" x="22" y="28" font-size="10.5" letter-spacing="2" fill="#A78BFA">06 · TOOLS &amp; ANALYTICS</text>
+      <text class="tc-serif" x="22" y="60" font-size="22" fill="#FFFFFF">Developer Productivity</text>
+      <text class="tc-sans" x="22" y="86" font-size="12.5" fill="#C4B5FD">Interactive dashboards, API testing suites, telemetry visualization &amp; data analysis.</text>
+      <text class="tc-mono" x="22" y="124" font-size="11" fill="#DDD6FE">Streamlit · PowerBI · Jupyter · Postman · Plotly</text>
+    </g>
+  </g>
+
+  <rect x=".5" y=".5" width="1199" height="479" rx="17.5" fill="none" stroke="#8B5CF6" stroke-opacity=".2"/>
+  <rect class="tc-trace" x=".5" y=".5" width="1199" height="479" rx="17.5" fill="none" stroke="url(#tc-trace)" stroke-width="1.6" stroke-linecap="round"/>
+</svg>
