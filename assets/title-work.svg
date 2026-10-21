@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" width="1200" height="120" role="img" aria-label="03 SELECTED WORK: Analytics & AI Projects, tested & deployed.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" width="1200" height="120" role="img" aria-label="03 SELECTED WORK: Analytics &amp; AI Projects, tested &amp; deployed.">
   <defs>
     <linearGradient id="ta-line" gradientUnits="userSpaceOnUse" x1="40" y1="0" x2="1160" y2="0">
       <stop offset="0" stop-color="#A78BFA"/><stop offset=".6" stop-color="#6D28D9"/><stop offset="1" stop-color="#6D28D9" stop-opacity="0"/>
@@ -14,8 +14,8 @@
   </style>
   <g transform="translate(40 40)">
     <text class="ta-mono" font-size="11" letter-spacing="2.8" fill="#C4B5FD">03 · SELECTED WORK</text>
-    <text class="ta-serif" y="44" font-size="34" font-weight="300" fill="#FFFFFF">Analytics & AI Projects, <tspan fill="#C4B5FD" font-style="italic">tested & deployed.</tspan></text>
-    <text class="ta-serif" y="44" font-size="34" font-weight="300" fill="url(#ta-sheen)">Analytics & AI Projects, <tspan fill="#C4B5FD" font-style="italic">tested & deployed.</tspan></text>
+    <text class="ta-serif" y="44" font-size="34" font-weight="300" fill="#FFFFFF">Analytics &amp; AI Projects, <tspan fill="#C4B5FD" font-style="italic">tested &amp; deployed.</tspan></text>
+    <text class="ta-serif" y="44" font-size="34" font-weight="300" fill="url(#ta-sheen)">Analytics &amp; AI Projects, <tspan fill="#C4B5FD" font-style="italic">tested &amp; deployed.</tspan></text>
     <text class="ta-mono" x="1120" y="14" text-anchor="end" font-size="10.5" letter-spacing="2" fill="#A79FB5">FEATURED SYSTEMS</text>
   </g>
   <line x1="40" y1="104" x2="1160" y2="104" stroke="url(#ta-line)" stroke-width="1"/>

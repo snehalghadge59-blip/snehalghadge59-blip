@@ -1,9 +1,9 @@
 <a href="https://snehalsportfolio2027.netlify.app">
-  <img src="assets/snehal-hero-portrait.svg?v=3" width="100%" alt="Snehal Ghadge — Data Analyst and AI Intern. Transforming complex data into actionable intelligence and building scalable ML systems.">
+  <img src="assets/snehal-hero-portrait.svg?v=4" width="100%" alt="Snehal Ghadge — Data Analyst and AI Intern. Transforming complex data into actionable intelligence and building scalable ML systems.">
 </a>
 
 <p align="center">
-  <img src="assets/snehal-profile.png?v=3" width="140" height="140" alt="Snehal Ghadge — Data Analyst &amp; AI Intern" />
+  <img src="assets/snehal-profile.png?v=4" width="140" height="140" alt="Snehal Ghadge — Data Analyst &amp; AI Intern" />
 </p>
 
 <p align="center">
@@ -14,37 +14,37 @@
   <a href="https://github.com/snehalghadge59-blip"><img src="https://img.shields.io/badge/GitHub-snehalghadge59--blip-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=github" alt="GitHub"></a>
 </p>
 
-<img src="assets/title-about.svg" width="100%" alt="01 About - Hello, Im Snehal.">
-<img src="assets/about-intro.svg?v=3" width="100%" alt="About: Data Analyst and AI Intern. B.Tech in CSE (AI/ML) at Nutan College of Engineering, Pune.">
+<img src="assets/title-about.svg?v=4" width="100%" alt="01 About - Hello, Im Snehal.">
+<img src="assets/about-intro.svg?v=4" width="100%" alt="About: Data Analyst and AI Intern. B.Tech in CSE (AI/ML) at Nutan College of Engineering, Pune.">
 
-<img src="assets/title-recognition.svg" width="100%" alt="02 Recognition - Proof, on the record.">
-<img src="assets/achievement-motif.svg?v=3" width="100%" alt="Lenovo LEAP NextGen Scholar via AICTE; Infosys Springboard Virtual Intern (Data Analytics, Power BI &amp; GenAI); AI Intern at Code-A-Nova; 30+ GitHub projects and dashboards.">
+<img src="assets/title-recognition.svg?v=4" width="100%" alt="02 Recognition - Proof, on the record.">
+<img src="assets/achievement-motif.svg?v=4" width="100%" alt="Lenovo LEAP NextGen Scholar via AICTE; Infosys Springboard Virtual Intern (Data Analytics, Power BI &amp; GenAI); AI Intern at Code-A-Nova; 30+ GitHub projects and dashboards.">
 
-<img src="assets/title-work.svg" width="100%" alt="03 Selected work - Products, not assignments.">
+<img src="assets/title-work.svg?v=4" width="100%" alt="03 Selected work - Products, not assignments.">
 
 <a href="https://github.com/snehalghadge59-blip/AeroFaultAI">
-  <img src="assets/project-aerofault.svg" width="100%" alt="AeroFaultAI: Real-time aerospace telemetry anomaly detection, exploratory data analysis and predictive diagnostics.">
+  <img src="assets/project-aerofault.svg?v=4" width="100%" alt="AeroFaultAI: Real-time aerospace telemetry anomaly detection, exploratory data analysis and predictive diagnostics.">
 </a>
 <p align="center">
   <a href="https://github.com/snehalghadge59-blip/AeroFaultAI"><img src="https://img.shields.io/badge/Repository-AeroFaultAI-4C1D95?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=github" alt="AeroFaultAI repository"></a>
 </p>
 
 <a href="https://github.com/snehalghadge59-blip/AgentFlow-AI">
-  <img src="assets/project-agentflow.svg" width="100%" alt="AgentFlow-AI: Multi-agent orchestration framework for autonomous decision intelligence and task execution.">
+  <img src="assets/project-agentflow.svg?v=4" width="100%" alt="AgentFlow-AI: Multi-agent orchestration framework for autonomous decision intelligence and task execution.">
 </a>
 <p align="center">
   <a href="https://github.com/snehalghadge59-blip/AgentFlow-AI"><img src="https://img.shields.io/badge/Repository-AgentFlow--AI-4C1D95?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=github" alt="AgentFlow-AI repository"></a>
 </p>
 
 <a href="https://github.com/snehalghadge59-blip/InsightRAG">
-  <img src="assets/project-insightrag.svg" width="100%" alt="InsightRAG: Production-grade enterprise analytics and RAG with hybrid search and semantic cache.">
+  <img src="assets/project-insightrag.svg?v=4" width="100%" alt="InsightRAG: Production-grade enterprise analytics and RAG with hybrid search and semantic cache.">
 </a>
 <p align="center">
   <a href="https://github.com/snehalghadge59-blip/InsightRAG"><img src="https://img.shields.io/badge/Repository-InsightRAG-4C1D95?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=github" alt="InsightRAG repository"></a>
 </p>
 
-<img src="assets/title-toolkit.svg" width="100%" alt="04 Toolkit - The tools I reach for.">
-<img src="assets/tech-constellation.svg?v=3" width="100%" alt="Full tech stack listing.">
+<img src="assets/title-toolkit.svg?v=4" width="100%" alt="04 Toolkit - The tools I reach for.">
+<img src="assets/tech-constellation.svg?v=4" width="100%" alt="Full tech stack listing.">
 
 <!-- Tech Stack Skill Icons with Logos -->
 <p align="center">
@@ -74,7 +74,7 @@
   <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=vscode,postman,figma" alt="VS Code Postman Figma" /></a>
 </p>
 
-<img src="assets/title-commits.svg" width="100%" alt="05 Commit log - A year of continuous building.">
+<img src="assets/title-commits.svg?v=4" width="100%" alt="05 Commit log - A year of continuous building.">
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" width="100%" alt="GitHub Contribution Grid Snake Animation" />
@@ -86,12 +86,12 @@
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=snehalghadge59-blip&amp;layout=compact&amp;hide_border=true&amp;border_radius=16&amp;bg_color=0B0714&amp;title_color=DDD6FE&amp;text_color=A79FB5" width="370" alt="Top languages" />
 </p>
 
-<img src="assets/title-certifications.svg" width="100%" alt="06 Certifications - Verified credentials and accreditations.">
+<img src="assets/title-certifications.svg?v=4" width="100%" alt="06 Certifications - Verified credentials and accreditations.">
 <a href="https://snehalsportfolio2027.netlify.app">
-  <img src="assets/certifications.svg?v=3" width="100%" alt="Certifications: Lenovo LEAP NextGen Scholar, Infosys Springboard GenAI, Code-A-Nova AI Internship, Edunet Foundation AI, Data Visualization, B.Tech CSE AI/ML.">
+  <img src="assets/certifications.svg?v=4" width="100%" alt="Certifications: Lenovo LEAP NextGen Scholar, Infosys Springboard GenAI, Code-A-Nova AI Internship, Edunet Foundation AI, Data Visualization, B.Tech CSE AI/ML.">
 </a>
 
-<img src="assets/title-connect.svg" width="100%" alt="07 Connect - Lets build something worth explaining.">
+<img src="assets/title-connect.svg?v=4" width="100%" alt="07 Connect - Lets build something worth explaining.">
 
 <p align="center">
   <a href="mailto:snehalghadge59@gmail.com"><img src="https://img.shields.io/badge/Email-snehalghadge59@gmail.com-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=gmail" alt="Email"></a>
@@ -101,5 +101,5 @@
 </p>
 
 <a href="https://snehalsportfolio2027.netlify.app">
-  <img src="assets/footer-signature.svg?v=3" width="100%" alt="Snehal - Delivering data-driven intelligence and high-impact AI solutions.">
+  <img src="assets/footer-signature.svg?v=4" width="100%" alt="Snehal - Delivering data-driven intelligence and high-impact AI solutions.">
 </a>
