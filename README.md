@@ -1,6 +1,10 @@
 <a href="https://snehalsportfolio2027.netlify.app">
-  <img src="assets/snehal-hero-portrait.svg" width="100%" alt="Snehal Ghadge — AI and Agentic Systems Engineer. Building autonomous intelligence. Designing scalable reasoning workflows.">
+  <img src="assets/snehal-hero-portrait.svg" width="100%" alt="Snehal Ghadge — Data Analyst and AI Intern. Transforming complex data into actionable intelligence and building scalable ML systems.">
 </a>
+
+<p align="center">
+  <img src="assets/snehal-profile.png" width="140" height="140" alt="Snehal Ghadge — Data Analyst &amp; AI Intern" />
+</p>
 
 <p align="center">
   <a href="https://snehalsportfolio2027.netlify.app"><img src="https://img.shields.io/badge/Portfolio-snehalsportfolio2027-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=netlify" alt="Portfolio"></a>
@@ -11,32 +15,32 @@
 </p>
 
 <img src="assets/title-about.svg" width="100%" alt="01 About - Hello, Im Snehal.">
-<img src="assets/about-intro.svg" width="100%" alt="About: AI and Agentic Systems Engineer and Machine Learning Developer. B.Tech in CSE (AI/ML) at Nutan College of Engineering, Pune.">
+<img src="assets/about-intro.svg" width="100%" alt="About: Data Analyst and AI Intern. B.Tech in CSE (AI/ML) at Nutan College of Engineering, Pune.">
 
 <img src="assets/title-recognition.svg" width="100%" alt="02 Recognition - Proof, on the record.">
-<img src="assets/achievement-motif.svg" width="100%" alt="Lenovo LEAP NextGen Scholar via AICTE; Infosys Springboard Virtual Intern; AI Intern at Code-A-Nova; 30+ GitHub projects.">
+<img src="assets/achievement-motif.svg" width="100%" alt="Lenovo LEAP NextGen Scholar via AICTE; Infosys Springboard Virtual Intern (Data Analytics, Power BI &amp; GenAI); AI Intern at Code-A-Nova; 30+ GitHub projects and dashboards.">
 
 <img src="assets/title-work.svg" width="100%" alt="03 Selected work - Products, not assignments.">
 
+<a href="https://github.com/snehalghadge59-blip/AeroFaultAI">
+  <img src="assets/project-aerofault.svg" width="100%" alt="AeroFaultAI: Real-time aerospace telemetry anomaly detection, exploratory data analysis and predictive diagnostics.">
+</a>
+<p align="center">
+  <a href="https://github.com/snehalghadge59-blip/AeroFaultAI"><img src="https://img.shields.io/badge/Repository-AeroFaultAI-4C1D95?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=github" alt="AeroFaultAI repository"></a>
+</p>
+
 <a href="https://github.com/snehalghadge59-blip/AgentFlow-AI">
-  <img src="assets/project-agentflow.svg" width="100%" alt="AgentFlow-AI: Multi-agent orchestration framework for autonomous task execution.">
+  <img src="assets/project-agentflow.svg" width="100%" alt="AgentFlow-AI: Multi-agent orchestration framework for autonomous decision intelligence and task execution.">
 </a>
 <p align="center">
   <a href="https://github.com/snehalghadge59-blip/AgentFlow-AI"><img src="https://img.shields.io/badge/Repository-AgentFlow--AI-4C1D95?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=github" alt="AgentFlow-AI repository"></a>
 </p>
 
 <a href="https://github.com/snehalghadge59-blip/InsightRAG">
-  <img src="assets/project-insightrag.svg" width="100%" alt="InsightRAG: Production-grade enterprise RAG with hybrid search and semantic cache.">
+  <img src="assets/project-insightrag.svg" width="100%" alt="InsightRAG: Production-grade enterprise analytics and RAG with hybrid search and semantic cache.">
 </a>
 <p align="center">
   <a href="https://github.com/snehalghadge59-blip/InsightRAG"><img src="https://img.shields.io/badge/Repository-InsightRAG-4C1D95?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=github" alt="InsightRAG repository"></a>
-</p>
-
-<a href="https://github.com/snehalghadge59-blip/AeroFaultAI">
-  <img src="assets/project-aerofault.svg" width="100%" alt="AeroFaultAI: Real-time aerospace telemetry anomaly detection and predictive diagnostics.">
-</a>
-<p align="center">
-  <a href="https://github.com/snehalghadge59-blip/AeroFaultAI"><img src="https://img.shields.io/badge/Repository-AeroFaultAI-4C1D95?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=github" alt="AeroFaultAI repository"></a>
 </p>
 
 <img src="assets/title-toolkit.svg" width="100%" alt="04 Toolkit - The tools I reach for.">
@@ -44,24 +48,30 @@
 
 <!-- Tech Stack Skill Icons with Logos -->
 <p align="center">
-  <b>Languages &amp; Core</b><br/>
-  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=python,cpp,c,ts,js,html,css,bash" alt="Python, C++, C, TypeScript, JavaScript, HTML5, CSS3, Bash" /></a>
+  <b>📊 Data Analytics &amp; Business Intelligence</b><br/>
+  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=python,postgres,mysql,mongodb&amp;perline=6" alt="Python PostgreSQL MySQL MongoDB" /></a>
 </p>
 <p align="center">
-  <b>AI, Machine Learning &amp; Frameworks</b><br/>
-  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=pytorch,tensorflow,sklearn,fastapi,flask" alt="PyTorch, TensorFlow, Scikit-Learn, FastAPI, Flask" /></a>
+  <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&amp;logo=powerbi&amp;logoColor=black" alt="Power BI" />
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&amp;logo=pandas&amp;logoColor=white" alt="Pandas" />
+  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&amp;logo=numpy&amp;logoColor=white" alt="NumPy" />
+  <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&amp;logo=tableau&amp;logoColor=white" alt="Tableau" />
 </p>
 <p align="center">
-  <b>Full-Stack Web Development</b><br/>
-  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=react,nextjs,nodejs,express,tailwind" alt="React, Next.js, Node.js, Express, Tailwind CSS" /></a>
+  <b>🤖 AI, Machine Learning &amp; Deep Learning</b><br/>
+  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=pytorch,tensorflow,sklearn,fastapi,flask" alt="PyTorch TensorFlow Scikit-Learn FastAPI Flask" /></a>
 </p>
 <p align="center">
-  <b>Databases, Cloud &amp; Infrastructure</b><br/>
-  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=postgres,mongodb,mysql,redis,aws,docker,linux,git,github,githubactions" alt="PostgreSQL, MongoDB, MySQL, Redis, AWS, Docker, Linux, Git, GitHub, GitHub Actions" /></a>
+  <b>💻 Programming Languages &amp; Core</b><br/>
+  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=python,cpp,c,ts,js,html,css,bash" alt="Python C++ C TypeScript JavaScript HTML5 CSS3 Bash" /></a>
 </p>
 <p align="center">
-  <b>Developer Tools &amp; Productivity</b><br/>
-  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=vscode,postman,figma" alt="VS Code, Postman, Figma" /></a>
+  <b>☁️ Cloud, Databases &amp; DevOps</b><br/>
+  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=aws,docker,linux,git,github,githubactions,redis" alt="AWS Docker Linux Git GitHub GitHub Actions Redis" /></a>
+</p>
+<p align="center">
+  <b>🛠️ Developer &amp; Data Tools</b><br/>
+  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=vscode,postman,figma" alt="VS Code Postman Figma" /></a>
 </p>
 
 <img src="assets/title-commits.svg" width="100%" alt="05 Commit log - A year of continuous building.">
@@ -91,5 +101,5 @@
 </p>
 
 <a href="https://snehalsportfolio2027.netlify.app">
-  <img src="assets/footer-signature.svg" width="100%" alt="Snehal - Engineering intelligence that creates real-world impact.">
+  <img src="assets/footer-signature.svg" width="100%" alt="Snehal - Delivering data-driven intelligence and high-impact AI solutions.">
 </a>
