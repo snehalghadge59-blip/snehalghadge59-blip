@@ -2,9 +2,6 @@
   <img src="assets/snehal-hero-portrait.svg" width="100%" alt="Snehal Ghadge — Data &amp; AI Developer. Transforming data into insights and building scalable machine learning systems.">
 </a>
 
-<p align="center">
-  <img src="assets/snehal-profile.png" width="140" height="140" alt="Snehal Ghadge" />
-</p>
 
 <p align="center">
   <a href="https://snehalsportfolio2027.netlify.app"><img src="https://img.shields.io/badge/Portfolio-snehalsportfolio2027-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=netlify" alt="Portfolio"></a>

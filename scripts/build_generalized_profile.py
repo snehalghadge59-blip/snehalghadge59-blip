@@ -454,10 +454,6 @@ readme = '''<a href="https://snehalsportfolio2027.netlify.app">
 </a>
 
 <p align="center">
-  <img src="assets/snehal-profile.png" width="140" height="140" alt="Snehal Ghadge" />
-</p>
-
-<p align="center">
   <a href="https://snehalsportfolio2027.netlify.app"><img src="https://img.shields.io/badge/Portfolio-snehalsportfolio2027-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=netlify" alt="Portfolio"></a>
   <a href="https://linkedin.com/in/snehal-g-711587312"><img src="https://img.shields.io/badge/LinkedIn-snehal--g-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=linkedin" alt="LinkedIn"></a>
   <a href="https://leetcode.com/u/snehalghadge/"><img src="https://img.shields.io/badge/LeetCode-snehalghadge-6D28D9?style=for-the-badge&amp;labelColor=140D24&amp;logoColor=EDE9FE&amp;logo=leetcode" alt="LeetCode"></a>
