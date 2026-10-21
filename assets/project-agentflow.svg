@@ -1,29 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 370" width="1200" height="370" role="img" aria-labelledby="project-agentflow-t">
-  <title id="project-agentflow-t">AgentFlow-AI: Multi-agent orchestration framework for autonomous task execution.</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 370" width="1200" height="370" role="img" aria-labelledby="p-agentflow-t">
+  <title id="p-agentflow-t">AgentFlow-AI: Multi-agent orchestration framework for autonomous task execution.</title>
   <defs>
-    <linearGradient id="project-agentflow-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#140D24"/><stop offset="1" stop-color="#0B0714"/></linearGradient>
-    <radialGradient id="project-agentflow-glow" cx="82%" cy="30%" r="55%"><stop offset="0" stop-color="#7C3AED" stop-opacity=".7"/><stop offset="1" stop-color="#3B0764" stop-opacity="0"/></radialGradient>
-    <pattern id="project-agentflow-grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#8B5CF6" stroke-opacity=".08"/></pattern>
-    <clipPath id="project-agentflow-clip"><rect width="1200" height="370" rx="18"/></clipPath>
-    <linearGradient id="project-agentflow-trace" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".45" stop-color="#C4B5FD"/><stop offset="1" stop-color="#7C3AED" stop-opacity="0"/></linearGradient>
+    <linearGradient id="p-agentflow-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#140D24"/><stop offset="1" stop-color="#0B0714"/></linearGradient>
+    <radialGradient id="p-agentflow-glow" cx="82%" cy="30%" r="55%"><stop offset="0" stop-color="#7C3AED" stop-opacity=".7"/><stop offset="1" stop-color="#3B0764" stop-opacity="0"/></radialGradient>
+    <pattern id="p-agentflow-grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#8B5CF6" stroke-opacity=".08"/></pattern>
+    <clipPath id="p-agentflow-clip"><rect width="1200" height="370" rx="18"/></clipPath>
+    <linearGradient id="p-agentflow-trace" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".45" stop-color="#C4B5FD"/><stop offset="1" stop-color="#7C3AED" stop-opacity="0"/></linearGradient>
   </defs>
   <style>
-    .p-serif { font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif; }
-    .p-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
-    .p-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
-    .p-in { animation: p-in 1.2s cubic-bezier(.16,1,.3,1) both; }
-    .p-d1 { animation-delay: .15s; } .p-d2 { animation-delay: .4s; }
-    .p-draw { stroke-dasharray: 600; stroke-dashoffset: 600; animation: p-draw 2s cubic-bezier(.65,0,.35,1) .5s forwards; }
-    .p-trace { stroke-dasharray: 564 3136; stroke-dashoffset: 3700; animation: p-trace 7s linear infinite; }
-    @keyframes p-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
-    @keyframes p-draw { to { stroke-dashoffset: 0; } }
-    @keyframes p-trace { to { stroke-dashoffset: 0; } }
-    @media (prefers-reduced-motion: reduce) { .p-in { animation: none; } .p-draw { animation: none; stroke-dashoffset: 0; } .p-trace { display: none; } }
+    .p-serif{font-family:Georgia,"Iowan Old Style","Palatino Linotype","Times New Roman",serif}
+    .p-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+    .p-sans{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+    .p-in{animation:p-in 1.2s cubic-bezier(.16,1,.3,1) both}
+    .p-d1{animation-delay:.15s} .p-d2{animation-delay:.4s}
+    .p-draw{stroke-dasharray:600;stroke-dashoffset:600;animation:p-draw 2s cubic-bezier(.65,0,.35,1) .5s forwards}
+    .p-trace{stroke-dasharray:564 3136;stroke-dashoffset:3700;animation:p-trace 7s linear infinite}
+    .p-chip{animation:p-chip .7s cubic-bezier(.34,1.56,.64,1) both}
+    @keyframes p-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+    @keyframes p-draw{to{stroke-dashoffset:0}}
+    @keyframes p-trace{to{stroke-dashoffset:0}}
+    @keyframes p-chip{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+    @media(prefers-reduced-motion:reduce){.p-in,.p-chip{animation:none}.p-draw{animation:none;stroke-dashoffset:0}.p-trace{display:none}}
   </style>
-  <g clip-path="url(#project-agentflow-clip)">
-    <rect width="1200" height="370" fill="url(#project-agentflow-bg)"/>
-    <rect x="720" width="480" height="370" fill="url(#project-agentflow-grid)"/>
-    <rect width="1200" height="370" fill="url(#project-agentflow-glow)"/>
+  <g clip-path="url(#p-agentflow-clip)">
+    <rect width="1200" height="370" fill="url(#p-agentflow-bg)"/>
+    <rect x="720" width="480" height="370" fill="url(#p-agentflow-grid)"/>
+    <rect width="1200" height="370" fill="url(#p-agentflow-glow)"/>
     <g class="p-in p-d1">
       <text class="p-mono" x="56" y="62" font-size="12" letter-spacing="2.6" fill="#A78BFA">01 · AUTONOMOUS AGENTS · MULTI-STAGE REASONING · 2026</text>
       <text class="p-serif" x="54" y="126" font-size="52" font-weight="300" letter-spacing="-1.5" fill="#FFFFFF">AgentFlow-AI</text>
@@ -31,61 +33,42 @@
       <text class="p-mono" x="56" y="200" font-size="12.5" fill="#DDD6FE"><tspan fill="#A78BFA">BUILT ›</tspan> Dynamic state-graph, automated sub-task decomposition, and tool delegation</text>
       <line class="p-draw" x1="56" y1="226" x2="680" y2="226" stroke="#8B5CF6" stroke-opacity=".3"/>
       <g transform="translate(56 266)"><text class="p-serif" font-size="34" font-weight="300" fill="#FFFFFF">15+</text><text class="p-sans" y="24" font-size="12.5" fill="#A79FB5">tools integrated</text></g>
-      <g transform="translate(261 266)"><text class="p-serif" font-size="34" font-weight="300" fill="#FFFFFF"><1.2s</text><text class="p-sans" y="24" font-size="12.5" fill="#A79FB5">agent dispatch latency</text></g>
+      <g transform="translate(261 266)"><text class="p-serif" font-size="34" font-weight="300" fill="#FFFFFF">&lt;1.2s</text><text class="p-sans" y="24" font-size="12.5" fill="#A79FB5">agent dispatch latency</text></g>
       <g transform="translate(466 266)"><text class="p-serif" font-size="34" font-weight="300" fill="#FFFFFF">99.4%</text><text class="p-sans" y="24" font-size="12.5" fill="#A79FB5">workflow reliability</text></g>
-      <g class="p-chip" style="animation-delay:1.00s">
-          <rect x="56" y="314" width="78" height="26" rx="13" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".35"/>
-          <text class="p-mono" x="95.0" y="331" text-anchor="middle" font-size="11.5" fill="#DDD6FE">Python</text>
-        </g>\n<g class="p-chip" style="animation-delay:1.12s">
-          <rect x="144" y="314" width="105" height="26" rx="13" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".35"/>
-          <text class="p-mono" x="196.5" y="331" text-anchor="middle" font-size="11.5" fill="#DDD6FE">LangGraph</text>
-        </g>\n<g class="p-chip" style="animation-delay:1.24s">
-          <rect x="259" y="314" width="87" height="26" rx="13" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".35"/>
-          <text class="p-mono" x="302.5" y="331" text-anchor="middle" font-size="11.5" fill="#DDD6FE">FastAPI</text>
-        </g>\n<g class="p-chip" style="animation-delay:1.36s">
-          <rect x="356" y="314" width="69" height="26" rx="13" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".35"/>
-          <text class="p-mono" x="390.5" y="331" text-anchor="middle" font-size="11.5" fill="#DDD6FE">Redis</text>
-        </g>\n<g class="p-chip" style="animation-delay:1.48s">
-          <rect x="435" y="314" width="150" height="26" rx="13" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".35"/>
-          <text class="p-mono" x="510.0" y="331" text-anchor="middle" font-size="11.5" fill="#DDD6FE">Docker Compose</text>
-        </g>
+      <g class="p-chip" style="animation-delay:1.00s"><rect x="56" y="314" width="78" height="26" rx="13" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".35"/><text class="p-mono" x="95.0" y="331" text-anchor="middle" font-size="11.5" fill="#DDD6FE">Python</text></g>
+      <g class="p-chip" style="animation-delay:1.12s"><rect x="144" y="314" width="105" height="26" rx="13" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".35"/><text class="p-mono" x="196.5" y="331" text-anchor="middle" font-size="11.5" fill="#DDD6FE">LangGraph</text></g>
+      <g class="p-chip" style="animation-delay:1.24s"><rect x="259" y="314" width="87" height="26" rx="13" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".35"/><text class="p-mono" x="302.5" y="331" text-anchor="middle" font-size="11.5" fill="#DDD6FE">FastAPI</text></g>
+      <g class="p-chip" style="animation-delay:1.36s"><rect x="356" y="314" width="69" height="26" rx="13" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".35"/><text class="p-mono" x="390.5" y="331" text-anchor="middle" font-size="11.5" fill="#DDD6FE">Redis</text></g>
+      <g class="p-chip" style="animation-delay:1.48s"><rect x="435" y="314" width="78" height="26" rx="13" fill="#1C1236" stroke="#8B5CF6" stroke-opacity=".35"/><text class="p-mono" x="474.0" y="331" text-anchor="middle" font-size="11.5" fill="#DDD6FE">Docker</text></g>
     </g>
-    <!-- Right Diagram Area -->
     <g class="p-in p-d2">
-      <g transform="translate(780 40)">
-  <rect x="0" y="0" width="370" height="290" rx="14" fill="#0B0714" stroke="#8B5CF6" stroke-opacity=".35"/>
-  <!-- Central Planner Node -->
-  <g transform="translate(185 60)">
-    <circle r="36" fill="#1C1236" stroke="#C084FC" stroke-width="1.5"/>
-    <text class="p-mono" text-anchor="middle" y="4" font-size="11" fill="#FFFFFF">PLANNER</text>
-  </g>
-  <!-- Executor Node -->
-  <g transform="translate(80 180)">
-    <circle r="32" fill="#1C1236" stroke="#8B5CF6" stroke-width="1.2"/>
-    <text class="p-mono" text-anchor="middle" y="4" font-size="10.5" fill="#DDD6FE">EXECUTOR</text>
-  </g>
-  <!-- Critic Node -->
-  <g transform="translate(290 180)">
-    <circle r="32" fill="#1C1236" stroke="#8B5CF6" stroke-width="1.2"/>
-    <text class="p-mono" text-anchor="middle" y="4" font-size="10.5" fill="#DDD6FE">VERIFIER</text>
-  </g>
-  <!-- Tool Execution Box -->
-  <g transform="translate(115 240)">
-    <rect width="140" height="36" rx="8" fill="#140D24" stroke="#A78BFA" stroke-opacity=".4"/>
-    <text class="p-mono" x="70" y="22" text-anchor="middle" font-size="10" fill="#C4B5FD">TOOL INVOCATION</text>
-  </g>
-  <!-- Connecting lines -->
-  <line x1="160" y1="85" x2="105" y2="152" stroke="#8B5CF6" stroke-width="1.5" stroke-dasharray="3 3"/>
-  <line x1="210" y1="85" x2="265" y2="152" stroke="#8B5CF6" stroke-width="1.5" stroke-dasharray="3 3"/>
-  <line x1="105" y1="205" x2="155" y2="240" stroke="#C084FC" stroke-width="1.5"/>
-  <line x1="265" y1="205" x2="215" y2="240" stroke="#C084FC" stroke-width="1.5"/>
-  <circle cx="185" cy="180" r="4" fill="#10B981">
-    <animate attributeName="opacity" values=".3;1;.3" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  <text class="p-mono" x="185" y="200" text-anchor="middle" font-size="9" fill="#10B981">DISPATCH ACTIVE</text>
-</g>
+    <g transform="translate(780 35)">
+      <rect x="0" y="0" width="380" height="295" rx="14" fill="#0B0714" stroke="#8B5CF6" stroke-opacity=".35"/>
+      <text class="p-mono" x="190" y="30" text-anchor="middle" font-size="10.5" letter-spacing="2" fill="#A78BFA">AGENT ORCHESTRATION GRAPH</text>
+      <!-- Planner Node -->
+      <circle cx="190" cy="80" r="36" fill="#1C1236" stroke="#C084FC" stroke-width="1.5"/>
+      <text class="p-mono" x="190" y="84" text-anchor="middle" font-size="11" fill="#FFFFFF">PLANNER</text>
+      <!-- Executor Node -->
+      <circle cx="90" cy="190" r="32" fill="#1C1236" stroke="#8B5CF6" stroke-width="1.2"/>
+      <text class="p-mono" x="90" y="194" text-anchor="middle" font-size="10.5" fill="#DDD6FE">EXECUTOR</text>
+      <!-- Critic Node -->
+      <circle cx="290" cy="190" r="32" fill="#1C1236" stroke="#8B5CF6" stroke-width="1.2"/>
+      <text class="p-mono" x="290" y="194" text-anchor="middle" font-size="10.5" fill="#DDD6FE">VERIFIER</text>
+      <!-- Tool Box -->
+      <rect x="120" y="248" width="140" height="34" rx="8" fill="#140D24" stroke="#A78BFA" stroke-opacity=".4"/>
+      <text class="p-mono" x="190" y="270" text-anchor="middle" font-size="10" fill="#C4B5FD">TOOL INVOCATION</text>
+      <!-- Connectors -->
+      <line x1="165" y1="106" x2="110" y2="162" stroke="#8B5CF6" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <line x1="215" y1="106" x2="268" y2="162" stroke="#8B5CF6" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <line x1="105" y1="217" x2="148" y2="248" stroke="#C084FC" stroke-width="1.5"/>
+      <line x1="275" y1="217" x2="232" y2="248" stroke="#C084FC" stroke-width="1.5"/>
+      <circle cx="190" cy="190" r="5" fill="#10B981">
+        <animate attributeName="opacity" values=".3;1;.3" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <text class="p-mono" x="190" y="207" text-anchor="middle" font-size="9" fill="#10B981">DISPATCH ACTIVE</text>
+    </g>
     </g>
     <rect x=".5" y=".5" width="1199" height="369" rx="17.5" fill="none" stroke="#8B5CF6" stroke-opacity=".2"/>
-    <rect class="p-trace" x=".5" y=".5" width="1199" height="369" rx="17.5" fill="none" stroke="url(#project-agentflow-trace)" stroke-width="1.6" stroke-linecap="round"/>
+    <rect class="p-trace" x=".5" y=".5" width="1199" height="369" rx="17.5" fill="none" stroke="url(#p-agentflow-trace)" stroke-width="1.6" stroke-linecap="round"/>
   </g>
 </svg>
